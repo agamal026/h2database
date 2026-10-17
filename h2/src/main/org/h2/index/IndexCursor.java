@@ -78,6 +78,7 @@ public class IndexCursor implements Cursor {
      */
     public void prepare(SessionLocal s, ArrayList<IndexCondition> indexConditions) {
         session = s;
+        cursor = null;
         alwaysFalse = false;
         start = end = null;
         inList = null;
@@ -115,9 +116,11 @@ public class IndexCursor implements Cursor {
             case Comparison.IN_ARRAY:
                 if (start == null && end == null) {
                     if (canUseIndexForIn(column)) {
-                        this.inColumn = column;
                         inList = condition.getCurrentValueList(s, buildSortTypes(new Column[] { column }));
-                        inListIndex = 0;
+                        if (inList != null) {
+                            this.inColumn = column;
+                            inListIndex = 0;
+                        }
                     }
                 }
                 break;
