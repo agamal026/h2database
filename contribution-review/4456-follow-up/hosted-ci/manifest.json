@@ -1,0 +1,34 @@
+{
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 2938,
+      "sha256": "1e7bea27653d248f8bd28849dc6ed1b61741e029b3d942a5f5a021138bc6394d"
+    },
+    {
+      "path": "logs/java11.log",
+      "bytes": 170149,
+      "sha256": "43314c8f0be09d122b97ce92ae5f7a418366467cedcef6df1b992e2ad9c3d58c"
+    },
+    {
+      "path": "logs/java17.log",
+      "bytes": 167762,
+      "sha256": "814ba4b9857646f0828853efa256d938f54de04fac463b303ecdcdc004d242e9"
+    },
+    {
+      "path": "logs/upstream-base-java11.log",
+      "bytes": 165575,
+      "sha256": "dfe1f7b9ac5d5c038192cd6cb80fefcaf86907ea78c2233f16ab26162d62d1e3"
+    },
+    {
+      "path": "receipt.json",
+      "bytes": 10427,
+      "sha256": "2f14e4fe9c5e47baf747032506270922fb07a70ca32d6ab09e35e84d68a1d68c"
+    },
+    {
+      "path": "terminal-evidence.md",
+      "bytes": 9439,
+      "sha256": "db1df280c43dbe04c58e5ca64931a0e630f8c88cfe4142a3465d9db703ec765a"
+    }
+  ]
+}

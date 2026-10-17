@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "observed_completed_at": "2026-10-17T22:25:01Z",
+  "receipt_generated_at": "2026-10-17 22:29:58 UTC",
+  "repository": "agamal026/h2database",
+  "run": {
+    "id": 39073428774,
+    "url": "https://github.com/agamal026/h2database/actions/runs/39073428774",
+    "head_sha": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+    "tree_sha": "07172cddd8b11fa8a5325ccb40072de775f3eaa7",
+    "branch": "ci/4456-java11-17",
+    "event": "push",
+    "attempt": 1,
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-17T22:02:30Z",
+    "updated_at": "2026-10-17T22:24:01Z"
+  },
+  "jobs": [
+    {
+      "id": 117515577514,
+      "name": "Java 11",
+      "url": "https://github.com/agamal026/h2database/actions/runs/39073428774/job/117515577514",
+      "head_sha": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-17T22:02:33Z",
+      "completed_at": "2026-10-17T22:23:12Z",
+      "test_step": {
+        "name": "Test",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-10-17T22:02:37Z",
+        "completed_at": "2026-10-17T22:23:10Z"
+      },
+      "java_runtime": "Java 11.0.32.1+1, OpenJDK 64-Bit Server VM, Eclipse Adoptium, 64",
+      "log_relative_path": "logs/java11.log",
+      "decoded_log_retrieved": true,
+      "truncated": false,
+      "truncation_note": "Complete decoded body received from dedicated job-log endpoint and retained; no provider truncation indication. Runner setup, TestAll total, Build Done, post-job cleanup and terminal orphan-process cleanup all present.",
+      "actual_command": "./build.sh jar testCI",
+      "command_present": true,
+      "testall_ci_command_present": true,
+      "checkout_sha_present": true,
+      "database_configurations": [
+        "Test memory  (1665 KB used)",
+        "Test utilities (19996 KB used)",
+        "Test lazy memory  (21646 KB used)",
+        "Test  (20496 KB used)",
+        "Test net memory  (25379 KB used)",
+        "Test lazy net  (20638 KB used)",
+        "Test AES SOFT_LRU diskUndo diskResult traceLevelFile throttle:1  (22704 KB used)"
+      ],
+      "prepared_statement_completion_lines": [
+        "22:03:55 00:00.312 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:09:27 00:00.229 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:12:05 00:00.240 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:15:42 00:00.965 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:18:07 00:00.892 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:20:29 00:00.457 org.h2.test.jdbc.TestPreparedStatement "
+      ],
+      "testall_total_line": "20:11.648 total",
+      "build_done_line": "Done in 1228247 ms",
+      "skipped_class_warnings": [
+        "Warning: test org.h2.test.store.TestDefrag was not executed.",
+        "Warning: test org.h2.test.store.TestMVStoreBenchmark was not executed.",
+        "Warning: test org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode was not executed.",
+        "Warning: test org.h2.test.db.TestSpatial was not executed.",
+        "Warning: test org.h2.test.db.TestLargeBlob was not executed."
+      ],
+      "framework_error_fail_count": 0,
+      "durability_failure_count": 0,
+      "github_error_annotation_lines": [
+        "##[error]Exception in thread \"MVStore background writer /home/runner/work/h2database/h2database/h2/data/test/outOfMemory.mv.db\" org.h2.mvstore.MVStoreException: java.lang.OutOfMemoryError: GC overhead limit exceeded [2.5.259/3]"
+      ],
+      "decoded_log_utf8_bytes": 170149,
+      "decoded_log_sha256": "43314c8f0be09d122b97ce92ae5f7a418366467cedcef6df1b992e2ad9c3d58c",
+      "physical_log_lines": 1742,
+      "contains_terminal_cleanup": true
+    },
+    {
+      "id": 117515577740,
+      "name": "Java 17",
+      "url": "https://github.com/agamal026/h2database/actions/runs/39073428774/job/117515577740",
+      "head_sha": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-17T22:02:34Z",
+      "completed_at": "2026-10-17T22:24:00Z",
+      "test_step": {
+        "name": "Test",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at": "2026-10-17T22:02:37Z",
+        "completed_at": "2026-10-17T22:23:58Z"
+      },
+      "java_runtime": "Java 17.0.20.1+1, OpenJDK 64-Bit Server VM, Eclipse Adoptium, 64",
+      "log_relative_path": "logs/java17.log",
+      "decoded_log_retrieved": true,
+      "truncated": false,
+      "truncation_note": "Complete decoded body received from dedicated job-log endpoint and retained; no provider truncation indication. Runner setup, TestAll total, Build Done, post-job cleanup and terminal orphan-process cleanup all present.",
+      "actual_command": "./build.sh jar testCI",
+      "command_present": true,
+      "testall_ci_command_present": true,
+      "checkout_sha_present": true,
+      "database_configurations": [
+        "Test memory  (1683 KB used)",
+        "Test utilities (18197 KB used)",
+        "Test lazy memory  (20649 KB used)",
+        "Test  (20410 KB used)",
+        "Test net memory  (23394 KB used)",
+        "Test lazy net  (20467 KB used)",
+        "Test AES SOFT_LRU diskUndo diskResult traceLevelFile throttle:1  (22628 KB used)"
+      ],
+      "prepared_statement_completion_lines": [
+        "22:03:52 00:00.311 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:09:25 00:00.204 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:11:57 00:00.285 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:15:31 00:01.056 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:18:21 00:01.156 org.h2.test.jdbc.TestPreparedStatement ",
+        "22:21:03 00:00.584 org.h2.test.jdbc.TestPreparedStatement "
+      ],
+      "testall_total_line": "21:00.460 total",
+      "build_done_line": "Done in 1279868 ms",
+      "skipped_class_warnings": [
+        "Warning: test org.h2.test.store.TestMVStoreBenchmark was not executed.",
+        "Warning: test org.h2.test.store.TestDefrag was not executed.",
+        "Warning: test org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode was not executed.",
+        "Warning: test org.h2.test.db.TestSpatial was not executed.",
+        "Warning: test org.h2.test.db.TestLargeBlob was not executed."
+      ],
+      "framework_error_fail_count": 0,
+      "durability_failure_count": 0,
+      "github_error_annotation_lines": [],
+      "decoded_log_utf8_bytes": 167762,
+      "decoded_log_sha256": "814ba4b9857646f0828853efa256d938f54de04fac463b303ecdcdc004d242e9",
+      "physical_log_lines": 1728,
+      "contains_terminal_cleanup": true
+    }
+  ],
+  "scope": {
+    "workflow_source": "https://github.com/agamal026/h2database/blob/9d7a0ad26f8a53654e0ce106a80f702ae5840a28/.github/workflows/CI.yml",
+    "build_entrypoint_source": "https://github.com/agamal026/h2database/blob/9d7a0ad26f8a53654e0ce106a80f702ae5840a28/h2/src/tools/org/h2/build/Build.java#L892",
+    "test_harness_source": "https://github.com/agamal026/h2database/blob/9d7a0ad26f8a53654e0ce106a80f702ae5840a28/h2/src/test/org/h2/test/TestAll.java#L559",
+    "description": "Successful complete upstream CI-selected suite on Java11 and Java17: jar compilation/Javadoc plus TestAll ci through six database configurations and additional/utility tests. The changed TestPreparedStatement class completed in all six configurations per job.",
+    "failure_propagation": "TestAll.main exits1 on framework-recorded test failures; Build.testCI propagates nonzero; workflow contains no continue-on-error override.",
+    "limits": "This is the complete CI selection, not all non-CI slow/big/SSL modes or an exhaustive SQL proof. Five explicitly named classes were not executed, and some enabled classes intentionally skip CI-only-inapplicable branches."
+  },
+  "java11_diagnostic": {
+    "classification": "retained diagnostic; precise cause/baseline equivalence unresolved",
+    "observed": "One GitHub error annotation records a background MVStore writer OutOfMemoryError at22:13:55Z during TestOutOfMemory; the harness then records that class's normal completion and completes all configurations successfully.",
+    "source_context": "The CI-enabled testUpdateWhenNearlyOutOfMemory launches MyChild with128MiB and ParallelGC. MyChild deliberately consumes memory via eatMemory(80), attempts an update, and expects a SQLException; the parent waits and validates persisted database rows. The source supports a connection to intentional memory pressure but does not establish that this exact uncaught background exception is an expected diagnostic.",
+    "source_url": "https://github.com/agamal026/h2database/blob/9d7a0ad26f8a53654e0ce106a80f702ae5840a28/h2/src/test/org/h2/test/db/TestOutOfMemory.java#L161",
+    "baseline_comparison": {
+      "run_id": 39058127214,
+      "job_id": 117470240956,
+      "url": "https://github.com/h2database/h2database/actions/runs/39058127214/job/117470240956",
+      "head_sha": "f2922a7766ec2472bc65d5e5ab4086390a76a42c",
+      "conclusion": "success",
+      "decoded_log_retrieved": true,
+      "log_relative_path": "logs/upstream-base-java11.log",
+      "github_error_annotation_count": 0,
+      "framework_error_fail_count": 0,
+      "background_exception_marker_count": 0,
+      "durability_failure_count": 0,
+      "conclusion_of_comparison": "The one exact-base Java11 log does not reproduce this diagnostic. No new run or rerun was performed; causation is not established.",
+      "decoded_log_utf8_bytes": 165575,
+      "decoded_log_sha256": "dfe1f7b9ac5d5c038192cd6cb80fefcaf86907ea78c2233f16ab26162d62d1e3",
+      "physical_log_lines": 1702,
+      "contains_terminal_cleanup": true,
+      "truncated": false
+    }
+  },
+  "other_gates": {
+    "prior_non_ci_runs": "Historical failed/interrupted initial-draft broad runs remain in the earlier evidence; this hosted CI result does not relabel them as passes.",
+    "docs": "Root independently ran jar docs in an isolated exact-final-source copy; it exits1 at the same baseline CheckTextFiles findings. This reader did not rerun docs.",
+    "contributor_statement": "Truthful contributor licensing/authorship requirement remains pending; hosted CI is not human approval or maintainer acceptance."
+  },
+  "mutations_performed": "No source changes, workflow dispatches, reruns or publication. Only local evidence files were written."
+}

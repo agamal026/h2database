@@ -1,0 +1,48 @@
+{
+  "source_commit": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+  "commands": [
+    {
+      "source_commit": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+      "baseline_commit": "f2922a7766ec2472bc65d5e5ab4086390a76a42c",
+      "command": [
+        "./build.sh",
+        "docs"
+      ],
+      "jdk": "Temurin 17.0.20.1+1",
+      "started_at": "2026-10-17T22:17:24.147742+00:00",
+      "finished_at": "2026-10-17T22:17:29.884166+00:00",
+      "duration_seconds": 5.736,
+      "exit_code": 1,
+      "working_copy": "/tmp/h2-4456-docs-xbnqeegz",
+      "log": "final-docs.log",
+      "log_sha256": "f281aef04145641216758782fbffc7fba7b54cd720617f062272430cc2f1ad62"
+    },
+    {
+      "source_commit": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+      "baseline_commit": "f2922a7766ec2472bc65d5e5ab4086390a76a42c",
+      "command": [
+        "./build.sh",
+        "jar",
+        "docs"
+      ],
+      "jdk": "Temurin 17.0.20.1+1",
+      "started_at": "2026-10-17T22:19:32.408601+00:00",
+      "finished_at": "2026-10-17T22:19:47.643734+00:00",
+      "duration_seconds": 15.235,
+      "exit_code": 1,
+      "working_copy": "/tmp/h2-4456-docs-xbnqeegz",
+      "log": "final-jar-docs.log",
+      "log_sha256": "6ac5e534a4abc82917d9e40a826add631ae57121bfaf86ee15423f2051bbbf00",
+      "context": "The initial clean-copy docs command lacked the prerequisite compiled H2 classes. This command first builds the final source, then runs docs in the same isolated copy."
+    }
+  ],
+  "baseline_comparison": {
+    "blocking_file": "h2/src/main/org/h2/mvstore/RandomAccessStore.java",
+    "baseline_commit": "f2922a7766ec2472bc65d5e5ab4086390a76a42c",
+    "sha256": "f99cf0790791a587b00c6bdbc8c5c4b3527db0b3735ec3df68649a4209e7b394",
+    "byte_equal_to_baseline": true,
+    "diagnostic": "line too long: 131 at line271",
+    "prior_baseline_evidence": "https://github.com/agamal026/h2database/blob/0feb07c57de0641cda13ad69de24ecf88fc4c917/contribution-review/4456/logs/baseline-text-format.log"
+  },
+  "original_source_files_match_published_payload": true
+}

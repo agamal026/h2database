@@ -1,0 +1,162 @@
+{
+  "verified_at": "2026-10-17 22:30:05 UTC",
+  "source_commit": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+  "run": {
+    "id": 39073428774,
+    "url": "https://github.com/agamal026/h2database/actions/runs/39073428774",
+    "event": "push",
+    "branch": "ci/4456-java11-17",
+    "status": "completed",
+    "conclusion": "success",
+    "attempt": 1,
+    "created_at": "2026-10-17T22:02:30Z",
+    "updated_at": "2026-10-17T22:24:01Z"
+  },
+  "command": [
+    "./build.sh",
+    "jar",
+    "testCI"
+  ],
+  "jobs": [
+    {
+      "id": 117515577514,
+      "name": "Java 11",
+      "url": "https://github.com/agamal026/h2database/actions/runs/39073428774/job/117515577514",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-17T22:02:33Z",
+      "completed_at": "2026-10-17T22:23:12Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T22:02:34Z",
+          "completed_at": "2026-10-17T22:02:35Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T22:02:35Z",
+          "completed_at": "2026-10-17T22:02:37Z"
+        },
+        {
+          "name": "Set up JDK 11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T22:02:37Z",
+          "completed_at": "2026-10-17T22:02:37Z"
+        },
+        {
+          "name": "Test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T22:02:37Z",
+          "completed_at": "2026-10-17T22:23:10Z"
+        },
+        {
+          "name": "Post Set up JDK 11",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T22:23:10Z",
+          "completed_at": "2026-10-17T22:23:10Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-17T22:23:10Z",
+          "completed_at": "2026-10-17T22:23:10Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-17T22:23:10Z",
+          "completed_at": "2026-10-17T22:23:10Z"
+        }
+      ]
+    },
+    {
+      "id": 117515577740,
+      "name": "Java 17",
+      "url": "https://github.com/agamal026/h2database/actions/runs/39073428774/job/117515577740",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-10-17T22:02:34Z",
+      "completed_at": "2026-10-17T22:24:00Z",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1,
+          "started_at": "2026-10-17T22:02:34Z",
+          "completed_at": "2026-10-17T22:02:35Z"
+        },
+        {
+          "name": "Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2,
+          "started_at": "2026-10-17T22:02:35Z",
+          "completed_at": "2026-10-17T22:02:36Z"
+        },
+        {
+          "name": "Set up JDK 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3,
+          "started_at": "2026-10-17T22:02:36Z",
+          "completed_at": "2026-10-17T22:02:37Z"
+        },
+        {
+          "name": "Test",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4,
+          "started_at": "2026-10-17T22:02:37Z",
+          "completed_at": "2026-10-17T22:23:58Z"
+        },
+        {
+          "name": "Post Set up JDK 17",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-17T22:23:58Z",
+          "completed_at": "2026-10-17T22:23:58Z"
+        },
+        {
+          "name": "Post Run actions/checkout@v6",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-17T22:23:58Z",
+          "completed_at": "2026-10-17T22:23:59Z"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9,
+          "started_at": "2026-10-17T22:23:59Z",
+          "completed_at": "2026-10-17T22:23:59Z"
+        }
+      ]
+    }
+  ],
+  "scope": "Unchanged upstream CI-selected suite on Java 11 and Java 17; not all non-CI slow/big/SSL combinations or release/documentation checks.",
+  "annotation": "Java 11 includes a GC overhead limit exceeded annotation during the deliberate TestOutOfMemory memory-stress test. The test step and job succeeded. Exact attribution is not resolved; do not label it baseline-reproduced.",
+  "environment_overrides": {
+    "JAVA_OPTS": "-Xmx512m"
+  },
+  "working_directory": "h2"
+}

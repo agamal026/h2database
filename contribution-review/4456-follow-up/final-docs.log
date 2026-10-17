@@ -1,0 +1,436 @@
+Target: docs
+Compiling 28 classes
+src/main/org/h2/value/ValueGeometry.java:21: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.Geometry;
+                                ^
+src/main/org/h2/value/ValueGeometry.java:146: error: cannot find symbol
+    public Geometry getGeometry() {
+           ^
+  symbol:   class Geometry
+  location: class ValueGeometry
+src/main/org/h2/util/geometry/JTSUtils.java:31: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.CoordinateSequence;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:32: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.Geometry;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:33: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.GeometryCollection;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:34: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.GeometryFactory;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:35: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.LineString;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:36: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.LinearRing;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:37: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.MultiLineString;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:38: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.MultiPoint;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:39: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.MultiPolygon;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:40: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.Point;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:41: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.Polygon;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:42: error: package org.locationtech.jts.geom does not exist
+import org.locationtech.jts.geom.PrecisionModel;
+                                ^
+src/main/org/h2/util/geometry/JTSUtils.java:43: error: package org.locationtech.jts.geom.impl does not exist
+import org.locationtech.jts.geom.impl.CoordinateArraySequenceFactory;
+                                     ^
+src/main/org/h2/util/geometry/JTSUtils.java:44: error: package org.locationtech.jts.geom.impl does not exist
+import org.locationtech.jts.geom.impl.PackedCoordinateSequenceFactory;
+                                     ^
+src/main/org/h2/util/geometry/JTSUtils.java:237: error: cannot find symbol
+    public static Geometry ewkb2geometry(byte[] ewkb) {
+                  ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:250: error: cannot find symbol
+    public static Geometry ewkb2geometry(byte[] ewkb, int dimensionSystem) {
+                  ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:263: error: cannot find symbol
+    public static byte[] geometry2ewkb(Geometry geometry) {
+                                       ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:276: error: cannot find symbol
+    public static byte[] geometry2ewkb(Geometry geometry, int dimensionSystem) {
+                                       ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:292: error: cannot find symbol
+    public static void parseGeometry(Geometry geometry, Target target) {
+                                     ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:306: error: cannot find symbol
+    private static void parseGeometry(Geometry geometry, Target target, int parentType) {
+                                      ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:396: error: cannot find symbol
+    private static void addRing(CoordinateSequence sequence, Target target, int size) {
+                                ^
+  symbol:   class CoordinateSequence
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:417: error: cannot find symbol
+    private static void addCoordinate(CoordinateSequence sequence, Target target, int index, int total) {
+                                      ^
+  symbol:   class CoordinateSequence
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:422: error: cannot find symbol
+    private static void addCoordinate(CoordinateSequence sequence, Target target, int index, int total, double x,
+                                      ^
+  symbol:   class CoordinateSequence
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:436: error: cannot find symbol
+    public static int getDimensionSystem(Geometry geometry) {
+                                         ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:441: error: cannot find symbol
+    private static int getDimensionSystem1(Geometry geometry) {
+                                           ^
+  symbol:   class Geometry
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:464: error: cannot find symbol
+    private static int getDimensionSystemFromSequence(CoordinateSequence sequence) {
+                                                      ^
+  symbol:   class CoordinateSequence
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:477: error: cannot find symbol
+    private static int getDimensionSystemFromCoordinate(CoordinateSequence sequence, int index) {
+                                                        ^
+  symbol:   class CoordinateSequence
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:58: error: cannot find symbol
+        private GeometryFactory factory;
+                ^
+  symbol:   class GeometryFactory
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:62: error: cannot find symbol
+        private CoordinateSequence coordinates;
+                ^
+  symbol:   class CoordinateSequence
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:64: error: cannot find symbol
+        private CoordinateSequence[] innerCoordinates;
+                ^
+  symbol:   class CoordinateSequence
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:68: error: cannot find symbol
+        private Geometry[] subgeometries;
+                ^
+  symbol:   class Geometry
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:80: error: cannot find symbol
+        private GeometryTarget(int dimensionSystem, GeometryFactory factory) {
+                                                    ^
+  symbol:   class GeometryFactory
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:154: error: cannot find symbol
+        private CoordinateSequence createCoordinates(int numPoints) {
+                ^
+  symbol:   class CoordinateSequence
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:200: error: cannot find symbol
+        Geometry getGeometry() {
+        ^
+  symbol:   class Geometry
+  location: class GeometryTarget
+src/main/org/h2/value/ValueGeometry.java:83: error: cannot find symbol
+            Geometry g = (Geometry) o;
+            ^
+  symbol:   class Geometry
+  location: class ValueGeometry
+src/main/org/h2/value/ValueGeometry.java:83: error: cannot find symbol
+            Geometry g = (Geometry) o;
+                          ^
+  symbol:   class Geometry
+  location: class ValueGeometry
+src/main/org/h2/value/ValueGeometry.java:154: error: cannot find symbol
+        return ((Geometry) geometry).copy();
+                 ^
+  symbol:   class Geometry
+  location: class ValueGeometry
+src/main/org/h2/util/geometry/JTSUtils.java:87: error: cannot find symbol
+            factory = new GeometryFactory(new PrecisionModel(), srid,
+                          ^
+  symbol:   class GeometryFactory
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:87: error: cannot find symbol
+            factory = new GeometryFactory(new PrecisionModel(), srid,
+                                              ^
+  symbol:   class PrecisionModel
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:88: error: cannot find symbol
+                    (dimensionSystem & DIMENSION_SYSTEM_XYM) != 0 ? PackedCoordinateSequenceFactory.DOUBLE_FACTORY
+                                                                    ^
+  symbol:   variable PackedCoordinateSequenceFactory
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:89: error: cannot find symbol
+                            : CoordinateArraySequenceFactory.instance());
+                              ^
+  symbol:   variable CoordinateArraySequenceFactory
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:110: error: cannot find symbol
+            innerCoordinates = new CoordinateSequence[numInner];
+                                   ^
+  symbol:   class CoordinateSequence
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:124: error: cannot find symbol
+                subgeometries = new Point[numItems];
+                                    ^
+  symbol:   class Point
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:127: error: cannot find symbol
+                subgeometries = new LineString[numItems];
+                                    ^
+  symbol:   class LineString
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:130: error: cannot find symbol
+                subgeometries = new Polygon[numItems];
+                                    ^
+  symbol:   class Polygon
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:133: error: cannot find symbol
+                subgeometries = new Geometry[numItems];
+                                    ^
+  symbol:   class Geometry
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:185: error: cannot find symbol
+            CoordinateSequence coordinates = innerOffset < 0 ? this.coordinates : innerCoordinates[innerOffset];
+            ^
+  symbol:   class CoordinateSequence
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:203: error: cannot find symbol
+                return new Point(coordinates, factory);
+                           ^
+  symbol:   class Point
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:205: error: cannot find symbol
+                return new LineString(coordinates, factory);
+                           ^
+  symbol:   class LineString
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:207: error: cannot find symbol
+                LinearRing shell = new LinearRing(coordinates, factory);
+                ^
+  symbol:   class LinearRing
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:207: error: cannot find symbol
+                LinearRing shell = new LinearRing(coordinates, factory);
+                                       ^
+  symbol:   class LinearRing
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:209: error: cannot find symbol
+                LinearRing[] holes = new LinearRing[innerCount];
+                ^
+  symbol:   class LinearRing
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:209: error: cannot find symbol
+                LinearRing[] holes = new LinearRing[innerCount];
+                                         ^
+  symbol:   class LinearRing
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:211: error: cannot find symbol
+                    holes[i] = new LinearRing(innerCoordinates[i], factory);
+                                   ^
+  symbol:   class LinearRing
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:213: error: cannot find symbol
+                return new Polygon(shell, holes, factory);
+                           ^
+  symbol:   class Polygon
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:216: error: cannot find symbol
+                return new MultiPoint((Point[]) subgeometries, factory);
+                           ^
+  symbol:   class MultiPoint
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:216: error: cannot find symbol
+                return new MultiPoint((Point[]) subgeometries, factory);
+                                       ^
+  symbol:   class Point
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:218: error: cannot find symbol
+                return new MultiLineString((LineString[]) subgeometries, factory);
+                           ^
+  symbol:   class MultiLineString
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:218: error: cannot find symbol
+                return new MultiLineString((LineString[]) subgeometries, factory);
+                                            ^
+  symbol:   class LineString
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:220: error: cannot find symbol
+                return new MultiPolygon((Polygon[]) subgeometries, factory);
+                           ^
+  symbol:   class MultiPolygon
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:220: error: cannot find symbol
+                return new MultiPolygon((Polygon[]) subgeometries, factory);
+                                         ^
+  symbol:   class Polygon
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:222: error: cannot find symbol
+                return new GeometryCollection(subgeometries, factory);
+                           ^
+  symbol:   class GeometryCollection
+  location: class GeometryTarget
+src/main/org/h2/util/geometry/JTSUtils.java:310: error: cannot find symbol
+        if (geometry instanceof Point) {
+                                ^
+  symbol:   class Point
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:315: error: cannot find symbol
+            Point p = (Point) geometry;
+            ^
+  symbol:   class Point
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:315: error: cannot find symbol
+            Point p = (Point) geometry;
+                       ^
+  symbol:   class Point
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:322: error: cannot find symbol
+        } else if (geometry instanceof LineString) {
+                                       ^
+  symbol:   class LineString
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:326: error: cannot find symbol
+            LineString ls = (LineString) geometry;
+            ^
+  symbol:   class LineString
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:326: error: cannot find symbol
+            LineString ls = (LineString) geometry;
+                             ^
+  symbol:   class LineString
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:327: error: cannot find symbol
+            CoordinateSequence cs = ls.getCoordinateSequence();
+            ^
+  symbol:   class CoordinateSequence
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:337: error: cannot find symbol
+        } else if (geometry instanceof Polygon) {
+                                       ^
+  symbol:   class Polygon
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:341: error: cannot find symbol
+            Polygon p = (Polygon) geometry;
+            ^
+  symbol:   class Polygon
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:341: error: cannot find symbol
+            Polygon p = (Polygon) geometry;
+                         ^
+  symbol:   class Polygon
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:343: error: cannot find symbol
+            CoordinateSequence cs = p.getExteriorRing().getCoordinateSequence();
+            ^
+  symbol:   class CoordinateSequence
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:368: error: cannot find symbol
+        } else if (geometry instanceof GeometryCollection) {
+                                       ^
+  symbol:   class GeometryCollection
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:372: error: cannot find symbol
+            GeometryCollection gc = (GeometryCollection) geometry;
+            ^
+  symbol:   class GeometryCollection
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:372: error: cannot find symbol
+            GeometryCollection gc = (GeometryCollection) geometry;
+                                     ^
+  symbol:   class GeometryCollection
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:374: error: cannot find symbol
+            if (gc instanceof MultiPoint) {
+                              ^
+  symbol:   class MultiPoint
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:376: error: cannot find symbol
+            } else if (gc instanceof MultiLineString) {
+                                     ^
+  symbol:   class MultiLineString
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:378: error: cannot find symbol
+            } else if (gc instanceof MultiPolygon) {
+                                     ^
+  symbol:   class MultiPolygon
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:443: error: cannot find symbol
+        if (geometry instanceof Point) {
+                                ^
+  symbol:   class Point
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:444: error: cannot find symbol
+            d = getDimensionSystemFromSequence(((Point) geometry).getCoordinateSequence());
+                                                 ^
+  symbol:   class Point
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:445: error: cannot find symbol
+        } else if (geometry instanceof LineString) {
+                                       ^
+  symbol:   class LineString
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:446: error: cannot find symbol
+            d = getDimensionSystemFromSequence(((LineString) geometry).getCoordinateSequence());
+                                                 ^
+  symbol:   class LineString
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:447: error: cannot find symbol
+        } else if (geometry instanceof Polygon) {
+                                       ^
+  symbol:   class Polygon
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:448: error: cannot find symbol
+            d = getDimensionSystemFromSequence(((Polygon) geometry).getExteriorRing().getCoordinateSequence());
+                                                 ^
+  symbol:   class Polygon
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:449: error: cannot find symbol
+        } else if (geometry instanceof GeometryCollection) {
+                                       ^
+  symbol:   class GeometryCollection
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:451: error: cannot find symbol
+            GeometryCollection gc = (GeometryCollection) geometry;
+            ^
+  symbol:   class GeometryCollection
+  location: class JTSUtils
+src/main/org/h2/util/geometry/JTSUtils.java:451: error: cannot find symbol
+            GeometryCollection gc = (GeometryCollection) geometry;
+                                     ^
+  symbol:   class GeometryCollection
+  location: class JTSUtils
+90 errors
+Exception in thread "main" java.lang.RuntimeException: An error occurred
+	at org.h2.build.BuildBase.javac(BuildBase.java:944)
+	at org.h2.build.Build.compileTools(Build.java:231)
+	at org.h2.build.Build.javadoc(Build.java:610)
+	at org.h2.build.Build.docs(Build.java:361)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.h2.build.BuildBase.invoke(BuildBase.java:289)
+	at org.h2.build.BuildBase.runTarget(BuildBase.java:254)
+	at org.h2.build.BuildBase.run(BuildBase.java:235)
+	at org.h2.build.Build.main(Build.java:83)

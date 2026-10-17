@@ -1,0 +1,1702 @@
+﻿2026-10-17T18:26:59.2888832Z Current runner version: '2.337.0'
+2026-10-17T18:26:59.2912914Z ##[group]Runner Image Provisioner
+2026-10-17T18:26:59.2913801Z Hosted Compute Agent
+2026-10-17T18:26:59.2914531Z Version: 20261012.601
+2026-10-17T18:26:59.2915501Z Commit: f3dc54e1fb89da6852db922499a0233137369e1d
+2026-10-17T18:26:59.2916242Z Build Date: 2026-10-12T17:48:21Z
+2026-10-17T18:26:59.2917078Z Worker ID: {aac408e7-35ff-4419-ae9f-c43d100def1c}
+2026-10-17T18:26:59.2917823Z Region: westus
+2026-10-17T18:26:59.2918428Z Cloud: Azure
+2026-10-17T18:26:59.2918995Z ##[endgroup]
+2026-10-17T18:26:59.2920785Z ##[group]Operating System
+2026-10-17T18:26:59.2921572Z Ubuntu
+2026-10-17T18:26:59.2922128Z 24.04.5
+2026-10-17T18:26:59.2923054Z LTS
+2026-10-17T18:26:59.2923725Z ##[endgroup]
+2026-10-17T18:26:59.2924435Z ##[group]Runner Image
+2026-10-17T18:26:59.2925458Z Image: ubuntu-24.04
+2026-10-17T18:26:59.2926107Z Version: 20261012.334.1
+2026-10-17T18:26:59.2927460Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261012.334/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-17T18:26:59.2929057Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261012.334
+2026-10-17T18:26:59.2930129Z ##[endgroup]
+2026-10-17T18:26:59.2931230Z ##[group]GITHUB_TOKEN Permissions
+2026-10-17T18:26:59.2933284Z Contents: read
+2026-10-17T18:26:59.2933917Z Metadata: read
+2026-10-17T18:26:59.2934561Z ##[endgroup]
+2026-10-17T18:26:59.2936942Z Secret source: Actions
+2026-10-17T18:26:59.2937929Z Cache mode: write
+2026-10-17T18:26:59.2938747Z Prepare workflow directory
+2026-10-17T18:26:59.3333640Z Prepare all required actions
+2026-10-17T18:26:59.3383010Z Getting action download info
+2026-10-17T18:26:59.6800484Z Download action repository 'actions/checkout@v6' (SHA:d23441a48e516b6c34aea4fa41551a30e30af803)
+2026-10-17T18:26:59.7898246Z Download action repository 'actions/setup-java@v5' (SHA:b6effb05e454b25005698d916606bdc6ffcbf961)
+2026-10-17T18:27:00.5979133Z Complete job name: Java 11
+2026-10-17T18:27:00.6699946Z ##[group]Run actions/checkout@v6
+2026-10-17T18:27:00.6700951Z with:
+2026-10-17T18:27:00.6701440Z   fetch-depth: 1
+2026-10-17T18:27:00.6701961Z   repository: h2database/h2database
+2026-10-17T18:27:00.6706312Z   token: ***
+2026-10-17T18:27:00.6706811Z   ssh-strict: true
+2026-10-17T18:27:00.6707308Z   ssh-user: git
+2026-10-17T18:27:00.6707809Z   persist-credentials: true
+2026-10-17T18:27:00.6708356Z   clean: true
+2026-10-17T18:27:00.6708846Z   sparse-checkout-cone-mode: true
+2026-10-17T18:27:00.6709423Z   fetch-tags: false
+2026-10-17T18:27:00.6709919Z   show-progress: true
+2026-10-17T18:27:00.6710416Z   lfs: false
+2026-10-17T18:27:00.6710889Z   submodules: false
+2026-10-17T18:27:00.6711456Z   set-safe-directory: true
+2026-10-17T18:27:00.6712036Z   allow-unsafe-pr-checkout: false
+2026-10-17T18:27:00.6712900Z ##[endgroup]
+2026-10-17T18:27:00.7693434Z Syncing repository: h2database/h2database
+2026-10-17T18:27:00.7695833Z ##[group]Getting Git version info
+2026-10-17T18:27:00.7696852Z Working directory is '/home/runner/work/h2database/h2database'
+2026-10-17T18:27:00.7698024Z [command]/usr/bin/git version
+2026-10-17T18:27:00.7769280Z git version 2.55.0
+2026-10-17T18:27:00.7792706Z ##[endgroup]
+2026-10-17T18:27:00.7807463Z Temporarily overriding HOME='/home/runner/work/_temp/3f915285-b53c-4783-b679-815cc587dd8d' before making global git config changes
+2026-10-17T18:27:00.7810058Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T18:27:00.7812425Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/h2database/h2database
+2026-10-17T18:27:00.7856234Z Deleting the contents of '/home/runner/work/h2database/h2database'
+2026-10-17T18:27:00.7861285Z ##[group]Determining repository object format
+2026-10-17T18:27:00.7863888Z ##[endgroup]
+2026-10-17T18:27:00.7865540Z ##[group]Initializing the repository
+2026-10-17T18:27:00.7868368Z [command]/usr/bin/git init /home/runner/work/h2database/h2database
+2026-10-17T18:27:00.7979634Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-17T18:27:00.7981507Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-17T18:27:00.7983652Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-17T18:27:00.7985274Z hint: call:
+2026-10-17T18:27:00.7986062Z hint:
+2026-10-17T18:27:00.7986686Z hint: 	git config --global init.defaultBranch <name>
+2026-10-17T18:27:00.7987898Z hint:
+2026-10-17T18:27:00.7988987Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-17T18:27:00.7990284Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-17T18:27:00.7991109Z hint:
+2026-10-17T18:27:00.7991582Z hint: 	git branch -m <name>
+2026-10-17T18:27:00.7992459Z hint:
+2026-10-17T18:27:00.7993777Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-17T18:27:00.7996021Z Initialized empty Git repository in /home/runner/work/h2database/h2database/.git/
+2026-10-17T18:27:00.7998374Z [command]/usr/bin/git remote add origin https://github.com/h2database/h2database
+2026-10-17T18:27:00.8036874Z ##[endgroup]
+2026-10-17T18:27:00.8038331Z ##[group]Disabling automatic garbage collection
+2026-10-17T18:27:00.8040084Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-17T18:27:00.8068838Z ##[endgroup]
+2026-10-17T18:27:00.8070184Z ##[group]Setting up auth
+2026-10-17T18:27:00.8071174Z Removing SSH command configuration
+2026-10-17T18:27:00.8075827Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T18:27:00.8105780Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T18:27:00.8438896Z Removing HTTP extra header
+2026-10-17T18:27:00.8444142Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T18:27:00.8476588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T18:27:00.8686587Z Removing includeIf entries pointing to credentials config files
+2026-10-17T18:27:00.8692463Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T18:27:00.8722742Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T18:27:00.8941382Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-17T18:27:00.8976383Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/h2database/h2database/.git.path /home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:27:00.9005760Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/h2database/h2database/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:27:00.9042177Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:27:00.9073011Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:27:00.9134254Z ##[endgroup]
+2026-10-17T18:27:00.9135873Z ##[group]Fetching the repository
+2026-10-17T18:27:00.9142386Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f2922a7766ec2472bc65d5e5ab4086390a76a42c:refs/remotes/origin/master
+2026-10-17T18:27:01.8802284Z From https://github.com/h2database/h2database
+2026-10-17T18:27:01.8803844Z  * [new ref]         f2922a7766ec2472bc65d5e5ab4086390a76a42c -> origin/master
+2026-10-17T18:27:01.8815119Z [command]/usr/bin/git branch --list --remote origin/master
+2026-10-17T18:27:01.8840049Z   origin/master
+2026-10-17T18:27:01.8848889Z [command]/usr/bin/git rev-parse refs/remotes/origin/master
+2026-10-17T18:27:01.8870757Z f2922a7766ec2472bc65d5e5ab4086390a76a42c
+2026-10-17T18:27:01.8875348Z ##[endgroup]
+2026-10-17T18:27:01.8876495Z ##[group]Determining the checkout info
+2026-10-17T18:27:01.8877671Z ##[endgroup]
+2026-10-17T18:27:01.8881378Z [command]/usr/bin/git sparse-checkout disable
+2026-10-17T18:27:01.8929685Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-17T18:27:01.8957026Z ##[group]Checking out the ref
+2026-10-17T18:27:01.8961648Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+2026-10-17T18:27:02.0231503Z Reset branch 'master'
+2026-10-17T18:27:02.0235797Z branch 'master' set up to track 'origin/master'.
+2026-10-17T18:27:02.0245694Z ##[endgroup]
+2026-10-17T18:27:02.0289513Z [command]/usr/bin/git log -1 --format=%H
+2026-10-17T18:27:02.0312580Z f2922a7766ec2472bc65d5e5ab4086390a76a42c
+2026-10-17T18:27:02.0639317Z ##[group]Run actions/setup-java@v5
+2026-10-17T18:27:02.0639953Z with:
+2026-10-17T18:27:02.0640379Z   java-version: 11
+2026-10-17T18:27:02.0640836Z   distribution: temurin
+2026-10-17T18:27:02.0641304Z   java-package: jdk
+2026-10-17T18:27:02.0641760Z   check-latest: false
+2026-10-17T18:27:02.0642216Z   set-default: true
+2026-10-17T18:27:02.0642677Z   verify-signature: false
+2026-10-17T18:27:02.0643150Z   server-id: github
+2026-10-17T18:27:02.0643616Z   server-username: GITHUB_ACTOR
+2026-10-17T18:27:02.0644151Z   server-password: GITHUB_TOKEN
+2026-10-17T18:27:02.0644678Z   overwrite-settings: true
+2026-10-17T18:27:02.0645349Z   job-status: success
+2026-10-17T18:27:02.0649333Z   token: ***
+2026-10-17T18:27:02.0649793Z   show-download-progress: false
+2026-10-17T18:27:02.0650321Z ##[endgroup]
+2026-10-17T18:27:02.2222070Z ##[group]Installed distributions
+2026-10-17T18:27:02.2289151Z Resolved Java 11.0.32+1 from tool-cache
+2026-10-17T18:27:02.2290412Z Setting Java 11.0.32+1 as the default
+2026-10-17T18:27:02.2300654Z Creating toolchains.xml for JDK version 11 from temurin
+2026-10-17T18:27:02.2376961Z Writing to /home/runner/.m2/toolchains.xml
+2026-10-17T18:27:02.2377882Z 
+2026-10-17T18:27:02.2378264Z Java configuration:
+2026-10-17T18:27:02.2378970Z   Distribution: temurin
+2026-10-17T18:27:02.2379605Z   Version: 11.0.32+1
+2026-10-17T18:27:02.2380434Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.32-1/x64
+2026-10-17T18:27:02.2381495Z 
+2026-10-17T18:27:02.2382183Z ##[endgroup]
+2026-10-17T18:27:02.2410351Z Creating settings.xml with server-id: github
+2026-10-17T18:27:02.2411195Z Writing to /home/runner/.m2/settings.xml
+2026-10-17T18:27:02.2412587Z Configured MAVEN_ARGS to include -ntp to suppress Maven transfer progress logs. Set 'show-download-progress: true' to keep the download progress output.
+2026-10-17T18:27:02.2536505Z ##[group]Run cd h2
+2026-10-17T18:27:02.2537112Z [36;1mcd h2[0m
+2026-10-17T18:27:02.2537628Z [36;1mecho $JAVA_OPTS[0m
+2026-10-17T18:27:02.2538129Z [36;1mexport JAVA_OPTS=-Xmx512m[0m
+2026-10-17T18:27:02.2538674Z [36;1m./build.sh jar testCI[0m
+2026-10-17T18:27:02.2783892Z shell: /usr/bin/bash -e {0}
+2026-10-17T18:27:02.2784585Z env:
+2026-10-17T18:27:02.2785712Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.32-1/x64
+2026-10-17T18:27:02.2787013Z   JAVA_HOME_11_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/11.0.32-1/x64
+2026-10-17T18:27:02.2788059Z   MAVEN_ARGS: -ntp
+2026-10-17T18:27:02.2788641Z ##[endgroup]
+2026-10-17T18:27:02.2898726Z 
+2026-10-17T18:27:06.3646515Z Target: jar
+2026-10-17T18:27:06.3647865Z Deleting temp
+2026-10-17T18:27:06.3742788Z Deleting docs
+2026-10-17T18:27:06.4407137Z Downloading https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar
+2026-10-17T18:27:07.9025398Z Downloading https://repo.maven.apache.org/maven2/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar
+2026-10-17T18:27:07.9666892Z Downloading https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-core/9.7.0/lucene-core-9.7.0.jar
+2026-10-17T18:27:08.2357667Z Downloading https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analysis-common/9.7.0/lucene-analysis-common-9.7.0.jar
+2026-10-17T18:27:08.3766909Z Downloading https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-queryparser/9.7.0/lucene-queryparser-9.7.0.jar
+2026-10-17T18:27:08.4230837Z Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar
+2026-10-17T18:27:08.4449739Z Downloading https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/5.0.0/org.osgi.core-5.0.0.jar
+2026-10-17T18:27:08.4992965Z Downloading https://repo.maven.apache.org/maven2/org/osgi/org.osgi.service.jdbc/1.1.0/org.osgi.service.jdbc-1.1.0.jar
+2026-10-17T18:27:08.5257929Z Downloading https://repo.maven.apache.org/maven2/org/locationtech/jts/jts-core/1.19.0/jts-core-1.19.0.jar
+2026-10-17T18:27:08.6179731Z Downloading https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar
+2026-10-17T18:27:08.6643995Z Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar
+2026-10-17T18:27:08.6965969Z Downloading https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar
+2026-10-17T18:27:08.7727164Z Compiling 942 classes
+2026-10-17T18:27:17.9558317Z Copying 3 files to temp
+2026-10-17T18:27:17.9662856Z Compiling 751 classes
+2026-10-17T18:27:22.3867341Z Copying 332 files to temp
+2026-10-17T18:27:22.4296424Z Javadoc
+2026-10-17T18:27:23.2724799Z Constructing Javadoc information...
+2026-10-17T18:27:24.1999380Z Creating destination directory: "docs/javadoc/"
+2026-10-17T18:27:24.2581853Z Standard Doclet version 11.0.32.1
+2026-10-17T18:27:24.2585786Z Building tree for all the packages and classes...
+2026-10-17T18:27:25.0505279Z Building index for all the packages and classes...
+2026-10-17T18:27:25.1253530Z Building index for all classes...
+2026-10-17T18:27:25.1356627Z Building index for all classes...
+2026-10-17T18:27:25.4630372Z Zip temp/org/h2/util/data.zip (672 KB)
+2026-10-17T18:27:25.4631435Z Copying 1 files to temp/META-INF/versions/21
+2026-10-17T18:27:25.7646536Z Jar bin/h2-2.5.259-SNAPSHOT.jar (2642 KB)
+2026-10-17T18:27:25.7666168Z Target: testCI
+2026-10-17T18:27:25.8858719Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/1.2.127/h2-1.2.127.jar
+2026-10-17T18:27:25.8860036Z Downloading https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.2/postgresql-42.7.2.jar
+2026-10-17T18:27:25.9652279Z Downloading https://repo.maven.apache.org/maven2/org/slf4j/slf4j-nop/2.0.7/slf4j-nop-2.0.7.jar
+2026-10-17T18:27:25.9972357Z Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar
+2026-10-17T18:27:26.0234521Z Downloading https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar
+2026-10-17T18:27:26.0987498Z /usr/lib/jvm/temurin-11-jdk-amd64/bin/java -ea -Xmx128m -XX:MaxDirectMemorySize=2g -Duser.timezone=Etc/UTC -cp src/java10/precompiled:src/java9/precompiled:temp:bin:ext/postgresql-42.7.2.jar:ext/javax.servlet-api-4.0.1.jar:ext/jakarta.servlet-api-5.0.0.jar:ext/lucene-core-9.7.0.jar:ext/lucene-analysis-common-9.7.0.jar:ext/lucene-queryparser-9.7.0.jar:ext/org.osgi.core-5.0.0.jar:ext/org.osgi.service.jdbc-1.1.0.jar:ext/jts-core-1.19.0.jar:ext/slf4j-api-2.0.7.jar:ext/slf4j-nop-2.0.7.jar:ext/asm-9.5.jar:/usr/lib/jvm/temurin-11-jdk-amd64/../lib/tools.jar org.h2.test.TestAll ci
+2026-10-17T18:27:26.3006279Z H2 2.5.259-SNAPSHOT (2026-09-23) @ 2026-10-17 18:27:26.277
+2026-10-17T18:27:26.3212519Z Java 11.0.32.1+1, OpenJDK 64-Bit Server VM, Eclipse Adoptium, 64
+2026-10-17T18:27:26.3650743Z Linux, amd64, 6.17.0-1022-azure, unknown, / : \n null en Etc/UTC null UTF-8
+2026-10-17T18:27:26.3665941Z 
+2026-10-17T18:27:26.5646315Z Test memory  (1671 KB used)
+2026-10-17T18:27:39.7216142Z 18:27:39 00:13.097 org.h2.test.scripts.TestScript 
+2026-10-17T18:27:39.7435203Z 18:27:39 00:00.021 org.h2.test.db.TestAlter 
+2026-10-17T18:27:39.8084636Z 18:27:39 00:00.062 org.h2.test.db.TestAlterSchemaRename 
+2026-10-17T18:27:39.8269847Z 18:27:39 00:00.016 org.h2.test.db.TestAutoRecompile 
+2026-10-17T18:27:40.3386218Z 18:27:40 00:00.506 org.h2.test.db.TestCases 
+2026-10-17T18:27:40.3423353Z 18:27:40 00:00.001 org.h2.test.db.TestCheckpoint 
+2026-10-17T18:27:41.0383265Z 18:27:41 00:00.697 org.h2.test.db.TestCompatibility 
+2026-10-17T18:27:41.0593535Z 18:27:41 00:00.018 org.h2.test.db.TestCompatibilityOracle 
+2026-10-17T18:27:41.0619421Z 18:27:41 00:00.002 org.h2.test.db.TestCompatibilitySQLServer 
+2026-10-17T18:27:41.1396873Z 18:27:41 00:00.076 org.h2.test.db.TestCsv 
+2026-10-17T18:27:43.6582098Z 18:27:43 00:02.516 org.h2.test.db.TestDeadlock 
+2026-10-17T18:27:43.6716066Z 18:27:43 00:00.012 org.h2.test.db.TestDuplicateKeyUpdate 
+2026-10-17T18:27:43.6784295Z 18:27:43 00:00.005 org.h2.test.db.TestExclusive 
+2026-10-17T18:27:43.8665752Z 18:27:43 00:00.187 org.h2.test.db.TestFullText create FT: 2
+2026-10-17T18:27:43.8708706Z 18:27:43 00:00.191 org.h2.test.db.TestFullText search FT: 0 count: 0
+2026-10-17T18:27:46.4543731Z 18:27:46 00:02.775 org.h2.test.db.TestFullText create FTL: 3
+2026-10-17T18:27:46.4557652Z 18:27:46 00:02.775 org.h2.test.db.TestFullText search FTL: 0 count: 0
+2026-10-17T18:27:46.4559509Z 18:27:46 00:02.776 org.h2.test.db.TestFullText 
+2026-10-17T18:27:46.4636694Z 18:27:46 00:00.007 org.h2.test.db.TestFunctionOverload 
+2026-10-17T18:27:46.8614364Z 18:27:46 00:00.395 org.h2.test.db.TestFunctions 
+2026-10-17T18:27:46.8656753Z 18:27:46 00:00.003 org.h2.test.server.TestInit 
+2026-10-17T18:27:48.4741605Z 18:27:48 00:01.607 org.h2.test.db.TestIndex 
+2026-10-17T18:27:48.4767010Z 18:27:48 00:00.002 org.h2.test.db.TestIndexHints 
+2026-10-17T18:27:48.4816275Z 18:27:48 00:00.003 org.h2.test.db.TestCompoundIndexSearch 
+2026-10-17T18:27:48.4881526Z 18:27:48 00:00.006 org.h2.test.db.TestCompoundIndexParamSearch 
+2026-10-17T18:27:48.5103404Z 18:27:48 00:00.020 org.h2.test.db.TestLinkedTable 
+2026-10-17T18:27:48.5150726Z 18:27:48 00:00.004 org.h2.test.db.TestListener 
+2026-10-17T18:27:59.9951188Z 18:27:59 00:11.476 org.h2.test.db.TestLob 
+2026-10-17T18:27:59.9969504Z 18:27:59 00:00.001 org.h2.test.db.TestMaterializedView 
+2026-10-17T18:28:00.0168409Z 18:28:00 00:00.019 org.h2.test.db.TestMergeUsing 
+2026-10-17T18:28:00.4130946Z 18:28:00 00:00.395 org.h2.test.db.TestMultiConn 
+2026-10-17T18:28:00.4651356Z 18:28:00 00:00.049 org.h2.test.db.TestMultiDimension 
+2026-10-17T18:28:03.4776495Z 18:28:03 00:03.013 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:28:04.5324209Z 18:28:04 00:01.054 org.h2.test.db.TestOpenClose 
+2026-10-17T18:28:04.5762286Z 18:28:04 00:00.041 org.h2.test.db.TestRecursiveQueries 
+2026-10-17T18:28:04.6014216Z 18:28:04 00:00.023 org.h2.test.db.TestGeneralCommonTableQueries 
+2026-10-17T18:28:04.6088202Z 18:28:04 00:00.006 org.h2.test.db.TestAlterTableNotFound 
+2026-10-17T18:28:04.6150057Z 18:28:04 00:00.004 org.h2.test.db.TestSelectTableNotFound 
+2026-10-17T18:28:04.6522193Z 18:28:04 00:00.035 org.h2.test.db.TestRights 
+2026-10-17T18:28:04.8827336Z 18:28:04 00:00.229 org.h2.test.db.TestRunscript 
+2026-10-17T18:28:04.8847132Z 18:28:04 00:00.001 org.h2.test.db.TestSQLInjection 
+2026-10-17T18:28:05.1021856Z 18:28:05 00:00.217 org.h2.test.db.TestSessionsLocks 
+2026-10-17T18:28:07.1440635Z 18:28:07 00:02.041 org.h2.test.db.TestSequence 
+2026-10-17T18:28:07.1518198Z 18:28:07 00:00.003 org.h2.test.db.TestSpeed 
+2026-10-17T18:28:07.1822135Z 18:28:07 00:00.028 org.h2.test.db.TestTableEngines 
+2026-10-17T18:28:08.9348941Z 18:28:08 00:01.751 org.h2.test.db.TestTempTables 
+2026-10-17T18:28:16.4926272Z 18:28:16 00:07.554 org.h2.test.db.TestTransaction 
+2026-10-17T18:28:17.3582742Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:28:17.5452917Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:28:17.6976477Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:28:17.7426497Z 18:28:17 00:01.249 org.h2.test.db.TestTriggersConstraints 
+2026-10-17T18:28:17.7990895Z 18:28:17 00:00.055 org.h2.test.db.TestView 
+2026-10-17T18:28:17.8241421Z 18:28:17 00:00.021 org.h2.test.db.TestViewAlterTable 
+2026-10-17T18:28:17.8295802Z 18:28:17 00:00.005 org.h2.test.db.TestViewDropView 
+2026-10-17T18:28:17.8381868Z 18:28:17 00:00.007 org.h2.test.db.TestSynonymForTable 
+2026-10-17T18:28:17.8659925Z 18:28:17 00:00.027 org.h2.test.jdbc.TestBatchUpdates 
+2026-10-17T18:28:17.8949037Z 18:28:17 00:00.027 org.h2.test.jdbc.TestCallableStatement 
+2026-10-17T18:28:19.1200501Z 18:28:19 00:01.224 org.h2.test.jdbc.TestCancel 
+2026-10-17T18:28:19.2766415Z 18:28:19 00:00.154 org.h2.test.jdbc.TestConcurrentConnectionUsage 
+2026-10-17T18:28:19.3443224Z 18:28:19 00:00.068 org.h2.test.jdbc.TestConnection 
+2026-10-17T18:28:19.3463784Z 18:28:19 00:00.001 org.h2.test.jdbc.TestDatabaseEventListener 
+2026-10-17T18:28:19.4687569Z 18:28:19 00:00.121 org.h2.test.jdbc.TestLobApi 
+2026-10-17T18:28:20.4466191Z 18:28:20 00:00.976 org.h2.test.jdbc.TestSQLXML 
+2026-10-17T18:28:20.4496090Z 18:28:20 00:00.001 org.h2.test.jdbc.TestManyJdbcObjects 
+2026-10-17T18:28:20.5174351Z 18:28:20 00:00.068 org.h2.test.jdbc.TestMetaData 
+2026-10-17T18:28:20.5278481Z 18:28:20 00:00.009 org.h2.test.jdbc.TestNativeSQL 
+2026-10-17T18:28:20.8306273Z 18:28:20 00:00.300 org.h2.test.jdbc.TestPreparedStatement 
+2026-10-17T18:28:20.8985735Z 18:28:20 00:00.066 org.h2.test.jdbc.TestResultSet 
+2026-10-17T18:28:20.9106548Z 18:28:20 00:00.011 org.h2.test.jdbc.TestStatement 
+2026-10-17T18:28:21.3676468Z 18:28:21 00:00.454 org.h2.test.jdbc.TestGetGeneratedKeys 
+2026-10-17T18:28:22.9837314Z 18:28:22 00:01.615 org.h2.test.jdbc.TestTransactionIsolation 
+2026-10-17T18:28:23.0146688Z 18:28:23 00:00.029 org.h2.test.jdbc.TestUpdatableResultSet 
+2026-10-17T18:28:23.0188755Z 18:28:23 00:00.001 org.h2.test.jdbc.TestZloty 
+2026-10-17T18:28:23.0327366Z 18:28:23 00:00.013 org.h2.test.db.TestSetCollation 
+2026-10-17T18:28:29.0608665Z 18:28:29 00:06.026 org.h2.test.jdbc.TestCachedQueryResults 
+2026-10-17T18:28:31.1211688Z 18:28:31 00:02.059 org.h2.test.jdbcx.TestConnectionPool 
+2026-10-17T18:28:31.1275273Z 18:28:31 00:00.005 org.h2.test.jdbcx.TestDataSource 
+2026-10-17T18:28:31.1355680Z 18:28:31 00:00.004 org.h2.test.jdbcx.TestXA 
+2026-10-17T18:28:31.1356672Z 18:28:31 00:00.000 org.h2.test.jdbcx.TestXASimple 
+2026-10-17T18:28:31.1358809Z 18:28:31 00:00.001 org.h2.test.server.TestAutoServer 
+2026-10-17T18:28:31.2562260Z 18:28:31 00:00.119 org.h2.test.server.TestNestedLoop 
+2026-10-17T18:28:31.3270574Z 18:28:31 00:00.070 org.h2.test.mvcc.TestMvcc1 
+2026-10-17T18:28:31.3816028Z 18:28:31 00:00.053 org.h2.test.mvcc.TestMvcc2 
+2026-10-17T18:28:31.4377649Z 18:28:31 00:00.054 org.h2.test.mvcc.TestMvcc3 
+2026-10-17T18:28:31.4438448Z 18:28:31 00:00.007 org.h2.test.mvcc.TestMvcc4 
+2026-10-17T18:28:33.5020360Z 18:28:33 00:02.057 org.h2.test.mvcc.TestMvccMultiThreaded 
+2026-10-17T18:28:39.5290902Z 18:28:39 00:06.026 org.h2.test.mvcc.TestMvccMultiThreaded2 
+2026-10-17T18:28:39.6834452Z 18:28:39 00:00.153 org.h2.test.rowlock.TestRowLocks 
+2026-10-17T18:28:40.1444826Z 18:28:40 00:00.460 org.h2.test.db.TestAnalyzeTableTx 
+2026-10-17T18:28:40.2840011Z 18:28:40 00:00.139 org.h2.test.synth.TestBtreeIndex 18:28:40 testIndex 453204414
+2026-10-17T18:28:40.3136258Z 18:28:40 00:00.166 org.h2.test.synth.TestBtreeIndex 
+2026-10-17T18:28:42.3236492Z 18:28:42 00:02.009 org.h2.test.synth.TestConcurrentUpdate 
+2026-10-17T18:28:42.3724373Z 18:28:42 00:00.048 org.h2.test.synth.TestDiskFull write op count: 367
+2026-10-17T18:28:45.6385440Z 18:28:45 00:03.313 org.h2.test.synth.TestDiskFull 
+2026-10-17T18:28:55.2306274Z 18:28:55 00:09.591 org.h2.test.synth.TestCrashAPI 18:28:55 seed: 779741255
+2026-10-17T18:29:46.2388312Z 18:29:46 01:00.599 org.h2.test.synth.TestCrashAPI stopping...
+2026-10-17T18:29:47.2391174Z 18:29:47 01:01.600 org.h2.test.synth.TestCrashAPI 
+2026-10-17T18:29:47.2537180Z 18:29:47 00:00.013 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4379447531566845572
+2026-10-17T18:29:47.2568717Z 18:29:47 00:00.015 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 97065034755683336
+2026-10-17T18:29:47.2595926Z 18:29:47 00:00.017 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4190235096284299791
+2026-10-17T18:29:47.2625923Z 18:29:47 00:00.017 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2828013901817589509
+2026-10-17T18:29:47.2655693Z 18:29:47 00:00.023 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1951490963648675252
+2026-10-17T18:29:47.2690855Z 18:29:47 00:00.029 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2782016520800362537
+2026-10-17T18:29:47.2735977Z 18:29:47 00:00.030 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1085958658371339274
+2026-10-17T18:29:47.2746211Z 18:29:47 00:00.033 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3020095978104897069
+2026-10-17T18:29:47.2776327Z 18:29:47 00:00.035 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2407495774871602324
+2026-10-17T18:29:47.2806361Z 18:29:47 00:00.036 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4408086221967288554
+2026-10-17T18:29:47.2845816Z 18:29:47 00:00.037 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9113391006095369998
+2026-10-17T18:29:47.2847170Z 18:29:47 00:00.038 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 689874898277527948
+2026-10-17T18:29:47.2848227Z 18:29:47 00:00.038 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7016005793547092700
+2026-10-17T18:29:47.2849287Z 18:29:47 00:00.042 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5356444146393258958
+2026-10-17T18:29:47.2865737Z 18:29:47 00:00.046 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -13905106686673170
+2026-10-17T18:29:47.2925781Z 18:29:47 00:00.051 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5844888485313490620
+2026-10-17T18:29:47.2953900Z 18:29:47 00:00.055 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1269637633152370075
+2026-10-17T18:29:47.2985858Z 18:29:47 00:00.056 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3235533685363967901
+2026-10-17T18:29:47.2986971Z 18:29:47 00:00.056 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2300580156577561387
+2026-10-17T18:29:47.2988006Z 18:29:47 00:00.057 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 579269601627822458
+2026-10-17T18:29:47.2989040Z 18:29:47 00:00.058 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6126087688119149029
+2026-10-17T18:29:47.3045834Z 18:29:47 00:00.064 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4150809070040277217
+2026-10-17T18:29:47.3075784Z 18:29:47 00:00.065 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1596918178490902265
+2026-10-17T18:29:47.3146098Z 18:29:47 00:00.074 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8083296124611956710
+2026-10-17T18:29:47.3176435Z 18:29:47 00:00.075 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 464803197720260823
+2026-10-17T18:29:47.3206484Z 18:29:47 00:00.075 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1825115642518243734
+2026-10-17T18:29:47.3229357Z 18:29:47 00:00.078 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5622791879658516596
+2026-10-17T18:29:47.3230712Z 18:29:47 00:00.080 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 914720178467498655
+2026-10-17T18:29:47.3232171Z 18:29:47 00:00.080 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3267029359828913296
+2026-10-17T18:29:47.3254126Z 18:29:47 00:00.085 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4606562766143605301
+2026-10-17T18:29:47.3266349Z 18:29:47 00:00.086 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2584968552709378264
+2026-10-17T18:29:47.3293986Z 18:29:47 00:00.089 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 416484696732649803
+2026-10-17T18:29:47.3314799Z 18:29:47 00:00.091 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4193227182920082187
+2026-10-17T18:29:47.3383290Z 18:29:47 00:00.098 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3233337308481699878
+2026-10-17T18:29:47.3414375Z 18:29:47 00:00.101 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6835422309343632056
+2026-10-17T18:29:47.3430095Z 18:29:47 00:00.103 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5363070273454231789
+2026-10-17T18:29:47.3472258Z 18:29:47 00:00.107 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4848731200950229862
+2026-10-17T18:29:47.3475811Z 18:29:47 00:00.107 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2126371260552482100
+2026-10-17T18:29:47.3504811Z 18:29:47 00:00.110 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5152366617278875444
+2026-10-17T18:29:47.3598815Z 18:29:47 00:00.120 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8062208007193538340
+2026-10-17T18:29:47.3609449Z 18:29:47 00:00.121 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5651600652926904733
+2026-10-17T18:29:47.3619571Z 18:29:47 00:00.122 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5821490336849961654
+2026-10-17T18:29:47.3680199Z 18:29:47 00:00.128 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2553222951714217863
+2026-10-17T18:29:47.3809184Z 18:29:47 00:00.141 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8042355015281338671
+2026-10-17T18:29:47.3829227Z 18:29:47 00:00.143 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1290407198261198568
+2026-10-17T18:29:47.3832343Z 18:29:47 00:00.143 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7572309366670022149
+2026-10-17T18:29:47.3840282Z 18:29:47 00:00.144 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6291320886818888567
+2026-10-17T18:29:47.3849274Z 18:29:47 00:00.145 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7646368601328839191
+2026-10-17T18:29:47.3900298Z 18:29:47 00:00.150 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6523766098331686273
+2026-10-17T18:29:47.4037193Z 18:29:47 00:00.163 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3061429434973168135
+2026-10-17T18:29:47.4040234Z 18:29:47 00:00.164 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2240116732706167249
+2026-10-17T18:29:47.4049105Z 18:29:47 00:00.165 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5792948923342857100
+2026-10-17T18:29:47.4056529Z 18:29:47 00:00.165 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3961246358063401431
+2026-10-17T18:29:47.4080977Z 18:29:47 00:00.168 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7621804368443602072
+2026-10-17T18:29:47.4084521Z 18:29:47 00:00.168 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4476734952939779320
+2026-10-17T18:29:47.4092491Z 18:29:47 00:00.169 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8259490649995746732
+2026-10-17T18:29:47.4102350Z 18:29:47 00:00.170 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3589574383842956991
+2026-10-17T18:29:47.4206926Z 18:29:47 00:00.180 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3611010210194942698
+2026-10-17T18:29:47.4272631Z 18:29:47 00:00.187 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5073316905737254977
+2026-10-17T18:29:47.4310883Z 18:29:47 00:00.191 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2106323251366576387
+2026-10-17T18:29:47.4328506Z 18:29:47 00:00.193 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1574115725085344051
+2026-10-17T18:29:47.4340641Z 18:29:47 00:00.194 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6338138072867519291
+2026-10-17T18:29:47.4360043Z 18:29:47 00:00.196 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4829352699673704802
+2026-10-17T18:29:47.4365827Z 18:29:47 00:00.196 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4811791580993526110
+2026-10-17T18:29:47.4376949Z 18:29:47 00:00.197 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6060764681120082231
+2026-10-17T18:29:47.4378362Z 18:29:47 00:00.197 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8005694968467175277
+2026-10-17T18:29:47.4427816Z 18:29:47 00:00.202 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1202964433736531719
+2026-10-17T18:29:47.4441148Z 18:29:47 00:00.204 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8975277781164264622
+2026-10-17T18:29:47.4458363Z 18:29:47 00:00.206 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2216336354211638335
+2026-10-17T18:29:47.4478114Z 18:29:47 00:00.207 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2280656488992848441
+2026-10-17T18:29:47.4494870Z 18:29:47 00:00.209 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -341526047536200955
+2026-10-17T18:29:47.4498845Z 18:29:47 00:00.210 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4412418715475120064
+2026-10-17T18:29:47.4500429Z 18:29:47 00:00.210 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1008526066927124856
+2026-10-17T18:29:47.4504811Z 18:29:47 00:00.210 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8765514958501693229
+2026-10-17T18:29:47.4528966Z 18:29:47 00:00.213 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3742509962899282069
+2026-10-17T18:29:47.4584187Z 18:29:47 00:00.218 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8167094600600892955
+2026-10-17T18:29:47.4586686Z 18:29:47 00:00.218 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4642876693827951494
+2026-10-17T18:29:47.4595706Z 18:29:47 00:00.219 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -628989648317903276
+2026-10-17T18:29:47.4619142Z 18:29:47 00:00.221 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8553715001989030514
+2026-10-17T18:29:47.4629985Z 18:29:47 00:00.223 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 111685724477676659
+2026-10-17T18:29:47.4676401Z 18:29:47 00:00.225 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9116832736811897328
+2026-10-17T18:29:47.4713016Z 18:29:47 00:00.231 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6106569029905370450
+2026-10-17T18:29:47.4733234Z 18:29:47 00:00.233 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6192182254906827449
+2026-10-17T18:29:47.4743014Z 18:29:47 00:00.234 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7691169183338021954
+2026-10-17T18:29:47.4752255Z 18:29:47 00:00.235 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4824360466849670567
+2026-10-17T18:29:47.4764384Z 18:29:47 00:00.236 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6312724079624230249
+2026-10-17T18:29:47.4773883Z 18:29:47 00:00.237 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2528826206709666182
+2026-10-17T18:29:47.4794316Z 18:29:47 00:00.239 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4393036028224775087
+2026-10-17T18:29:47.4803824Z 18:29:47 00:00.240 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8530862545824226065
+2026-10-17T18:29:47.4871724Z 18:29:47 00:00.247 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6707590187816598835
+2026-10-17T18:29:47.4874476Z 18:29:47 00:00.247 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6603437490123268735
+2026-10-17T18:29:47.4882304Z 18:29:47 00:00.248 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4416258685086064540
+2026-10-17T18:29:47.4913197Z 18:29:47 00:00.250 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2526697155830275525
+2026-10-17T18:29:47.4914663Z 18:29:47 00:00.250 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2487724637642654457
+2026-10-17T18:29:47.4926210Z 18:29:47 00:00.252 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4547816449205808081
+2026-10-17T18:29:47.4946098Z 18:29:47 00:00.254 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6225702069198482414
+2026-10-17T18:29:47.5025934Z 18:29:47 00:00.260 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9200581101673605628
+2026-10-17T18:29:47.5027044Z 18:29:47 00:00.261 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -157797163431463681
+2026-10-17T18:29:47.5028116Z 18:29:47 00:00.262 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -355291315879357116
+2026-10-17T18:29:47.5055984Z 18:29:47 00:00.263 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 347571411181185038
+2026-10-17T18:29:47.5077296Z 18:29:47 00:00.266 org.h2.test.synth.TestFuzzOptimizations testGroupSorted() seed: -3556208403128825517
+2026-10-17T18:29:47.7151478Z 18:29:47 00:00.475 org.h2.test.synth.TestFuzzOptimizations testInSelect() seed: 1813095780817077645
+2026-10-17T18:29:47.7299863Z 18:29:47 00:00.489 org.h2.test.synth.TestFuzzOptimizations 
+2026-10-17T18:29:48.2589178Z 18:29:48 00:00.528 org.h2.test.synth.TestLimit 
+2026-10-17T18:29:48.3566527Z 18:29:48 00:00.095 org.h2.test.synth.TestRandomCompare 
+2026-10-17T18:29:48.9491902Z 18:29:48 00:00.592 org.h2.test.synth.TestKillRestart 18:29:48 killing: 0
+2026-10-17T18:29:49.5268457Z 18:29:49 00:01.166 org.h2.test.synth.TestKillRestart 18:29:49 killing: 1
+2026-10-17T18:29:49.5656325Z 18:29:49 00:01.208 org.h2.test.synth.TestKillRestart 
+2026-10-17T18:29:50.2803423Z 18:29:50 00:00.714 org.h2.test.synth.TestKillRestartMulti 18:29:50 killing: 0
+2026-10-17T18:29:50.2808779Z 18:29:50 00:00.714 org.h2.test.synth.TestKillRestartMulti 18:29:50 killing, waiting for: 0
+2026-10-17T18:29:50.3083210Z 18:29:50 00:00.742 org.h2.test.synth.TestKillRestartMulti 18:29:50 killing, dead: 0
+2026-10-17T18:29:51.0586486Z 18:29:51 00:01.490 org.h2.test.synth.TestKillRestartMulti 18:29:51 killing: 1
+2026-10-17T18:29:51.0616091Z 18:29:51 00:01.490 org.h2.test.synth.TestKillRestartMulti 18:29:51 killing, waiting for: 1
+2026-10-17T18:29:51.0890924Z 18:29:51 00:01.523 org.h2.test.synth.TestKillRestartMulti 18:29:51 killing, dead: 1
+2026-10-17T18:29:51.9047568Z 18:29:51 00:02.338 org.h2.test.synth.TestKillRestartMulti 18:29:51 killing: 2
+2026-10-17T18:29:51.9065792Z 18:29:51 00:02.338 org.h2.test.synth.TestKillRestartMulti 18:29:51 killing, waiting for: 2
+2026-10-17T18:29:51.9288281Z 18:29:51 00:02.362 org.h2.test.synth.TestKillRestartMulti 18:29:51 killing, dead: 2
+2026-10-17T18:29:51.9311776Z 18:29:51 00:02.363 org.h2.test.synth.TestKillRestartMulti 
+2026-10-17T18:29:54.1326028Z 18:29:54 00:02.202 org.h2.test.synth.TestMultiThreaded 
+2026-10-17T18:29:54.1779440Z 18:29:54 00:00.044 org.h2.test.synth.TestOuterJoins 
+2026-10-17T18:29:54.5957852Z 18:29:54 00:00.417 org.h2.test.synth.TestNestedJoins 
+2026-10-17T18:29:54.9882945Z 18:29:54 00:00.361 org.h2.test.db.TestDateStorage 
+2026-10-17T18:29:54.9906563Z 18:29:54 00:00.002 org.h2.test.jdbc.TestDriver 
+2026-10-17T18:29:54.9924393Z 18:29:54 00:00.001 org.h2.test.jdbc.TestJavaObjectSerializer 
+2026-10-17T18:29:54.9936380Z 18:29:54 00:00.000 org.h2.test.unit.TestLocale 
+2026-10-17T18:29:54.9957785Z 18:29:54 00:00.001 org.h2.test.db.TestMemoryUsage 
+2026-10-17T18:29:59.4810573Z 18:29:59 00:04.481 org.h2.test.db.TestMultiThread 
+2026-10-17T18:29:59.4821710Z 18:29:59 00:00.000 org.h2.test.poweroff.TestReorderWrites testMVStore(): Disable partial write
+2026-10-17T18:29:59.8316391Z 18:29:59 00:00.346 org.h2.test.poweroff.TestReorderWrites testMVStore(): Enable partial write
+2026-10-17T18:30:00.0990042Z 18:30:00 00:00.616 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Disable partial write
+2026-10-17T18:30:00.1346922Z 18:30:00 00:00.651 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Enable partial write
+2026-10-17T18:30:00.1528498Z 18:30:00 00:00.670 org.h2.test.poweroff.TestReorderWrites 
+2026-10-17T18:30:00.1535044Z 18:30:00 00:00.000 org.h2.test.synth.TestRandomSQL 18:30:00 seed: 488304783
+2026-10-17T18:30:00.1848873Z 18:30:00 00:00.031 org.h2.test.synth.TestRandomSQL 18:30:00 seed: 1960478084
+2026-10-17T18:30:00.2002864Z 18:30:00 00:00.046 org.h2.test.synth.TestRandomSQL 18:30:00 total: 100 success: 14%
+2026-10-17T18:30:00.2032803Z 18:30:00 00:00.049 org.h2.test.synth.TestRandomSQL 
+2026-10-17T18:30:00.2867554Z 18:30:00 00:00.082 org.h2.test.db.TestQueryCache 
+2026-10-17T18:30:00.2896159Z 18:30:00 00:00.001 org.h2.test.jdbc.TestUrlJavaObjectSerializer 
+2026-10-17T18:30:06.1040723Z 18:30:06 00:05.813 org.h2.test.server.TestWeb 
+2026-10-17T18:30:06.1236070Z 18:30:06 00:00.009 org.h2.test.server.TestJakartaWeb 
+2026-10-17T18:30:08.2010481Z 18:30:08 00:02.074 org.h2.test.db.TestOptimizations 
+2026-10-17T18:30:08.3135259Z 18:30:08 00:00.112 org.h2.test.db.TestOutOfMemory 
+2026-10-17T18:30:08.3227344Z 18:30:08 00:00.008 org.h2.test.db.TestIgnoreCatalogs 
+2026-10-17T18:30:08.3331101Z 18:30:08 00:00.007 org.h2.test.store.TestMVTableEngine 
+2026-10-17T18:30:12.3801165Z 18:30:12 00:04.046 org.h2.test.unit.TestAutoReconnect 
+2026-10-17T18:30:12.4976204Z 18:30:12 00:00.116 org.h2.test.unit.TestBnf 
+2026-10-17T18:30:12.5005774Z 18:30:12 00:00.002 org.h2.test.unit.TestCache 
+2026-10-17T18:30:12.5085687Z 18:30:12 00:00.007 org.h2.test.unit.TestCollation 
+2026-10-17T18:30:16.8129939Z 18:30:16 00:04.303 org.h2.test.unit.TestCompress 
+2026-10-17T18:30:16.8203889Z 18:30:16 00:00.007 org.h2.test.unit.TestConnectionInfo 
+2026-10-17T18:30:17.7880995Z 18:30:17 00:00.967 org.h2.test.unit.TestExit 
+2026-10-17T18:30:34.7220130Z 18:30:34 00:16.933 org.h2.test.unit.TestFileLock 
+2026-10-17T18:30:34.8457614Z 18:30:34 00:00.123 org.h2.test.unit.TestJmx 
+2026-10-17T18:30:37.8514016Z 18:30:37 00:03.005 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:30:54.5986347Z 18:30:54 00:16.742 org.h2.test.unit.TestPgServer 
+2026-10-17T18:30:54.6446342Z 18:30:54 00:00.043 org.h2.test.unit.TestTimeStampWithTimeZone 
+2026-10-17T18:30:54.6526113Z 18:30:54 00:00.006 org.h2.test.unit.TestValue 
+2026-10-17T18:30:54.6554388Z 18:30:54 00:00.000 org.h2.test.unit.TestFileLockProcess socket
+2026-10-17T18:30:54.7590827Z 18:30:54 00:00.104 org.h2.test.unit.TestFileLockProcess 0/4
+2026-10-17T18:30:56.7939221Z 18:30:56 00:02.139 org.h2.test.unit.TestFileLockProcess fs
+2026-10-17T18:30:56.8954755Z 18:30:56 00:02.240 org.h2.test.unit.TestFileLockProcess 0/4
+2026-10-17T18:30:57.8991136Z 18:30:57 00:03.244 org.h2.test.unit.TestFileLockProcess default
+2026-10-17T18:30:58.0005408Z 18:30:58 00:03.345 org.h2.test.unit.TestFileLockProcess 0/50
+2026-10-17T18:30:59.0386212Z 18:30:59 00:04.380 org.h2.test.unit.TestFileLockProcess 10/50
+2026-10-17T18:31:00.0974218Z 18:31:00 00:05.430 org.h2.test.unit.TestFileLockProcess 20/50
+2026-10-17T18:31:01.1816489Z 18:31:01 00:06.526 org.h2.test.unit.TestFileLockProcess 30/50
+2026-10-17T18:31:02.2772879Z 18:31:02 00:07.616 org.h2.test.unit.TestFileLockProcess 40/50
+2026-10-17T18:31:09.2441829Z 18:31:09 00:14.589 org.h2.test.unit.TestFileLockProcess 
+2026-10-17T18:31:13.1626212Z 18:31:13 00:03.914 org.h2.test.unit.TestTools 
+2026-10-17T18:31:13.4801894Z 18:31:13 00:00.317 org.h2.test.unit.TestSampleApps 
+2026-10-17T18:31:13.4808502Z 
+2026-10-17T18:31:13.5563863Z Test utilities (20618 KB used)
+2026-10-17T18:31:15.5581463Z 18:31:15 00:02.002 org.h2.test.store.TestCacheConcurrentLIRS 
+2026-10-17T18:31:15.8701001Z 18:31:15 00:00.311 org.h2.test.store.TestCacheLIRS 
+2026-10-17T18:31:16.6570228Z 18:31:16 00:00.785 org.h2.test.store.TestCacheLongKeyLIRS 
+2026-10-17T18:31:16.9971698Z 18:31:16 00:00.339 org.h2.test.store.TestDataUtils 
+2026-10-17T18:31:18.8009187Z 18:31:18 00:01.803 org.h2.test.store.TestFreeSpace 
+2026-10-17T18:31:21.1316469Z 18:31:21 00:02.328 org.h2.test.store.TestKillProcessWhileWriting 
+2026-10-17T18:31:21.6601870Z 18:31:21 00:00.522 org.h2.test.store.TestMVRTree 
+2026-10-17T18:31:23.2302386Z 18:31:23 00:01.571 org.h2.test.store.TestMVStore 
+2026-10-17T18:31:27.3731945Z 18:31:27 00:04.142 org.h2.test.store.TestMVStoreStopCompact 
+2026-10-17T18:31:29.5052502Z 18:31:29 00:02.130 org.h2.test.store.TestMVStoreTool 
+2026-10-17T18:31:29.6003339Z 18:31:29 00:00.094 org.h2.test.store.TestObjectDataType 
+2026-10-17T18:31:30.6334697Z 18:31:30 00:01.032 org.h2.test.store.TestRandomMapOps 
+2026-10-17T18:31:30.6891618Z 18:31:30 00:00.054 org.h2.test.store.TestSpinLock 
+2026-10-17T18:31:30.8096493Z 18:31:30 00:00.118 org.h2.test.store.TestStreamStore 
+2026-10-17T18:31:32.7785943Z 18:31:32 00:01.968 org.h2.test.store.TestTransactionStore 
+2026-10-17T18:31:41.9314078Z 18:31:41 00:09.152 org.h2.test.unit.TestMVTempResult 
+2026-10-17T18:31:41.9826897Z 18:31:41 00:00.048 org.h2.test.unit.TestConcurrentJdbc 
+2026-10-17T18:31:42.1432717Z 18:31:42 00:00.161 org.h2.test.unit.TestAnsCompression 
+2026-10-17T18:31:42.2207015Z 18:31:42 00:00.076 org.h2.test.unit.TestBinaryArithmeticStream 
+2026-10-17T18:31:42.2214278Z 18:31:42 00:00.000 org.h2.test.unit.TestBinaryOperation 
+2026-10-17T18:31:42.4261629Z 18:31:42 00:00.202 org.h2.test.unit.TestBitStream 
+2026-10-17T18:31:42.4276743Z 18:31:42 00:00.001 org.h2.test.unit.TestCharsetCollator 
+2026-10-17T18:31:42.4315868Z 18:31:42 00:00.001 org.h2.test.unit.TestDateIso8601 
+2026-10-17T18:31:42.4375836Z 18:31:42 00:00.005 org.h2.test.unit.TestDateTimeTemplate 
+2026-10-17T18:31:42.4425845Z 18:31:42 00:00.002 org.h2.test.unit.TestDbException 
+2026-10-17T18:31:42.5466843Z 18:31:42 00:00.105 org.h2.test.unit.TestFile 
+2026-10-17T18:31:57.5029763Z 18:31:57 00:14.955 org.h2.test.unit.TestFileSystem 
+2026-10-17T18:31:57.5579788Z 18:31:57 00:00.054 org.h2.test.unit.TestFtp 
+2026-10-17T18:31:57.5836715Z 18:31:57 00:00.023 org.h2.test.unit.TestGeometryUtils 
+2026-10-17T18:31:57.5895715Z 18:31:57 00:00.005 org.h2.test.unit.TestInterval 
+2026-10-17T18:31:57.5998674Z 18:31:57 00:00.010 org.h2.test.unit.TestIntArray 
+2026-10-17T18:31:58.0102407Z 18:31:58 00:00.409 org.h2.test.unit.TestIntPerfectHash 
+2026-10-17T18:31:58.8937072Z 18:31:58 00:00.881 org.h2.test.unit.TestJsonUtils 
+2026-10-17T18:31:59.4313486Z 18:31:59 00:00.498 org.h2.test.unit.TestKeywords 
+2026-10-17T18:31:59.4498279Z 18:31:59 00:00.017 org.h2.test.unit.TestMathUtils 
+2026-10-17T18:31:59.7586380Z 18:31:59 00:00.308 org.h2.test.unit.TestMemoryUnmapper 
+2026-10-17T18:31:59.7589733Z 18:31:59 00:00.000 org.h2.test.unit.TestMode 
+2026-10-17T18:31:59.7605468Z 18:31:59 00:00.001 org.h2.test.unit.TestObjectDeserialization 
+2026-10-17T18:31:59.8733717Z 18:31:59 00:00.112 org.h2.test.unit.TestOverflow 
+2026-10-17T18:32:01.8400618Z 18:32:01 00:01.966 org.h2.test.unit.TestPerfectHash 
+2026-10-17T18:32:01.8686341Z 18:32:01 00:00.024 org.h2.test.unit.TestScriptReader 
+2026-10-17T18:32:01.8956000Z 18:32:01 00:00.025 org.h2.test.unit.TestSecurity 
+2026-10-17T18:32:02.0657427Z 18:32:02 00:00.171 org.h2.test.unit.TestShell 
+2026-10-17T18:32:02.7769557Z 18:32:02 00:00.710 org.h2.test.unit.TestSort 
+2026-10-17T18:32:02.7954211Z 18:32:02 00:00.017 org.h2.test.unit.TestStreams 
+2026-10-17T18:32:02.8116220Z 18:32:02 00:00.015 org.h2.test.unit.TestStringUtils 
+2026-10-17T18:32:02.8242559Z 18:32:02 00:00.010 org.h2.test.unit.TestTraceSystem 
+2026-10-17T18:32:03.7169104Z 18:32:03 00:00.892 org.h2.test.unit.TestUtils 
+2026-10-17T18:32:03.7218139Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/1.2.120/h2-1.2.120.jar
+2026-10-17T18:32:04.3538178Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/1.2.120/h2-1.2.120.jar
+2026-10-17T18:32:04.5546496Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar
+2026-10-17T18:32:04.8455378Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/1.4.200/h2-1.4.200.jar
+2026-10-17T18:32:05.1101188Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224.jar
+2026-10-17T18:32:05.4362229Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/2.2.224/h2-2.2.224.jar
+2026-10-17T18:32:05.7289906Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/2.5.252/h2-2.5.252.jar
+2026-10-17T18:32:06.0586208Z Downloading https://repo.maven.apache.org/maven2/com/h2database/h2/2.5.252/h2-2.5.252.jar
+2026-10-17T18:32:06.3558871Z 18:32:06 00:02.638 org.h2.test.unit.TestUpgrade 
+2026-10-17T18:32:07.3351451Z 18:32:07 00:00.978 org.h2.test.unit.TestDate 
+2026-10-17T18:32:09.1443889Z 18:32:09 00:01.809 org.h2.test.unit.TestDateTimeUtils 
+2026-10-17T18:33:07.4443445Z 18:33:07 00:58.296 org.h2.test.store.TestMVStoreConcurrent 
+2026-10-17T18:33:10.8532322Z 18:33:10 00:03.407 org.h2.test.unit.TestNetUtils 
+2026-10-17T18:33:10.8849679Z 18:33:10 00:00.032 org.h2.test.unit.TestPattern 
+2026-10-17T18:33:11.1520173Z 18:33:11 00:00.266 org.h2.test.unit.TestStringCache 
+2026-10-17T18:33:26.3672867Z 18:33:26 00:15.214 org.h2.test.unit.TestValueMemory 
+2026-10-17T18:33:26.4876154Z 18:33:26 00:00.117 org.h2.test.auth.TestAuthentication 
+2026-10-17T18:33:26.4876474Z 
+2026-10-17T18:33:26.5546688Z Test lazy memory  (21501 KB used)
+2026-10-17T18:33:36.6496396Z 18:33:36 00:10.066 org.h2.test.scripts.TestScript 
+2026-10-17T18:33:36.6548279Z 18:33:36 00:00.005 org.h2.test.db.TestAlter 
+2026-10-17T18:33:36.6925406Z 18:33:36 00:00.035 org.h2.test.db.TestAlterSchemaRename 
+2026-10-17T18:33:36.6926229Z 18:33:36 00:00.001 org.h2.test.db.TestAutoRecompile 
+2026-10-17T18:33:37.1354484Z 18:33:37 00:00.435 org.h2.test.db.TestCases 
+2026-10-17T18:33:37.1355822Z 18:33:37 00:00.000 org.h2.test.db.TestCheckpoint 
+2026-10-17T18:33:37.4358326Z 18:33:37 00:00.299 org.h2.test.db.TestCompatibility 
+2026-10-17T18:33:37.4869674Z 18:33:37 00:00.048 org.h2.test.db.TestCompatibilityOracle 
+2026-10-17T18:33:37.4882782Z 18:33:37 00:00.002 org.h2.test.db.TestCompatibilitySQLServer 
+2026-10-17T18:33:37.5310505Z 18:33:37 00:00.041 org.h2.test.db.TestCsv 
+2026-10-17T18:33:40.0389599Z 18:33:40 00:02.507 org.h2.test.db.TestDeadlock 
+2026-10-17T18:33:40.0448212Z 18:33:40 00:00.005 org.h2.test.db.TestDuplicateKeyUpdate 
+2026-10-17T18:33:40.0475595Z 18:33:40 00:00.002 org.h2.test.db.TestExclusive 
+2026-10-17T18:33:40.3309931Z 18:33:40 00:00.280 org.h2.test.db.TestFullText create FT: 1
+2026-10-17T18:33:40.3311014Z 18:33:40 00:00.280 org.h2.test.db.TestFullText search FT: 0 count: 0
+2026-10-17T18:33:42.5151460Z 18:33:42 00:02.467 org.h2.test.db.TestFullText create FTL: 3
+2026-10-17T18:33:42.5152941Z 18:33:42 00:02.467 org.h2.test.db.TestFullText search FTL: 0 count: 0
+2026-10-17T18:33:42.5175836Z 18:33:42 00:02.468 org.h2.test.db.TestFullText 
+2026-10-17T18:33:42.5205938Z 18:33:42 00:00.001 org.h2.test.db.TestFunctionOverload 
+2026-10-17T18:33:42.7436581Z 18:33:42 00:00.224 org.h2.test.db.TestFunctions 
+2026-10-17T18:33:42.7443025Z 18:33:42 00:00.001 org.h2.test.server.TestInit 
+2026-10-17T18:33:43.9178003Z 18:33:43 00:01.173 org.h2.test.db.TestIndex 
+2026-10-17T18:33:43.9190769Z 18:33:43 00:00.001 org.h2.test.db.TestIndexHints 
+2026-10-17T18:33:43.9213270Z 18:33:43 00:00.001 org.h2.test.db.TestCompoundIndexSearch 
+2026-10-17T18:33:43.9242981Z 18:33:43 00:00.002 org.h2.test.db.TestCompoundIndexParamSearch 
+2026-10-17T18:33:43.9350884Z 18:33:43 00:00.008 org.h2.test.db.TestLinkedTable 
+2026-10-17T18:33:43.9365885Z 18:33:43 00:00.002 org.h2.test.db.TestListener 
+2026-10-17T18:33:55.0715343Z 18:33:55 00:11.134 org.h2.test.db.TestLob 
+2026-10-17T18:33:55.0722953Z 18:33:55 00:00.000 org.h2.test.db.TestMaterializedView 
+2026-10-17T18:33:55.0795487Z 18:33:55 00:00.006 org.h2.test.db.TestMergeUsing 
+2026-10-17T18:33:55.4727836Z 18:33:55 00:00.392 org.h2.test.db.TestMultiConn 
+2026-10-17T18:33:55.4943684Z 18:33:55 00:00.021 org.h2.test.db.TestMultiDimension 
+2026-10-17T18:33:58.4994291Z 18:33:58 00:03.004 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:33:59.5529138Z 18:33:59 00:01.052 org.h2.test.db.TestOpenClose 
+2026-10-17T18:33:59.6006401Z 18:33:59 00:00.043 org.h2.test.db.TestRecursiveQueries 
+2026-10-17T18:33:59.6135227Z 18:33:59 00:00.014 org.h2.test.db.TestGeneralCommonTableQueries 
+2026-10-17T18:33:59.6190168Z 18:33:59 00:00.005 org.h2.test.db.TestAlterTableNotFound 
+2026-10-17T18:33:59.6227854Z 18:33:59 00:00.003 org.h2.test.db.TestSelectTableNotFound 
+2026-10-17T18:33:59.6393096Z 18:33:59 00:00.016 org.h2.test.db.TestRights 
+2026-10-17T18:33:59.7917414Z 18:33:59 00:00.151 org.h2.test.db.TestRunscript 
+2026-10-17T18:33:59.7937464Z 18:33:59 00:00.000 org.h2.test.db.TestSQLInjection 
+2026-10-17T18:34:00.0195372Z 18:34:00 00:00.226 org.h2.test.db.TestSessionsLocks 
+2026-10-17T18:34:02.0437289Z 18:34:02 00:02.023 org.h2.test.db.TestSequence 
+2026-10-17T18:34:02.0448561Z 18:34:02 00:00.000 org.h2.test.db.TestSpeed 
+2026-10-17T18:34:02.0549518Z 18:34:02 00:00.009 org.h2.test.db.TestTableEngines 
+2026-10-17T18:34:03.3983578Z 18:34:03 00:01.343 org.h2.test.db.TestTempTables 
+2026-10-17T18:34:10.8465194Z 18:34:10 00:07.447 org.h2.test.db.TestTransaction 
+2026-10-17T18:34:10.9022944Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:34:10.9146323Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:34:10.9276333Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:34:10.9507367Z 18:34:10 00:00.101 org.h2.test.db.TestTriggersConstraints 
+2026-10-17T18:34:10.9972874Z 18:34:10 00:00.046 org.h2.test.db.TestView 
+2026-10-17T18:34:11.0086212Z 18:34:11 00:00.010 org.h2.test.db.TestViewAlterTable 
+2026-10-17T18:34:11.0119700Z 18:34:11 00:00.003 org.h2.test.db.TestViewDropView 
+2026-10-17T18:34:11.0191468Z 18:34:11 00:00.006 org.h2.test.db.TestSynonymForTable 
+2026-10-17T18:34:11.0404358Z 18:34:11 00:00.021 org.h2.test.jdbc.TestBatchUpdates 
+2026-10-17T18:34:11.0451789Z 18:34:11 00:00.004 org.h2.test.jdbc.TestCallableStatement 
+2026-10-17T18:34:12.2411880Z 18:34:12 00:01.195 org.h2.test.jdbc.TestCancel 
+2026-10-17T18:34:12.2596282Z 18:34:12 00:00.017 org.h2.test.jdbc.TestConcurrentConnectionUsage 
+2026-10-17T18:34:12.3162041Z 18:34:12 00:00.056 org.h2.test.jdbc.TestConnection 
+2026-10-17T18:34:12.3168136Z 18:34:12 00:00.000 org.h2.test.jdbc.TestDatabaseEventListener 
+2026-10-17T18:34:12.3807022Z 18:34:12 00:00.063 org.h2.test.jdbc.TestLobApi 
+2026-10-17T18:34:12.3956387Z 18:34:12 00:00.014 org.h2.test.jdbc.TestSQLXML 
+2026-10-17T18:34:12.3963345Z 18:34:12 00:00.000 org.h2.test.jdbc.TestManyJdbcObjects 
+2026-10-17T18:34:12.4265754Z 18:34:12 00:00.029 org.h2.test.jdbc.TestMetaData 
+2026-10-17T18:34:12.4328295Z 18:34:12 00:00.005 org.h2.test.jdbc.TestNativeSQL 
+2026-10-17T18:34:12.6502121Z 18:34:12 00:00.212 org.h2.test.jdbc.TestPreparedStatement 
+2026-10-17T18:34:12.6700442Z 18:34:12 00:00.020 org.h2.test.jdbc.TestResultSet 
+2026-10-17T18:34:12.6739442Z 18:34:12 00:00.003 org.h2.test.jdbc.TestStatement 
+2026-10-17T18:34:12.9267575Z 18:34:12 00:00.252 org.h2.test.jdbc.TestGetGeneratedKeys 
+2026-10-17T18:34:14.5437861Z 18:34:14 00:01.616 org.h2.test.jdbc.TestTransactionIsolation 
+2026-10-17T18:34:14.5540817Z 18:34:14 00:00.010 org.h2.test.jdbc.TestUpdatableResultSet 
+2026-10-17T18:34:14.5549959Z 18:34:14 00:00.000 org.h2.test.jdbc.TestZloty 
+2026-10-17T18:34:14.5574682Z 18:34:14 00:00.002 org.h2.test.db.TestSetCollation 
+2026-10-17T18:34:20.3373589Z 18:34:20 00:05.779 org.h2.test.jdbc.TestCachedQueryResults 
+2026-10-17T18:34:22.3924621Z 18:34:22 00:02.054 org.h2.test.jdbcx.TestConnectionPool 
+2026-10-17T18:34:22.3950177Z 18:34:22 00:00.002 org.h2.test.jdbcx.TestDataSource 
+2026-10-17T18:34:22.3980973Z 18:34:22 00:00.002 org.h2.test.jdbcx.TestXA 
+2026-10-17T18:34:22.3988840Z 18:34:22 00:00.000 org.h2.test.jdbcx.TestXASimple 
+2026-10-17T18:34:22.3997859Z 18:34:22 00:00.000 org.h2.test.server.TestAutoServer 
+2026-10-17T18:34:22.5405785Z 18:34:22 00:00.140 org.h2.test.server.TestNestedLoop 
+2026-10-17T18:34:22.6025435Z 18:34:22 00:00.061 org.h2.test.mvcc.TestMvcc1 
+2026-10-17T18:34:22.6559667Z 18:34:22 00:00.053 org.h2.test.mvcc.TestMvcc2 
+2026-10-17T18:34:22.7093083Z 18:34:22 00:00.053 org.h2.test.mvcc.TestMvcc3 
+2026-10-17T18:34:22.7109989Z 18:34:22 00:00.001 org.h2.test.mvcc.TestMvcc4 
+2026-10-17T18:34:24.7493123Z 18:34:24 00:02.038 org.h2.test.mvcc.TestMvccMultiThreaded 
+2026-10-17T18:34:30.7668328Z 18:34:30 00:06.017 org.h2.test.mvcc.TestMvccMultiThreaded2 
+2026-10-17T18:34:30.9201435Z 18:34:30 00:00.151 org.h2.test.rowlock.TestRowLocks 
+2026-10-17T18:34:31.3261001Z 18:34:31 00:00.405 org.h2.test.db.TestAnalyzeTableTx 
+2026-10-17T18:34:31.4250549Z 18:34:31 00:00.098 org.h2.test.synth.TestBtreeIndex 18:34:31 testIndex -1753560133
+2026-10-17T18:34:31.4383708Z 18:34:31 00:00.112 org.h2.test.synth.TestBtreeIndex 
+2026-10-17T18:34:33.4440938Z 18:34:33 00:02.005 org.h2.test.synth.TestConcurrentUpdate 
+2026-10-17T18:34:33.4510505Z 18:34:33 00:00.006 org.h2.test.synth.TestDiskFull write op count: 367
+2026-10-17T18:34:35.8301153Z 18:34:35 00:02.385 org.h2.test.synth.TestDiskFull 
+2026-10-17T18:34:44.6993138Z 18:34:44 00:08.868 org.h2.test.synth.TestCrashAPI 18:34:44 seed: 1039406105
+2026-10-17T18:35:36.1987731Z 18:35:36 01:00.368 org.h2.test.synth.TestCrashAPI stopping...
+2026-10-17T18:35:37.1991692Z 18:35:37 01:01.368 org.h2.test.synth.TestCrashAPI 
+2026-10-17T18:35:37.2089759Z 18:35:37 00:00.009 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5336240844738935405
+2026-10-17T18:35:37.2115998Z 18:35:37 00:00.012 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7815785080824549045
+2026-10-17T18:35:37.2132879Z 18:35:37 00:00.013 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8924580991578391811
+2026-10-17T18:35:37.2150542Z 18:35:37 00:00.015 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 348315715484295962
+2026-10-17T18:35:37.2173144Z 18:35:37 00:00.017 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7935672052870583211
+2026-10-17T18:35:37.2196604Z 18:35:37 00:00.020 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8626375410171189506
+2026-10-17T18:35:37.2217549Z 18:35:37 00:00.022 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5271017157749870331
+2026-10-17T18:35:37.2290359Z 18:35:37 00:00.029 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3666278013920031323
+2026-10-17T18:35:37.2302808Z 18:35:37 00:00.030 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1052019749876893373
+2026-10-17T18:35:37.2311326Z 18:35:37 00:00.031 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2170955062111544071
+2026-10-17T18:35:37.2317704Z 18:35:37 00:00.032 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -974566216030918659
+2026-10-17T18:35:37.2328848Z 18:35:37 00:00.033 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8846704447259648330
+2026-10-17T18:35:37.2361374Z 18:35:37 00:00.036 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5977581179837727860
+2026-10-17T18:35:37.2398227Z 18:35:37 00:00.040 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8239697900894272452
+2026-10-17T18:35:37.2467341Z 18:35:37 00:00.047 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7372166918259369248
+2026-10-17T18:35:37.2476504Z 18:35:37 00:00.048 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8715772206423084122
+2026-10-17T18:35:37.2556874Z 18:35:37 00:00.056 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7032602503037177987
+2026-10-17T18:35:37.2563749Z 18:35:37 00:00.056 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -320441934320250342
+2026-10-17T18:35:37.2572363Z 18:35:37 00:00.057 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7182562760507020814
+2026-10-17T18:35:37.2585476Z 18:35:37 00:00.059 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8222380246368084126
+2026-10-17T18:35:37.2594103Z 18:35:37 00:00.060 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8365660681666636914
+2026-10-17T18:35:37.2620596Z 18:35:37 00:00.062 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1554774961697196357
+2026-10-17T18:35:37.2649042Z 18:35:37 00:00.065 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 20164184892916467
+2026-10-17T18:35:37.2679914Z 18:35:37 00:00.068 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6270197955326347501
+2026-10-17T18:35:37.2713567Z 18:35:37 00:00.071 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 889821351670890642
+2026-10-17T18:35:37.2731830Z 18:35:37 00:00.073 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3070635839746302875
+2026-10-17T18:35:37.2733582Z 18:35:37 00:00.074 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6388079134650126360
+2026-10-17T18:35:37.2743139Z 18:35:37 00:00.074 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -954851598097917476
+2026-10-17T18:35:37.2750794Z 18:35:37 00:00.075 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7765062665810926887
+2026-10-17T18:35:37.2877653Z 18:35:37 00:00.088 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7580698251534721545
+2026-10-17T18:35:37.2890061Z 18:35:37 00:00.089 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8711284819202670775
+2026-10-17T18:35:37.2898467Z 18:35:37 00:00.090 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6688460796073344216
+2026-10-17T18:35:37.2939534Z 18:35:37 00:00.094 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3500086960997959969
+2026-10-17T18:35:37.2950896Z 18:35:37 00:00.095 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4646516838479100329
+2026-10-17T18:35:37.2964846Z 18:35:37 00:00.097 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6149312427459270371
+2026-10-17T18:35:37.3011746Z 18:35:37 00:00.101 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9179139359703618528
+2026-10-17T18:35:37.3148541Z 18:35:37 00:00.115 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8975176400759558149
+2026-10-17T18:35:37.3239979Z 18:35:37 00:00.124 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -245789507652163853
+2026-10-17T18:35:37.3282927Z 18:35:37 00:00.126 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7138183189360553930
+2026-10-17T18:35:37.3299502Z 18:35:37 00:00.128 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1993643498493423612
+2026-10-17T18:35:37.3346350Z 18:35:37 00:00.132 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3979513412970670991
+2026-10-17T18:35:37.3406363Z 18:35:37 00:00.139 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4798258839999749710
+2026-10-17T18:35:37.3435928Z 18:35:37 00:00.140 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9023383475494175239
+2026-10-17T18:35:37.3445751Z 18:35:37 00:00.142 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3143564907146826389
+2026-10-17T18:35:37.3467498Z 18:35:37 00:00.145 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5634857451443595732
+2026-10-17T18:35:37.3505885Z 18:35:37 00:00.149 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2221639013238721659
+2026-10-17T18:35:37.3535922Z 18:35:37 00:00.153 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -125041345526916336
+2026-10-17T18:35:37.3560383Z 18:35:37 00:00.154 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1036992794663511118
+2026-10-17T18:35:37.3561700Z 18:35:37 00:00.156 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6557438589967356544
+2026-10-17T18:35:37.3811547Z 18:35:37 00:00.181 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1348902879850553759
+2026-10-17T18:35:37.3912959Z 18:35:37 00:00.186 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8394523847689890940
+2026-10-17T18:35:37.3966493Z 18:35:37 00:00.194 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7363516455981498822
+2026-10-17T18:35:37.4016352Z 18:35:37 00:00.201 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7010452536442365154
+2026-10-17T18:35:37.4024529Z 18:35:37 00:00.203 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9036639012532556557
+2026-10-17T18:35:37.4295498Z 18:35:37 00:00.229 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3795857667004908651
+2026-10-17T18:35:37.4321732Z 18:35:37 00:00.232 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5633629254634812206
+2026-10-17T18:35:37.4340957Z 18:35:37 00:00.234 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3862067749010192421
+2026-10-17T18:35:37.4406570Z 18:35:37 00:00.241 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1932517960374794148
+2026-10-17T18:35:37.4424059Z 18:35:37 00:00.242 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6047186978079156108
+2026-10-17T18:35:37.4581820Z 18:35:37 00:00.258 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7137885705850902603
+2026-10-17T18:35:37.4633003Z 18:35:37 00:00.263 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4549724306550738091
+2026-10-17T18:35:37.4682669Z 18:35:37 00:00.268 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4642752742641516055
+2026-10-17T18:35:37.4689533Z 18:35:37 00:00.269 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4817773109205204962
+2026-10-17T18:35:37.4706264Z 18:35:37 00:00.271 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4210257320080564753
+2026-10-17T18:35:37.4710636Z 18:35:37 00:00.271 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2388754478295533884
+2026-10-17T18:35:37.4733635Z 18:35:37 00:00.273 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4193444304941714089
+2026-10-17T18:35:37.4756549Z 18:35:37 00:00.276 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6126812137765404517
+2026-10-17T18:35:37.4851132Z 18:35:37 00:00.285 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8523868801563992421
+2026-10-17T18:35:37.4857632Z 18:35:37 00:00.286 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5324344514583672499
+2026-10-17T18:35:37.4861396Z 18:35:37 00:00.286 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 49169191810345585
+2026-10-17T18:35:37.4864693Z 18:35:37 00:00.287 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8447258468612333252
+2026-10-17T18:35:37.4892759Z 18:35:37 00:00.289 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1942352077223117504
+2026-10-17T18:35:37.4905642Z 18:35:37 00:00.291 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4355937453841992096
+2026-10-17T18:35:37.4908782Z 18:35:37 00:00.291 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6052260024211465765
+2026-10-17T18:35:37.4927465Z 18:35:37 00:00.293 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4392558256972308997
+2026-10-17T18:35:37.4965745Z 18:35:37 00:00.294 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3851558843789546139
+2026-10-17T18:35:37.4966976Z 18:35:37 00:00.295 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3831786561855787468
+2026-10-17T18:35:37.5006965Z 18:35:37 00:00.301 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7242436115799024857
+2026-10-17T18:35:37.5019117Z 18:35:37 00:00.302 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1091843482131294746
+2026-10-17T18:35:37.5021954Z 18:35:37 00:00.302 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4647407338065940061
+2026-10-17T18:35:37.5090280Z 18:35:37 00:00.309 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8475361820753326867
+2026-10-17T18:35:37.5147668Z 18:35:37 00:00.315 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -456671502412423959
+2026-10-17T18:35:37.5196493Z 18:35:37 00:00.320 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2559018764285536184
+2026-10-17T18:35:37.5207003Z 18:35:37 00:00.321 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8289981230132647384
+2026-10-17T18:35:37.5304708Z 18:35:37 00:00.330 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5432036573725223021
+2026-10-17T18:35:37.5328796Z 18:35:37 00:00.333 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2989089186439450489
+2026-10-17T18:35:37.5354427Z 18:35:37 00:00.335 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3541407897522920527
+2026-10-17T18:35:37.5361389Z 18:35:37 00:00.336 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8959111636433767627
+2026-10-17T18:35:37.5368923Z 18:35:37 00:00.337 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4425642840642787588
+2026-10-17T18:35:37.5413903Z 18:35:37 00:00.341 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6042478056752639810
+2026-10-17T18:35:37.5420186Z 18:35:37 00:00.342 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2353775871467725155
+2026-10-17T18:35:37.5435734Z 18:35:37 00:00.344 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 497037666392347552
+2026-10-17T18:35:37.5441676Z 18:35:37 00:00.344 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6128108195827307850
+2026-10-17T18:35:37.5451671Z 18:35:37 00:00.345 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4316484481747339234
+2026-10-17T18:35:37.5459602Z 18:35:37 00:00.346 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2649506602321246034
+2026-10-17T18:35:37.5461813Z 18:35:37 00:00.346 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7463686011796735149
+2026-10-17T18:35:37.5467156Z 18:35:37 00:00.347 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6606330692852311191
+2026-10-17T18:35:37.5545333Z 18:35:37 00:00.355 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7048977913221412983
+2026-10-17T18:35:37.5616293Z 18:35:37 00:00.362 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5154741746110123060
+2026-10-17T18:35:37.5657283Z 18:35:37 00:00.366 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5863446094722838069
+2026-10-17T18:35:37.5671285Z 18:35:37 00:00.367 org.h2.test.synth.TestFuzzOptimizations testGroupSorted() seed: -2723584759850946848
+2026-10-17T18:35:37.8120887Z 18:35:37 00:00.612 org.h2.test.synth.TestFuzzOptimizations testInSelect() seed: -7213172315274837932
+2026-10-17T18:35:37.8237513Z 18:35:37 00:00.624 org.h2.test.synth.TestFuzzOptimizations 
+2026-10-17T18:35:38.3217197Z 18:35:38 00:00.497 org.h2.test.synth.TestLimit 
+2026-10-17T18:35:38.4087399Z 18:35:38 00:00.086 org.h2.test.synth.TestRandomCompare 
+2026-10-17T18:35:39.0506487Z 18:35:39 00:00.640 org.h2.test.synth.TestKillRestart 18:35:39 killing: 0
+2026-10-17T18:35:39.6755412Z 18:35:39 00:01.266 org.h2.test.synth.TestKillRestart 18:35:39 killing: 1
+2026-10-17T18:35:39.7093946Z 18:35:39 00:01.300 org.h2.test.synth.TestKillRestart 
+2026-10-17T18:35:40.5696277Z 18:35:40 00:00.858 org.h2.test.synth.TestKillRestartMulti 18:35:40 killing: 0
+2026-10-17T18:35:40.5697322Z 18:35:40 00:00.858 org.h2.test.synth.TestKillRestartMulti 18:35:40 killing, waiting for: 0
+2026-10-17T18:35:40.6043430Z 18:35:40 00:00.894 org.h2.test.synth.TestKillRestartMulti 18:35:40 killing, dead: 0
+2026-10-17T18:35:41.4333141Z 18:35:41 00:01.723 org.h2.test.synth.TestKillRestartMulti 18:35:41 killing: 1
+2026-10-17T18:35:41.4348331Z 18:35:41 00:01.723 org.h2.test.synth.TestKillRestartMulti 18:35:41 killing, waiting for: 1
+2026-10-17T18:35:41.4613173Z 18:35:41 00:01.751 org.h2.test.synth.TestKillRestartMulti 18:35:41 killing, dead: 1
+2026-10-17T18:35:42.3087535Z 18:35:42 00:02.594 org.h2.test.synth.TestKillRestartMulti 18:35:42 killing: 2
+2026-10-17T18:35:42.3088636Z 18:35:42 00:02.594 org.h2.test.synth.TestKillRestartMulti 18:35:42 killing, waiting for: 2
+2026-10-17T18:35:42.3361763Z 18:35:42 00:02.626 org.h2.test.synth.TestKillRestartMulti 18:35:42 killing, dead: 2
+2026-10-17T18:35:42.3371622Z 18:35:42 00:02.627 org.h2.test.synth.TestKillRestartMulti 
+2026-10-17T18:35:44.5388653Z 18:35:44 00:02.201 org.h2.test.synth.TestMultiThreaded 
+2026-10-17T18:35:44.5669078Z 18:35:44 00:00.027 org.h2.test.synth.TestOuterJoins 
+2026-10-17T18:35:44.9784239Z 18:35:44 00:00.411 org.h2.test.synth.TestNestedJoins 
+2026-10-17T18:35:45.1165847Z 18:35:45 00:00.137 org.h2.test.db.TestDateStorage 
+2026-10-17T18:35:45.1178220Z 18:35:45 00:00.001 org.h2.test.jdbc.TestDriver 
+2026-10-17T18:35:45.1190976Z 18:35:45 00:00.001 org.h2.test.jdbc.TestJavaObjectSerializer 
+2026-10-17T18:35:45.1202141Z 18:35:45 00:00.000 org.h2.test.unit.TestLocale 
+2026-10-17T18:35:45.1214641Z 18:35:45 00:00.001 org.h2.test.db.TestMemoryUsage 
+2026-10-17T18:35:49.4826370Z 18:35:49 00:04.360 org.h2.test.db.TestMultiThread 
+2026-10-17T18:35:49.4828134Z 18:35:49 00:00.000 org.h2.test.poweroff.TestReorderWrites testMVStore(): Disable partial write
+2026-10-17T18:35:49.6586631Z 18:35:49 00:00.175 org.h2.test.poweroff.TestReorderWrites testMVStore(): Enable partial write
+2026-10-17T18:35:49.8032379Z 18:35:49 00:00.320 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Disable partial write
+2026-10-17T18:35:49.8115965Z 18:35:49 00:00.326 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Enable partial write
+2026-10-17T18:35:49.8170897Z 18:35:49 00:00.334 org.h2.test.poweroff.TestReorderWrites 
+2026-10-17T18:35:49.8175255Z 18:35:49 00:00.000 org.h2.test.synth.TestRandomSQL 18:35:49 seed: 1881463461
+2026-10-17T18:35:49.8366224Z 18:35:49 00:00.017 org.h2.test.synth.TestRandomSQL 18:35:49 seed: 1858338218
+2026-10-17T18:35:49.8696906Z 18:35:49 00:00.052 org.h2.test.synth.TestRandomSQL 18:35:49 total: 100 success: 21%
+2026-10-17T18:35:49.8716221Z 18:35:49 00:00.054 org.h2.test.synth.TestRandomSQL 
+2026-10-17T18:35:49.9545780Z 18:35:49 00:00.081 org.h2.test.db.TestQueryCache 
+2026-10-17T18:35:49.9553874Z 18:35:49 00:00.000 org.h2.test.jdbc.TestUrlJavaObjectSerializer 
+2026-10-17T18:35:55.6928089Z 18:35:55 00:05.737 org.h2.test.server.TestWeb 
+2026-10-17T18:35:55.6938892Z 18:35:55 00:00.000 org.h2.test.server.TestJakartaWeb 
+2026-10-17T18:35:56.2771967Z 18:35:56 00:00.583 org.h2.test.db.TestOptimizations 
+2026-10-17T18:35:56.4172941Z 18:35:56 00:00.139 org.h2.test.db.TestOutOfMemory 
+2026-10-17T18:35:56.4224077Z 18:35:56 00:00.004 org.h2.test.db.TestIgnoreCatalogs 
+2026-10-17T18:35:56.4236225Z 
+2026-10-17T18:35:56.4946182Z Test  (20512 KB used)
+2026-10-17T18:36:07.8340135Z 18:36:07 00:11.338 org.h2.test.scripts.TestScript 
+2026-10-17T18:36:07.8457097Z 18:36:07 00:00.011 org.h2.test.db.TestAlter 
+2026-10-17T18:36:07.9289069Z 18:36:07 00:00.083 org.h2.test.db.TestAlterSchemaRename 
+2026-10-17T18:36:07.9333799Z 18:36:07 00:00.003 org.h2.test.db.TestAutoRecompile 
+2026-10-17T18:36:07.9698054Z 18:36:07 00:00.037 org.h2.test.db.TestBackup 
+2026-10-17T18:36:07.9833038Z 18:36:07 00:00.013 org.h2.test.db.TestBigDb rows: 0
+2026-10-17T18:36:08.0201617Z 18:36:08 00:00.050 org.h2.test.db.TestBigDb 
+2026-10-17T18:36:08.3925937Z 18:36:08 00:00.371 org.h2.test.db.TestBigResult 
+2026-10-17T18:36:09.2076865Z 18:36:09 00:00.814 org.h2.test.db.TestCases 
+2026-10-17T18:36:09.2115927Z 18:36:09 00:00.003 org.h2.test.db.TestCheckpoint 
+2026-10-17T18:36:09.7517436Z 18:36:09 00:00.540 org.h2.test.db.TestCompatibility 
+2026-10-17T18:36:09.7988131Z 18:36:09 00:00.048 org.h2.test.db.TestCompatibilityOracle 
+2026-10-17T18:36:09.8031170Z 18:36:09 00:00.003 org.h2.test.db.TestCompatibilitySQLServer 
+2026-10-17T18:36:09.8648354Z 18:36:09 00:00.061 org.h2.test.db.TestCsv 
+2026-10-17T18:36:12.4043467Z 18:36:12 00:02.539 org.h2.test.db.TestDeadlock 
+2026-10-17T18:36:12.4101194Z 18:36:12 00:00.005 org.h2.test.db.TestDuplicateKeyUpdate 
+2026-10-17T18:36:12.4172388Z 18:36:12 00:00.006 org.h2.test.db.TestEncryptedDb 
+2026-10-17T18:36:12.4221165Z 18:36:12 00:00.004 org.h2.test.db.TestExclusive 
+2026-10-17T18:36:12.6077479Z 18:36:12 00:00.184 org.h2.test.db.TestFullText create FT: 1
+2026-10-17T18:36:12.6078511Z 18:36:12 00:00.185 org.h2.test.db.TestFullText search FT: 0 count: 0
+2026-10-17T18:36:15.1045304Z 18:36:15 00:02.682 org.h2.test.db.TestFullText create FTL: 8
+2026-10-17T18:36:15.1046009Z 18:36:15 00:02.682 org.h2.test.db.TestFullText search FTL: 0 count: 0
+2026-10-17T18:36:15.1970304Z 18:36:15 00:02.774 org.h2.test.db.TestFullText 
+2026-10-17T18:36:15.2003088Z 18:36:15 00:00.003 org.h2.test.db.TestFunctionOverload 
+2026-10-17T18:36:15.5615226Z 18:36:15 00:00.361 org.h2.test.db.TestFunctions 
+2026-10-17T18:36:15.5642293Z 18:36:15 00:00.002 org.h2.test.server.TestInit 
+2026-10-17T18:36:16.5184683Z 18:36:16 00:00.953 org.h2.test.db.TestIndex 
+2026-10-17T18:36:16.5225665Z 18:36:16 00:00.003 org.h2.test.db.TestIndexHints 
+2026-10-17T18:36:16.5258022Z 18:36:16 00:00.003 org.h2.test.db.TestCompoundIndexSearch 
+2026-10-17T18:36:16.5303279Z 18:36:16 00:00.004 org.h2.test.db.TestCompoundIndexParamSearch 
+2026-10-17T18:36:16.6132506Z 18:36:16 00:00.081 org.h2.test.db.TestLinkedTable 
+2026-10-17T18:36:16.6296239Z 18:36:16 00:00.016 org.h2.test.db.TestListener 
+2026-10-17T18:36:29.6936295Z 18:36:29 00:13.063 org.h2.test.db.TestLob 
+2026-10-17T18:36:29.6955761Z 18:36:29 00:00.002 org.h2.test.db.TestMaterializedView 
+2026-10-17T18:36:29.7298947Z 18:36:29 00:00.034 org.h2.test.db.TestMergeUsing 
+2026-10-17T18:36:30.1461570Z 18:36:30 00:00.416 org.h2.test.db.TestMultiConn 
+2026-10-17T18:36:30.1753091Z 18:36:30 00:00.028 org.h2.test.db.TestMultiDimension 
+2026-10-17T18:36:33.1875518Z 18:36:33 00:03.012 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:36:34.3668072Z 18:36:34 00:01.178 org.h2.test.db.TestOpenClose 
+2026-10-17T18:36:34.4249936Z 18:36:34 00:00.059 org.h2.test.db.TestReadOnly 
+2026-10-17T18:36:34.4555808Z 18:36:34 00:00.030 org.h2.test.db.TestRecursiveQueries 
+2026-10-17T18:36:34.4962437Z 18:36:34 00:00.040 org.h2.test.db.TestGeneralCommonTableQueries 
+2026-10-17T18:36:34.5188793Z 18:36:34 00:00.022 org.h2.test.db.TestAlterTableNotFound 
+2026-10-17T18:36:34.5350699Z 18:36:34 00:00.016 org.h2.test.db.TestSelectTableNotFound 
+2026-10-17T18:36:34.5692255Z 18:36:34 00:00.033 org.h2.test.db.TestPersistentCommonTableExpressions 
+2026-10-17T18:36:34.7572476Z 18:36:34 00:00.187 org.h2.test.db.TestRights 
+2026-10-17T18:36:35.3409803Z 18:36:35 00:00.583 org.h2.test.db.TestRunscript 
+2026-10-17T18:36:35.3467160Z 18:36:35 00:00.005 org.h2.test.db.TestSQLInjection 
+2026-10-17T18:36:35.5619286Z 18:36:35 00:00.215 org.h2.test.db.TestSessionsLocks 
+2026-10-17T18:36:37.7556565Z 18:36:37 00:02.192 org.h2.test.db.TestSequence 
+2026-10-17T18:36:37.9588187Z 18:36:37 00:00.203 org.h2.test.db.TestSpaceReuse 
+2026-10-17T18:36:37.9618622Z 18:36:37 00:00.002 org.h2.test.db.TestSpeed 
+2026-10-17T18:36:37.9936249Z 18:36:37 00:00.031 org.h2.test.db.TestTableEngines 
+2026-10-17T18:36:39.4584069Z 18:36:39 00:01.464 org.h2.test.db.TestTempTables 
+2026-10-17T18:36:46.9919941Z 18:36:46 00:07.533 org.h2.test.db.TestTransaction 
+2026-10-17T18:36:47.0983127Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:36:47.1132064Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:36:47.1256335Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:36:47.1777965Z 18:36:47 00:00.185 org.h2.test.db.TestTriggersConstraints 
+2026-10-17T18:36:47.2046469Z 18:36:47 00:00.026 org.h2.test.db.TestTwoPhaseCommit 
+2026-10-17T18:36:47.2964129Z 18:36:47 00:00.091 org.h2.test.db.TestView 
+2026-10-17T18:36:47.3213879Z 18:36:47 00:00.024 org.h2.test.db.TestViewAlterTable 
+2026-10-17T18:36:47.3271345Z 18:36:47 00:00.005 org.h2.test.db.TestViewDropView 
+2026-10-17T18:36:47.3715111Z 18:36:47 00:00.044 org.h2.test.db.TestSynonymForTable 
+2026-10-17T18:36:47.4239833Z 18:36:47 00:00.051 org.h2.test.jdbc.TestBatchUpdates 
+2026-10-17T18:36:47.4326023Z 18:36:47 00:00.008 org.h2.test.jdbc.TestCallableStatement 
+2026-10-17T18:36:48.6804074Z 18:36:48 00:01.248 org.h2.test.jdbc.TestCancel 
+2026-10-17T18:36:48.8359738Z 18:36:48 00:00.155 org.h2.test.jdbc.TestConcurrentConnectionUsage 
+2026-10-17T18:36:48.9966256Z 18:36:48 00:00.160 org.h2.test.jdbc.TestConnection 
+2026-10-17T18:36:49.0520341Z 18:36:49 00:00.055 org.h2.test.jdbc.TestDatabaseEventListener 
+2026-10-17T18:36:49.1630910Z 18:36:49 00:00.110 org.h2.test.jdbc.TestLobApi 
+2026-10-17T18:36:49.1871635Z 18:36:49 00:00.022 org.h2.test.jdbc.TestSQLXML 
+2026-10-17T18:36:49.1902345Z 18:36:49 00:00.002 org.h2.test.jdbc.TestManyJdbcObjects 
+2026-10-17T18:36:49.4074748Z 18:36:49 00:00.216 org.h2.test.jdbc.TestMetaData 
+2026-10-17T18:36:49.4227531Z 18:36:49 00:00.014 org.h2.test.jdbc.TestNativeSQL 
+2026-10-17T18:36:49.7352949Z 18:36:49 00:00.312 org.h2.test.jdbc.TestPreparedStatement 
+2026-10-17T18:36:49.8701824Z 18:36:49 00:00.134 org.h2.test.jdbc.TestResultSet 
+2026-10-17T18:36:49.8844169Z 18:36:49 00:00.014 org.h2.test.jdbc.TestStatement 
+2026-10-17T18:36:50.2242480Z 18:36:50 00:00.339 org.h2.test.jdbc.TestGetGeneratedKeys 
+2026-10-17T18:36:51.8493061Z 18:36:51 00:01.624 org.h2.test.jdbc.TestTransactionIsolation 
+2026-10-17T18:36:51.8797605Z 18:36:51 00:00.030 org.h2.test.jdbc.TestUpdatableResultSet 
+2026-10-17T18:36:51.9005607Z 18:36:51 00:00.020 org.h2.test.jdbc.TestZloty 
+2026-10-17T18:36:51.9307812Z 18:36:51 00:00.029 org.h2.test.db.TestSetCollation 
+2026-10-17T18:36:58.0185994Z 18:36:58 00:06.087 org.h2.test.jdbc.TestCachedQueryResults 
+2026-10-17T18:37:00.0999836Z 18:37:00 00:02.081 org.h2.test.jdbcx.TestConnectionPool 
+2026-10-17T18:37:00.1076034Z 18:37:00 00:00.007 org.h2.test.jdbcx.TestDataSource 
+2026-10-17T18:37:00.1228018Z 18:37:00 00:00.015 org.h2.test.jdbcx.TestXA 
+2026-10-17T18:37:00.1431529Z 18:37:00 00:00.020 org.h2.test.jdbcx.TestXASimple 
+2026-10-17T18:37:01.1659102Z 18:37:01 00:01.022 org.h2.test.server.TestAutoServer 
+2026-10-17T18:37:01.2789391Z 18:37:01 00:00.112 org.h2.test.server.TestNestedLoop 
+2026-10-17T18:37:01.3506997Z 18:37:01 00:00.071 org.h2.test.mvcc.TestMvcc1 
+2026-10-17T18:37:01.4172269Z 18:37:01 00:00.065 org.h2.test.mvcc.TestMvcc2 
+2026-10-17T18:37:01.4863059Z 18:37:01 00:00.069 org.h2.test.mvcc.TestMvcc3 
+2026-10-17T18:37:01.4888439Z 18:37:01 00:00.002 org.h2.test.mvcc.TestMvcc4 
+2026-10-17T18:37:03.5972348Z 18:37:03 00:02.108 org.h2.test.mvcc.TestMvccMultiThreaded 
+2026-10-17T18:37:09.6231367Z 18:37:09 00:06.025 org.h2.test.mvcc.TestMvccMultiThreaded2 
+2026-10-17T18:37:09.7775209Z 18:37:09 00:00.154 org.h2.test.rowlock.TestRowLocks 
+2026-10-17T18:37:10.3191419Z 18:37:10 00:00.541 org.h2.test.db.TestAnalyzeTableTx 
+2026-10-17T18:37:10.5548334Z 18:37:10 00:00.234 org.h2.test.synth.TestBtreeIndex 18:37:10 testIndex -1515020575
+2026-10-17T18:37:10.5757259Z 18:37:10 00:00.255 org.h2.test.synth.TestBtreeIndex 
+2026-10-17T18:37:12.5991478Z 18:37:12 00:02.023 org.h2.test.synth.TestConcurrentUpdate 
+2026-10-17T18:37:12.6195409Z 18:37:12 00:00.020 org.h2.test.synth.TestDiskFull write op count: 367
+2026-10-17T18:37:14.3590628Z 18:37:14 00:01.759 org.h2.test.synth.TestDiskFull 
+2026-10-17T18:37:25.0846511Z 18:37:25 00:10.725 org.h2.test.synth.TestCrashAPI 18:37:25 seed: 1534612277
+2026-10-17T18:38:15.7669903Z 18:38:15 01:01.407 org.h2.test.synth.TestCrashAPI stopping...
+2026-10-17T18:38:16.7674451Z 18:38:16 01:02.408 org.h2.test.synth.TestCrashAPI 
+2026-10-17T18:38:16.7786208Z 18:38:16 00:00.010 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4053013588414058700
+2026-10-17T18:38:16.7794429Z 18:38:16 00:00.011 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8262905097083264801
+2026-10-17T18:38:16.7798596Z 18:38:16 00:00.012 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6173437374447198758
+2026-10-17T18:38:16.7866468Z 18:38:16 00:00.018 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2519580490548800814
+2026-10-17T18:38:16.7868949Z 18:38:16 00:00.019 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2893438663140239236
+2026-10-17T18:38:16.7956200Z 18:38:16 00:00.027 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7831170391944341343
+2026-10-17T18:38:16.7962187Z 18:38:16 00:00.028 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9193854978561365353
+2026-10-17T18:38:16.7976948Z 18:38:16 00:00.029 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8738564108834252139
+2026-10-17T18:38:16.8086698Z 18:38:16 00:00.040 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6109288897284119425
+2026-10-17T18:38:16.8112766Z 18:38:16 00:00.043 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2801949602942876657
+2026-10-17T18:38:16.8172576Z 18:38:16 00:00.049 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6306121530689892693
+2026-10-17T18:38:16.8226476Z 18:38:16 00:00.054 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -562956207555122876
+2026-10-17T18:38:16.8236039Z 18:38:16 00:00.055 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7295871908607406045
+2026-10-17T18:38:16.8238329Z 18:38:16 00:00.056 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3390784780036943952
+2026-10-17T18:38:16.8240599Z 18:38:16 00:00.056 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1003963419651384964
+2026-10-17T18:38:16.8259626Z 18:38:16 00:00.058 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7725656572140757467
+2026-10-17T18:38:16.8296798Z 18:38:16 00:00.061 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5546093728690857394
+2026-10-17T18:38:16.8312225Z 18:38:16 00:00.063 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6828616905249594442
+2026-10-17T18:38:16.8316702Z 18:38:16 00:00.063 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6563752433037098611
+2026-10-17T18:38:16.8336804Z 18:38:16 00:00.065 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 290804297151514589
+2026-10-17T18:38:16.8381120Z 18:38:16 00:00.070 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4589444927424359734
+2026-10-17T18:38:16.8396053Z 18:38:16 00:00.071 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1263312236694435233
+2026-10-17T18:38:16.8429578Z 18:38:16 00:00.075 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7375827509610744812
+2026-10-17T18:38:16.8459021Z 18:38:16 00:00.078 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6902793102027582139
+2026-10-17T18:38:16.8462877Z 18:38:16 00:00.078 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6787309758879242523
+2026-10-17T18:38:16.8465336Z 18:38:16 00:00.078 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2599371586846313046
+2026-10-17T18:38:16.8470402Z 18:38:16 00:00.079 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2284391274923067553
+2026-10-17T18:38:16.8476918Z 18:38:16 00:00.079 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6885580072877627415
+2026-10-17T18:38:16.8482359Z 18:38:16 00:00.080 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1286247849174266585
+2026-10-17T18:38:16.8486803Z 18:38:16 00:00.081 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4090947969215668060
+2026-10-17T18:38:16.8494180Z 18:38:16 00:00.081 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3308595206259738517
+2026-10-17T18:38:16.8498604Z 18:38:16 00:00.082 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6457488378181367097
+2026-10-17T18:38:16.8502473Z 18:38:16 00:00.082 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2348767309003810728
+2026-10-17T18:38:16.8519695Z 18:38:16 00:00.084 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3606338500688285699
+2026-10-17T18:38:16.8555986Z 18:38:16 00:00.087 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2184517963837817443
+2026-10-17T18:38:16.8557118Z 18:38:16 00:00.087 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4709700680176069718
+2026-10-17T18:38:16.8566367Z 18:38:16 00:00.088 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7022299571313096337
+2026-10-17T18:38:16.8993250Z 18:38:16 00:00.131 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2161297086897559096
+2026-10-17T18:38:16.9090211Z 18:38:16 00:00.141 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3984791726030545003
+2026-10-17T18:38:16.9221355Z 18:38:16 00:00.154 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1537755238254056993
+2026-10-17T18:38:16.9228286Z 18:38:16 00:00.155 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8943394585537890296
+2026-10-17T18:38:16.9274075Z 18:38:16 00:00.159 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6225087170034536174
+2026-10-17T18:38:16.9309032Z 18:38:16 00:00.163 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4949248596443583830
+2026-10-17T18:38:16.9349346Z 18:38:16 00:00.167 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1710527855839128432
+2026-10-17T18:38:16.9368895Z 18:38:16 00:00.169 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5419892543465125226
+2026-10-17T18:38:16.9384890Z 18:38:16 00:00.170 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7290520297565861232
+2026-10-17T18:38:16.9412476Z 18:38:16 00:00.173 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7761281240730105699
+2026-10-17T18:38:16.9417334Z 18:38:16 00:00.174 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6692285563123364638
+2026-10-17T18:38:16.9435866Z 18:38:16 00:00.175 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6594842845468458570
+2026-10-17T18:38:16.9451716Z 18:38:16 00:00.177 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -176121723983342018
+2026-10-17T18:38:16.9553571Z 18:38:16 00:00.187 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3294404156106512931
+2026-10-17T18:38:16.9848927Z 18:38:16 00:00.217 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7386715425220778749
+2026-10-17T18:38:16.9862400Z 18:38:16 00:00.218 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5845955160775308438
+2026-10-17T18:38:16.9878468Z 18:38:16 00:00.220 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6138796936768952091
+2026-10-17T18:38:16.9925484Z 18:38:16 00:00.224 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2115319641627025564
+2026-10-17T18:38:16.9941988Z 18:38:16 00:00.226 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7217734333159581539
+2026-10-17T18:38:17.0089911Z 18:38:17 00:00.241 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1246513277396410656
+2026-10-17T18:38:17.0103043Z 18:38:17 00:00.242 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1713149882762714005
+2026-10-17T18:38:17.0142007Z 18:38:17 00:00.246 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1965102363131677890
+2026-10-17T18:38:17.0196951Z 18:38:17 00:00.252 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7660351784782057337
+2026-10-17T18:38:17.0202060Z 18:38:17 00:00.252 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1779803846631848499
+2026-10-17T18:38:17.0338760Z 18:38:17 00:00.266 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7727922348574173140
+2026-10-17T18:38:17.0355878Z 18:38:17 00:00.267 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2906517560473143067
+2026-10-17T18:38:17.0388848Z 18:38:17 00:00.271 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5150147427595920958
+2026-10-17T18:38:17.0405502Z 18:38:17 00:00.272 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1664633212800505540
+2026-10-17T18:38:17.0535837Z 18:38:17 00:00.285 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7658934709280019263
+2026-10-17T18:38:17.0537379Z 18:38:17 00:00.286 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2851350565282452010
+2026-10-17T18:38:17.0560833Z 18:38:17 00:00.288 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3365801152262132050
+2026-10-17T18:38:17.0575922Z 18:38:17 00:00.289 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9172396456601832269
+2026-10-17T18:38:17.0578571Z 18:38:17 00:00.290 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3041347906528793826
+2026-10-17T18:38:17.0585224Z 18:38:17 00:00.290 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8695477977847060215
+2026-10-17T18:38:17.0588508Z 18:38:17 00:00.291 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8689414380141814347
+2026-10-17T18:38:17.0679318Z 18:38:17 00:00.300 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3497546377250487907
+2026-10-17T18:38:17.0693594Z 18:38:17 00:00.301 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7200274742069764950
+2026-10-17T18:38:17.0710581Z 18:38:17 00:00.303 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1919191685401165014
+2026-10-17T18:38:17.0906880Z 18:38:17 00:00.323 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6696340646458671718
+2026-10-17T18:38:17.1070501Z 18:38:17 00:00.339 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5432644394241240571
+2026-10-17T18:38:17.1098479Z 18:38:17 00:00.342 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7429194974100058064
+2026-10-17T18:38:17.1123403Z 18:38:17 00:00.344 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4954936979673813399
+2026-10-17T18:38:17.1126560Z 18:38:17 00:00.344 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7196565969726315683
+2026-10-17T18:38:17.1141770Z 18:38:17 00:00.346 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2811235249728759932
+2026-10-17T18:38:17.1206193Z 18:38:17 00:00.352 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5421925324184178126
+2026-10-17T18:38:17.1210810Z 18:38:17 00:00.353 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1506724746644230897
+2026-10-17T18:38:17.1215821Z 18:38:17 00:00.353 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6148832107749202059
+2026-10-17T18:38:17.1232500Z 18:38:17 00:00.355 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5009174440748352189
+2026-10-17T18:38:17.1239586Z 18:38:17 00:00.356 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2569750772577156709
+2026-10-17T18:38:17.1275427Z 18:38:17 00:00.359 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3334881281704281545
+2026-10-17T18:38:17.1284214Z 18:38:17 00:00.360 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7343403133084725600
+2026-10-17T18:38:17.1285987Z 18:38:17 00:00.360 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6416795164267976076
+2026-10-17T18:38:17.1349674Z 18:38:17 00:00.367 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -182501732207667689
+2026-10-17T18:38:17.1365155Z 18:38:17 00:00.368 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1100922806295003671
+2026-10-17T18:38:17.1368404Z 18:38:17 00:00.369 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4008788358253926329
+2026-10-17T18:38:17.1375132Z 18:38:17 00:00.369 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2789206768878441451
+2026-10-17T18:38:17.1376985Z 18:38:17 00:00.370 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7491744672911248044
+2026-10-17T18:38:17.1433680Z 18:38:17 00:00.375 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7249736222752793958
+2026-10-17T18:38:17.1452786Z 18:38:17 00:00.376 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1178801933690010073
+2026-10-17T18:38:17.1454220Z 18:38:17 00:00.377 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -765106888645403603
+2026-10-17T18:38:17.1480959Z 18:38:17 00:00.380 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5377584589720135762
+2026-10-17T18:38:17.1496460Z 18:38:17 00:00.382 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4413096289544527633
+2026-10-17T18:38:17.1500167Z 18:38:17 00:00.382 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4682768741464176098
+2026-10-17T18:38:17.1512521Z 18:38:17 00:00.383 org.h2.test.synth.TestFuzzOptimizations testGroupSorted() seed: -1311017087329062682
+2026-10-17T18:38:17.2849050Z 18:38:17 00:00.517 org.h2.test.synth.TestFuzzOptimizations testInSelect() seed: 6774954819386137524
+2026-10-17T18:38:17.2928715Z 18:38:17 00:00.525 org.h2.test.synth.TestFuzzOptimizations 
+2026-10-17T18:38:17.6826545Z 18:38:17 00:00.389 org.h2.test.synth.TestLimit 
+2026-10-17T18:38:17.7331025Z 18:38:17 00:00.049 org.h2.test.synth.TestRandomCompare 
+2026-10-17T18:38:18.4089954Z 18:38:18 00:00.675 org.h2.test.synth.TestKillRestart 18:38:18 killing: 0
+2026-10-17T18:38:19.2936421Z 18:38:19 00:01.560 org.h2.test.synth.TestKillRestart 18:38:19 killing: 1
+2026-10-17T18:38:19.5318794Z 18:38:19 00:01.798 org.h2.test.synth.TestKillRestart 
+2026-10-17T18:38:20.3826973Z 18:38:20 00:00.849 org.h2.test.synth.TestKillRestartMulti 18:38:20 killing: 0
+2026-10-17T18:38:20.3843614Z 18:38:20 00:00.849 org.h2.test.synth.TestKillRestartMulti 18:38:20 killing, waiting for: 0
+2026-10-17T18:38:20.6027709Z 18:38:20 00:01.070 org.h2.test.synth.TestKillRestartMulti 18:38:20 killing, dead: 0
+2026-10-17T18:38:21.5136479Z 18:38:21 00:01.976 org.h2.test.synth.TestKillRestartMulti 18:38:21 killing: 1
+2026-10-17T18:38:21.5146078Z 18:38:21 00:01.976 org.h2.test.synth.TestKillRestartMulti 18:38:21 killing, waiting for: 1
+2026-10-17T18:38:21.7500633Z 18:38:21 00:02.217 org.h2.test.synth.TestKillRestartMulti 18:38:21 killing, dead: 1
+2026-10-17T18:38:22.6503321Z 18:38:22 00:03.118 org.h2.test.synth.TestKillRestartMulti 18:38:22 killing: 2
+2026-10-17T18:38:22.6527741Z 18:38:22 00:03.118 org.h2.test.synth.TestKillRestartMulti 18:38:22 killing, waiting for: 2
+2026-10-17T18:38:22.7049383Z 18:38:22 00:03.172 org.h2.test.synth.TestKillRestartMulti 18:38:22 killing, dead: 2
+2026-10-17T18:38:22.7198631Z 18:38:22 00:03.187 org.h2.test.synth.TestKillRestartMulti 
+2026-10-17T18:38:24.9250282Z 18:38:24 00:02.204 org.h2.test.synth.TestMultiThreaded 
+2026-10-17T18:38:24.9465133Z 18:38:24 00:00.021 org.h2.test.synth.TestOuterJoins 
+2026-10-17T18:38:25.3225094Z 18:38:25 00:00.375 org.h2.test.synth.TestNestedJoins 
+2026-10-17T18:38:25.4556726Z 18:38:25 00:00.131 org.h2.test.db.TestDateStorage 
+2026-10-17T18:38:25.4569649Z 18:38:25 00:00.001 org.h2.test.jdbc.TestDriver 
+2026-10-17T18:38:25.4618227Z 18:38:25 00:00.004 org.h2.test.jdbc.TestJavaObjectSerializer 
+2026-10-17T18:38:25.4707257Z 18:38:25 00:00.008 org.h2.test.unit.TestLocale 
+2026-10-17T18:38:25.8392002Z 18:38:25 00:00.368 org.h2.test.db.TestMemoryUsage 
+2026-10-17T18:38:30.4945871Z 18:38:30 00:04.655 org.h2.test.db.TestMultiThread 
+2026-10-17T18:38:30.5987957Z 18:38:30 00:00.103 org.h2.test.db.TestPowerOff 
+2026-10-17T18:38:30.5992817Z 18:38:30 00:00.000 org.h2.test.poweroff.TestReorderWrites testMVStore(): Disable partial write
+2026-10-17T18:38:30.7859421Z 18:38:30 00:00.187 org.h2.test.poweroff.TestReorderWrites testMVStore(): Enable partial write
+2026-10-17T18:38:30.9155512Z 18:38:30 00:00.316 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Disable partial write
+2026-10-17T18:38:30.9213342Z 18:38:30 00:00.322 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Enable partial write
+2026-10-17T18:38:30.9263783Z 18:38:30 00:00.327 org.h2.test.poweroff.TestReorderWrites 
+2026-10-17T18:38:30.9267249Z 18:38:30 00:00.000 org.h2.test.synth.TestRandomSQL 18:38:30 seed: 1777208776
+2026-10-17T18:38:30.9596357Z 18:38:30 00:00.031 org.h2.test.synth.TestRandomSQL 18:38:30 seed: 795909954
+2026-10-17T18:38:30.9691592Z 18:38:30 00:00.042 org.h2.test.synth.TestRandomSQL 18:38:30 total: 100 success: 11%
+2026-10-17T18:38:30.9819449Z 18:38:30 00:00.055 org.h2.test.synth.TestRandomSQL 
+2026-10-17T18:38:31.0279246Z 18:38:31 00:00.045 org.h2.test.db.TestQueryCache 
+2026-10-17T18:38:31.0299752Z 18:38:31 00:00.001 org.h2.test.jdbc.TestUrlJavaObjectSerializer 
+2026-10-17T18:38:37.0759889Z 18:38:37 00:06.045 org.h2.test.server.TestWeb 
+2026-10-17T18:38:37.0764881Z 18:38:37 00:00.000 org.h2.test.server.TestJakartaWeb 
+2026-10-17T18:38:39.5815174Z 18:38:39 00:02.504 org.h2.test.db.TestOptimizations 
+2026-10-17T18:38:41.5396001Z 18:38:41 00:01.957 org.h2.test.db.TestOutOfMemory 
+2026-10-17T18:38:41.5653479Z 18:38:41 00:00.025 org.h2.test.db.TestIgnoreCatalogs 
+2026-10-17T18:38:41.6033938Z 18:38:41 00:00.028 org.h2.test.store.TestMVTableEngine 
+2026-10-17T18:38:45.3191757Z 18:38:45 00:03.715 org.h2.test.unit.TestAutoReconnect 
+2026-10-17T18:38:45.4656330Z 18:38:45 00:00.145 org.h2.test.unit.TestBnf 
+2026-10-17T18:38:45.7457185Z 18:38:45 00:00.280 org.h2.test.unit.TestCache 
+2026-10-17T18:38:45.7547560Z 18:38:45 00:00.008 org.h2.test.unit.TestCollation 
+2026-10-17T18:38:49.9697944Z 18:38:49 00:04.214 org.h2.test.unit.TestCompress 
+2026-10-17T18:38:49.9756293Z 18:38:49 00:00.005 org.h2.test.unit.TestConnectionInfo 
+2026-10-17T18:38:50.9274304Z 18:38:50 00:00.951 org.h2.test.unit.TestExit 
+2026-10-17T18:39:04.2605562Z 18:39:04 00:13.332 org.h2.test.unit.TestFileLock 
+2026-10-17T18:39:04.2701555Z 18:39:04 00:00.009 org.h2.test.unit.TestJmx 
+2026-10-17T18:39:07.2810970Z 18:39:07 00:03.010 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:39:07.4161414Z 18:39:07 00:00.134 org.h2.test.unit.TestPageStoreCoverage 
+2026-10-17T18:39:07.6166130Z 18:39:07 00:00.197 org.h2.test.unit.TestRecovery 
+2026-10-17T18:39:07.6640970Z 18:39:07 00:00.049 org.h2.test.recover.RecoverLobTest 
+2026-10-17T18:39:08.9305781Z 18:39:08 00:01.266 org.h2.test.unit.TestServlet 
+2026-10-17T18:39:10.1962895Z 18:39:10 00:01.265 org.h2.test.unit.TestJakartaServlet 
+2026-10-17T18:39:10.2157043Z 18:39:10 00:00.019 org.h2.test.unit.TestTimeStampWithTimeZone 
+2026-10-17T18:39:10.2252561Z 18:39:10 00:00.009 org.h2.test.unit.TestValue 
+2026-10-17T18:39:18.2077571Z 18:39:18 00:07.981 org.h2.test.db.TestCluster 
+2026-10-17T18:39:18.2078820Z 18:39:18 00:00.000 org.h2.test.unit.TestFileLockProcess socket
+2026-10-17T18:39:18.3096657Z 18:39:18 00:00.101 org.h2.test.unit.TestFileLockProcess 0/4
+2026-10-17T18:39:20.3498514Z 18:39:20 00:02.141 org.h2.test.unit.TestFileLockProcess fs
+2026-10-17T18:39:20.4509680Z 18:39:20 00:02.242 org.h2.test.unit.TestFileLockProcess 0/4
+2026-10-17T18:39:21.4476406Z 18:39:21 00:03.239 org.h2.test.unit.TestFileLockProcess default
+2026-10-17T18:39:21.5487646Z 18:39:21 00:03.340 org.h2.test.unit.TestFileLockProcess 0/50
+2026-10-17T18:39:22.5866089Z 18:39:22 00:04.372 org.h2.test.unit.TestFileLockProcess 10/50
+2026-10-17T18:39:23.6286255Z 18:39:23 00:05.415 org.h2.test.unit.TestFileLockProcess 20/50
+2026-10-17T18:39:24.6999961Z 18:39:24 00:06.489 org.h2.test.unit.TestFileLockProcess 30/50
+2026-10-17T18:39:25.8276625Z 18:39:25 00:07.599 org.h2.test.unit.TestFileLockProcess 40/50
+2026-10-17T18:39:33.1319317Z 18:39:33 00:14.924 org.h2.test.unit.TestFileLockProcess 
+2026-10-17T18:39:36.2616240Z 18:39:36 00:03.129 org.h2.test.unit.TestTools 
+2026-10-17T18:39:36.4501468Z 18:39:36 00:00.188 org.h2.test.unit.TestSampleApps 
+2026-10-17T18:39:36.4507570Z 
+2026-10-17T18:39:36.5794313Z Test net memory  (25384 KB used)
+2026-10-17T18:39:47.4051417Z 18:39:47 00:10.820 org.h2.test.scripts.TestScript 
+2026-10-17T18:39:47.4185528Z 18:39:47 00:00.013 org.h2.test.db.TestAlter 
+2026-10-17T18:39:47.4581894Z 18:39:47 00:00.039 org.h2.test.db.TestAlterSchemaRename 
+2026-10-17T18:39:47.4618170Z 18:39:47 00:00.003 org.h2.test.db.TestAutoRecompile 
+2026-10-17T18:39:47.6561593Z 18:39:47 00:00.193 org.h2.test.db.TestCases 
+2026-10-17T18:39:47.6599063Z 18:39:47 00:00.003 org.h2.test.db.TestCheckpoint 
+2026-10-17T18:39:48.6008488Z 18:39:48 00:00.940 org.h2.test.db.TestCompatibility 
+2026-10-17T18:39:48.6395368Z 18:39:48 00:00.038 org.h2.test.db.TestCompatibilityOracle 
+2026-10-17T18:39:48.6447548Z 18:39:48 00:00.004 org.h2.test.db.TestCompatibilitySQLServer 
+2026-10-17T18:39:48.7801045Z 18:39:48 00:00.135 org.h2.test.db.TestCsv 
+2026-10-17T18:39:51.3085216Z 18:39:51 00:02.528 org.h2.test.db.TestDeadlock 
+2026-10-17T18:39:51.3225476Z 18:39:51 00:00.013 org.h2.test.db.TestDuplicateKeyUpdate 
+2026-10-17T18:39:51.3305588Z 18:39:51 00:00.007 org.h2.test.db.TestExclusive 
+2026-10-17T18:39:51.5592518Z 18:39:51 00:00.228 org.h2.test.db.TestFullText create FT: 1
+2026-10-17T18:39:51.5594324Z 18:39:51 00:00.228 org.h2.test.db.TestFullText search FT: 0 count: 0
+2026-10-17T18:39:53.8269934Z 18:39:53 00:02.496 org.h2.test.db.TestFullText create FTL: 3
+2026-10-17T18:39:53.8275397Z 18:39:53 00:02.496 org.h2.test.db.TestFullText search FTL: 0 count: 0
+2026-10-17T18:39:53.8285955Z 18:39:53 00:02.497 org.h2.test.db.TestFullText 
+2026-10-17T18:39:53.8331211Z 18:39:53 00:00.004 org.h2.test.db.TestFunctionOverload 
+2026-10-17T18:39:54.1291728Z 18:39:54 00:00.295 org.h2.test.db.TestFunctions 
+2026-10-17T18:39:54.1335803Z 18:39:54 00:00.004 org.h2.test.server.TestInit 
+2026-10-17T18:40:01.6806340Z 18:40:01 00:07.546 org.h2.test.db.TestIndex 
+2026-10-17T18:40:01.6845870Z 18:40:01 00:00.003 org.h2.test.db.TestIndexHints 
+2026-10-17T18:40:01.6890082Z 18:40:01 00:00.004 org.h2.test.db.TestCompoundIndexSearch 
+2026-10-17T18:40:01.6965654Z 18:40:01 00:00.007 org.h2.test.db.TestCompoundIndexParamSearch 
+2026-10-17T18:40:01.7038986Z 18:40:01 00:00.007 org.h2.test.db.TestLinkedTable 
+2026-10-17T18:40:14.0624267Z 18:40:14 00:12.358 org.h2.test.db.TestLob 
+2026-10-17T18:40:14.0654421Z 18:40:14 00:00.002 org.h2.test.db.TestMaterializedView 
+2026-10-17T18:40:14.0881431Z 18:40:14 00:00.022 org.h2.test.db.TestMergeUsing 
+2026-10-17T18:40:14.4896672Z 18:40:14 00:00.401 org.h2.test.db.TestMultiConn 
+2026-10-17T18:40:14.6387064Z 18:40:14 00:00.148 org.h2.test.db.TestMultiDimension 
+2026-10-17T18:40:17.6515303Z 18:40:17 00:03.012 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:40:18.7048068Z 18:40:18 00:01.053 org.h2.test.db.TestOpenClose 
+2026-10-17T18:40:18.7334471Z 18:40:18 00:00.028 org.h2.test.db.TestRecursiveQueries 
+2026-10-17T18:40:18.7635462Z 18:40:18 00:00.029 org.h2.test.db.TestGeneralCommonTableQueries 
+2026-10-17T18:40:18.7774022Z 18:40:18 00:00.013 org.h2.test.db.TestAlterTableNotFound 
+2026-10-17T18:40:18.7878097Z 18:40:18 00:00.010 org.h2.test.db.TestSelectTableNotFound 
+2026-10-17T18:40:18.8543239Z 18:40:18 00:00.066 org.h2.test.db.TestRights 
+2026-10-17T18:40:19.1400903Z 18:40:19 00:00.285 org.h2.test.db.TestRunscript 
+2026-10-17T18:40:19.1436519Z 18:40:19 00:00.003 org.h2.test.db.TestSQLInjection 
+2026-10-17T18:40:19.3558885Z 18:40:19 00:00.211 org.h2.test.db.TestSessionsLocks 
+2026-10-17T18:40:22.4711377Z 18:40:22 00:03.115 org.h2.test.db.TestSequence 
+2026-10-17T18:40:22.4735867Z 18:40:22 00:00.002 org.h2.test.db.TestSpeed 
+2026-10-17T18:40:22.4951672Z 18:40:22 00:00.021 org.h2.test.db.TestTableEngines 
+2026-10-17T18:40:23.7692467Z 18:40:23 00:01.273 org.h2.test.db.TestTempTables 
+2026-10-17T18:40:25.4791145Z 18:40:25 00:01.709 org.h2.test.db.TestTransaction 
+2026-10-17T18:40:25.5946534Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:40:25.6030218Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:40:25.6195433Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:40:25.6756822Z 18:40:25 00:00.196 org.h2.test.db.TestTriggersConstraints 
+2026-10-17T18:40:25.7289267Z 18:40:25 00:00.052 org.h2.test.db.TestView 
+2026-10-17T18:40:25.7568757Z 18:40:25 00:00.027 org.h2.test.db.TestViewAlterTable 
+2026-10-17T18:40:25.7684727Z 18:40:25 00:00.011 org.h2.test.db.TestViewDropView 
+2026-10-17T18:40:25.7939268Z 18:40:25 00:00.025 org.h2.test.db.TestSynonymForTable 
+2026-10-17T18:40:25.8703603Z 18:40:25 00:00.076 org.h2.test.jdbc.TestBatchUpdates 
+2026-10-17T18:40:25.8915350Z 18:40:25 00:00.020 org.h2.test.jdbc.TestCallableStatement 
+2026-10-17T18:40:27.1561174Z 18:40:27 00:01.264 org.h2.test.jdbc.TestCancel 
+2026-10-17T18:40:27.7670461Z 18:40:27 00:00.610 org.h2.test.jdbc.TestConcurrentConnectionUsage 
+2026-10-17T18:40:27.8629770Z 18:40:27 00:00.095 org.h2.test.jdbc.TestConnection 
+2026-10-17T18:40:27.8636665Z 18:40:27 00:00.000 org.h2.test.jdbc.TestDatabaseEventListener 
+2026-10-17T18:40:28.2537906Z 18:40:28 00:00.389 org.h2.test.jdbc.TestLobApi 
+2026-10-17T18:40:28.3366931Z 18:40:28 00:00.082 org.h2.test.jdbc.TestSQLXML 
+2026-10-17T18:40:28.4722934Z 18:40:28 00:00.135 org.h2.test.jdbc.TestManyJdbcObjects 
+2026-10-17T18:40:28.6265347Z 18:40:28 00:00.154 org.h2.test.jdbc.TestMetaData 
+2026-10-17T18:40:28.6609744Z 18:40:28 00:00.034 org.h2.test.jdbc.TestNativeSQL 
+2026-10-17T18:40:29.8362394Z 18:40:29 00:01.175 org.h2.test.jdbc.TestPreparedStatement 
+2026-10-17T18:40:29.9705738Z 18:40:29 00:00.134 org.h2.test.jdbc.TestResultSet 
+2026-10-17T18:40:29.9861942Z 18:40:29 00:00.015 org.h2.test.jdbc.TestStatement 
+2026-10-17T18:40:33.1993149Z 18:40:33 00:03.213 org.h2.test.jdbc.TestGetGeneratedKeys 
+2026-10-17T18:40:34.8923975Z 18:40:34 00:01.692 org.h2.test.jdbc.TestTransactionIsolation 
+2026-10-17T18:40:34.9565348Z 18:40:34 00:00.063 org.h2.test.jdbc.TestUpdatableResultSet 
+2026-10-17T18:40:34.9601303Z 18:40:34 00:00.003 org.h2.test.jdbc.TestZloty 
+2026-10-17T18:40:34.9946324Z 18:40:34 00:00.032 org.h2.test.db.TestSetCollation 
+2026-10-17T18:41:27.4962185Z 18:41:27 00:52.503 org.h2.test.jdbc.TestCachedQueryResults 
+2026-10-17T18:41:30.3597003Z 18:41:30 00:02.863 org.h2.test.jdbcx.TestConnectionPool 
+2026-10-17T18:41:30.3661155Z 18:41:30 00:00.006 org.h2.test.jdbcx.TestDataSource 
+2026-10-17T18:41:30.3755790Z 18:41:30 00:00.009 org.h2.test.jdbcx.TestXA 
+2026-10-17T18:41:30.3806577Z 18:41:30 00:00.004 org.h2.test.jdbcx.TestXASimple 
+2026-10-17T18:41:30.3811480Z 18:41:30 00:00.000 org.h2.test.server.TestAutoServer 
+2026-10-17T18:41:30.8469631Z 18:41:30 00:00.465 org.h2.test.server.TestNestedLoop 
+2026-10-17T18:41:31.6758152Z 18:41:31 00:00.828 org.h2.test.mvcc.TestMvcc1 
+2026-10-17T18:41:31.7390327Z 18:41:31 00:00.063 org.h2.test.mvcc.TestMvcc2 
+2026-10-17T18:41:31.8063351Z 18:41:31 00:00.067 org.h2.test.mvcc.TestMvcc3 
+2026-10-17T18:41:34.3678021Z 18:41:34 00:02.561 org.h2.test.mvcc.TestMvccMultiThreaded 
+2026-10-17T18:41:40.4087237Z 18:41:40 00:06.040 org.h2.test.mvcc.TestMvccMultiThreaded2 
+2026-10-17T18:41:40.5657802Z 18:41:40 00:00.156 org.h2.test.rowlock.TestRowLocks 
+2026-10-17T18:41:41.1883299Z 18:41:41 00:00.622 org.h2.test.synth.TestBtreeIndex 18:41:41 testIndex 115932727
+2026-10-17T18:41:41.2697116Z 18:41:41 00:00.703 org.h2.test.synth.TestBtreeIndex 
+2026-10-17T18:41:43.2771970Z 18:41:43 00:02.007 org.h2.test.synth.TestConcurrentUpdate 
+2026-10-17T18:41:43.2816748Z 18:41:43 00:00.004 org.h2.test.synth.TestDiskFull write op count: 367
+2026-10-17T18:41:44.8166841Z 18:41:44 00:01.539 org.h2.test.synth.TestDiskFull 
+2026-10-17T18:41:44.8281211Z 18:41:44 00:00.011 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8822543833007274388
+2026-10-17T18:41:44.8477228Z 18:41:44 00:00.030 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6790325775228477978
+2026-10-17T18:41:44.8511945Z 18:41:44 00:00.034 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1904028364991284089
+2026-10-17T18:41:44.8613274Z 18:41:44 00:00.044 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5115348308759706617
+2026-10-17T18:41:44.8674761Z 18:41:44 00:00.050 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9138252615226519758
+2026-10-17T18:41:44.8684846Z 18:41:44 00:00.051 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4321383231256703095
+2026-10-17T18:41:44.8764359Z 18:41:44 00:00.059 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7301568199874424825
+2026-10-17T18:41:44.8774017Z 18:41:44 00:00.060 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9220074823885114599
+2026-10-17T18:41:44.8778700Z 18:41:44 00:00.060 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1035932650320792672
+2026-10-17T18:41:44.8806210Z 18:41:44 00:00.063 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7615415065594072450
+2026-10-17T18:41:44.8817784Z 18:41:44 00:00.064 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -448373132342546661
+2026-10-17T18:41:44.8892853Z 18:41:44 00:00.072 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2437329324778977474
+2026-10-17T18:41:44.8905551Z 18:41:44 00:00.073 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5742758876341713545
+2026-10-17T18:41:44.8959791Z 18:41:44 00:00.078 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7450398688838408684
+2026-10-17T18:41:44.9045355Z 18:41:44 00:00.087 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7272618129153501706
+2026-10-17T18:41:44.9120154Z 18:41:44 00:00.094 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1848441540526492741
+2026-10-17T18:41:44.9151992Z 18:41:44 00:00.098 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6853951703328149996
+2026-10-17T18:41:44.9280505Z 18:41:44 00:00.110 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9144292247946178029
+2026-10-17T18:41:44.9332563Z 18:41:44 00:00.116 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8381880860370684069
+2026-10-17T18:41:44.9367592Z 18:41:44 00:00.119 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4756131288914308095
+2026-10-17T18:41:44.9397851Z 18:41:44 00:00.122 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5110046537199934503
+2026-10-17T18:41:44.9446216Z 18:41:44 00:00.127 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1971514551122080619
+2026-10-17T18:41:44.9458292Z 18:41:44 00:00.128 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8769233023368664062
+2026-10-17T18:41:44.9464284Z 18:41:44 00:00.129 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8473736878538785497
+2026-10-17T18:41:44.9487629Z 18:41:44 00:00.131 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6310173809906751547
+2026-10-17T18:41:44.9522336Z 18:41:44 00:00.135 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6051278218494567319
+2026-10-17T18:41:44.9530483Z 18:41:44 00:00.136 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5146290443458484004
+2026-10-17T18:41:44.9551056Z 18:41:44 00:00.138 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5139941022026508420
+2026-10-17T18:41:44.9557355Z 18:41:44 00:00.138 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8239962252365026135
+2026-10-17T18:41:44.9574630Z 18:41:44 00:00.140 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5078609355585344042
+2026-10-17T18:41:44.9588154Z 18:41:44 00:00.141 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2988743518606768696
+2026-10-17T18:41:44.9623910Z 18:41:44 00:00.145 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9183152738393016305
+2026-10-17T18:41:44.9694141Z 18:41:44 00:00.152 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3713742273724105441
+2026-10-17T18:41:44.9702560Z 18:41:44 00:00.153 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2536899025760285514
+2026-10-17T18:41:44.9747777Z 18:41:44 00:00.157 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6432640440715205693
+2026-10-17T18:41:44.9773060Z 18:41:44 00:00.160 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7008553455776587352
+2026-10-17T18:41:44.9778873Z 18:41:44 00:00.160 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5510769925553183323
+2026-10-17T18:41:44.9817069Z 18:41:44 00:00.164 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 288720596332920368
+2026-10-17T18:41:44.9863238Z 18:41:44 00:00.169 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5142351030248426591
+2026-10-17T18:41:44.9878483Z 18:41:44 00:00.170 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8674526220675454828
+2026-10-17T18:41:44.9884133Z 18:41:44 00:00.171 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2916516022744299468
+2026-10-17T18:41:44.9890485Z 18:41:44 00:00.172 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2414577218736028585
+2026-10-17T18:41:44.9905701Z 18:41:44 00:00.173 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2630181280448223394
+2026-10-17T18:41:44.9926915Z 18:41:44 00:00.175 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6424787840467862839
+2026-10-17T18:41:44.9960445Z 18:41:44 00:00.179 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8904137800931286986
+2026-10-17T18:41:44.9997504Z 18:41:44 00:00.182 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7999626451148774248
+2026-10-17T18:41:45.0034568Z 18:41:45 00:00.186 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 441926911739538774
+2026-10-17T18:41:45.0041407Z 18:41:45 00:00.187 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1189337688681245099
+2026-10-17T18:41:45.0046458Z 18:41:45 00:00.187 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6995154421735326706
+2026-10-17T18:41:45.0050809Z 18:41:45 00:00.188 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1077471983631986574
+2026-10-17T18:41:45.0077223Z 18:41:45 00:00.190 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8961387647841223164
+2026-10-17T18:41:45.0090851Z 18:41:45 00:00.192 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8187108217502953573
+2026-10-17T18:41:45.0207300Z 18:41:45 00:00.203 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3623097136090898057
+2026-10-17T18:41:45.0231760Z 18:41:45 00:00.206 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3583434632234120128
+2026-10-17T18:41:45.0260313Z 18:41:45 00:00.209 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5014219979196021948
+2026-10-17T18:41:45.0265019Z 18:41:45 00:00.209 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6104821793606363009
+2026-10-17T18:41:45.0282724Z 18:41:45 00:00.211 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9152972890709555603
+2026-10-17T18:41:45.0292857Z 18:41:45 00:00.212 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -962443976888996192
+2026-10-17T18:41:45.0317688Z 18:41:45 00:00.214 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2374968504464328086
+2026-10-17T18:41:45.0418192Z 18:41:45 00:00.224 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7528500431321951993
+2026-10-17T18:41:45.0451642Z 18:41:45 00:00.228 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5134896395955995529
+2026-10-17T18:41:45.0561631Z 18:41:45 00:00.239 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4015552960206738619
+2026-10-17T18:41:45.0587234Z 18:41:45 00:00.241 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4205079137407645812
+2026-10-17T18:41:45.0591763Z 18:41:45 00:00.242 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1407557533736037247
+2026-10-17T18:41:45.0619944Z 18:41:45 00:00.244 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2296890713299383241
+2026-10-17T18:41:45.0623435Z 18:41:45 00:00.245 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1704109249331694707
+2026-10-17T18:41:45.0637980Z 18:41:45 00:00.246 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7912316545908294773
+2026-10-17T18:41:45.0966231Z 18:41:45 00:00.279 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7545475787503357039
+2026-10-17T18:41:45.0991525Z 18:41:45 00:00.282 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1758780516064412383
+2026-10-17T18:41:45.1070940Z 18:41:45 00:00.290 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2154593593605680131
+2026-10-17T18:41:45.1078085Z 18:41:45 00:00.290 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7117453444797306580
+2026-10-17T18:41:45.1137236Z 18:41:45 00:00.296 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -85903176832351998
+2026-10-17T18:41:45.1145739Z 18:41:45 00:00.297 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8546418892012989301
+2026-10-17T18:41:45.1157045Z 18:41:45 00:00.298 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2842862470000437605
+2026-10-17T18:41:45.1224107Z 18:41:45 00:00.305 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4487110148531104480
+2026-10-17T18:41:45.1296742Z 18:41:45 00:00.312 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1187114578338928762
+2026-10-17T18:41:45.1300306Z 18:41:45 00:00.313 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4491825661197037320
+2026-10-17T18:41:45.1380953Z 18:41:45 00:00.321 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1090079968011778023
+2026-10-17T18:41:45.1425536Z 18:41:45 00:00.325 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5603203655098728706
+2026-10-17T18:41:45.1445850Z 18:41:45 00:00.327 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4361331193924751349
+2026-10-17T18:41:45.1543247Z 18:41:45 00:00.337 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5536842203186109172
+2026-10-17T18:41:45.1579376Z 18:41:45 00:00.340 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6223836225850712523
+2026-10-17T18:41:45.1617423Z 18:41:45 00:00.344 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8345054163736690777
+2026-10-17T18:41:45.1623777Z 18:41:45 00:00.345 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6450274941145654594
+2026-10-17T18:41:45.1705265Z 18:41:45 00:00.353 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -174044355597161215
+2026-10-17T18:41:45.1710097Z 18:41:45 00:00.354 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1675829786991350498
+2026-10-17T18:41:45.1730548Z 18:41:45 00:00.356 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9136331297012029753
+2026-10-17T18:41:45.1756287Z 18:41:45 00:00.358 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3222805836130360186
+2026-10-17T18:41:45.1960158Z 18:41:45 00:00.379 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5968521570139429437
+2026-10-17T18:41:45.1996019Z 18:41:45 00:00.382 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1893659321927881505
+2026-10-17T18:41:45.2014559Z 18:41:45 00:00.384 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4289789020012103769
+2026-10-17T18:41:45.2037758Z 18:41:45 00:00.386 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2541282564286078646
+2026-10-17T18:41:45.2051967Z 18:41:45 00:00.388 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1262688448382176989
+2026-10-17T18:41:45.2072745Z 18:41:45 00:00.390 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5182575773962694909
+2026-10-17T18:41:45.2092657Z 18:41:45 00:00.392 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8237221891419506143
+2026-10-17T18:41:45.2098564Z 18:41:45 00:00.392 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6666707138520829920
+2026-10-17T18:41:45.2159418Z 18:41:45 00:00.398 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1977247816129322596
+2026-10-17T18:41:45.2169048Z 18:41:45 00:00.399 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6219636817924845408
+2026-10-17T18:41:45.2190919Z 18:41:45 00:00.402 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7684127321152388815
+2026-10-17T18:41:45.2196018Z 18:41:45 00:00.402 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1097041001299678947
+2026-10-17T18:41:45.2232802Z 18:41:45 00:00.406 org.h2.test.synth.TestFuzzOptimizations testGroupSorted() seed: -8289237723353152651
+2026-10-17T18:41:45.7266588Z 18:41:45 00:00.909 org.h2.test.synth.TestFuzzOptimizations testInSelect() seed: -6998926752225543215
+2026-10-17T18:41:45.7647296Z 18:41:45 00:00.947 org.h2.test.synth.TestFuzzOptimizations 
+2026-10-17T18:41:51.0353488Z 18:41:51 00:05.270 org.h2.test.synth.TestLimit 
+2026-10-17T18:41:51.2432682Z 18:41:51 00:00.207 org.h2.test.synth.TestRandomCompare 
+2026-10-17T18:41:53.4477326Z 18:41:53 00:02.203 org.h2.test.synth.TestMultiThreaded 
+2026-10-17T18:41:53.5575384Z 18:41:53 00:00.109 org.h2.test.synth.TestOuterJoins 
+2026-10-17T18:41:54.1070812Z 18:41:54 00:00.549 org.h2.test.synth.TestNestedJoins 
+2026-10-17T18:41:54.8331350Z 18:41:54 00:00.725 org.h2.test.db.TestDateStorage 
+2026-10-17T18:41:54.8341866Z 18:41:54 00:00.000 org.h2.test.jdbc.TestDriver 
+2026-10-17T18:41:54.8400515Z 18:41:54 00:00.005 org.h2.test.jdbc.TestJavaObjectSerializer 
+2026-10-17T18:41:54.8433008Z 18:41:54 00:00.003 org.h2.test.unit.TestLocale 
+2026-10-17T18:41:54.8485352Z 18:41:54 00:00.005 org.h2.test.db.TestMemoryUsage 
+2026-10-17T18:42:02.5663526Z 18:42:02 00:07.717 org.h2.test.db.TestMultiThread 
+2026-10-17T18:42:02.5669056Z 18:42:02 00:00.000 org.h2.test.poweroff.TestReorderWrites testMVStore(): Disable partial write
+2026-10-17T18:42:02.7248501Z 18:42:02 00:00.158 org.h2.test.poweroff.TestReorderWrites testMVStore(): Enable partial write
+2026-10-17T18:42:02.8421696Z 18:42:02 00:00.275 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Disable partial write
+2026-10-17T18:42:02.8473263Z 18:42:02 00:00.280 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Enable partial write
+2026-10-17T18:42:02.8546561Z 18:42:02 00:00.288 org.h2.test.poweroff.TestReorderWrites 
+2026-10-17T18:42:05.4519475Z 18:42:05 00:02.596 org.h2.test.db.TestQueryCache 
+2026-10-17T18:42:05.4538348Z 18:42:05 00:00.001 org.h2.test.jdbc.TestUrlJavaObjectSerializer 
+2026-10-17T18:42:11.1783703Z 18:42:11 00:05.724 org.h2.test.server.TestWeb 
+2026-10-17T18:42:11.1788694Z 18:42:11 00:00.000 org.h2.test.server.TestJakartaWeb 
+2026-10-17T18:42:12.7233154Z 18:42:12 00:01.544 org.h2.test.db.TestOptimizations 
+2026-10-17T18:42:12.8852150Z 18:42:12 00:00.161 org.h2.test.db.TestOutOfMemory 
+2026-10-17T18:42:12.9112254Z 18:42:12 00:00.025 org.h2.test.db.TestIgnoreCatalogs 
+2026-10-17T18:42:12.9121304Z 
+2026-10-17T18:42:12.9947614Z Test lazy net  (20625 KB used)
+2026-10-17T18:42:25.0868587Z 18:42:25 00:12.088 org.h2.test.scripts.TestScript 
+2026-10-17T18:42:25.1032954Z 18:42:25 00:00.016 org.h2.test.db.TestAlter 
+2026-10-17T18:42:25.1944255Z 18:42:25 00:00.090 org.h2.test.db.TestAlterSchemaRename 
+2026-10-17T18:42:25.1991826Z 18:42:25 00:00.004 org.h2.test.db.TestAutoRecompile 
+2026-10-17T18:42:25.2223984Z 18:42:25 00:00.023 org.h2.test.db.TestBackup 
+2026-10-17T18:42:25.2293315Z 18:42:25 00:00.006 org.h2.test.db.TestBigDb rows: 0
+2026-10-17T18:42:25.2943050Z 18:42:25 00:00.071 org.h2.test.db.TestBigDb 
+2026-10-17T18:42:26.2185287Z 18:42:26 00:00.923 org.h2.test.db.TestBigResult 
+2026-10-17T18:42:26.8043360Z 18:42:26 00:00.585 org.h2.test.db.TestCases 
+2026-10-17T18:42:26.8092552Z 18:42:26 00:00.004 org.h2.test.db.TestCheckpoint 
+2026-10-17T18:42:27.7836660Z 18:42:27 00:00.974 org.h2.test.db.TestCompatibility 
+2026-10-17T18:42:27.8341171Z 18:42:27 00:00.050 org.h2.test.db.TestCompatibilityOracle 
+2026-10-17T18:42:27.8401266Z 18:42:27 00:00.005 org.h2.test.db.TestCompatibilitySQLServer 
+2026-10-17T18:42:27.9801564Z 18:42:27 00:00.139 org.h2.test.db.TestCsv 
+2026-10-17T18:42:30.5398291Z 18:42:30 00:02.558 org.h2.test.db.TestDeadlock 
+2026-10-17T18:42:30.5541032Z 18:42:30 00:00.015 org.h2.test.db.TestDuplicateKeyUpdate 
+2026-10-17T18:42:30.5644575Z 18:42:30 00:00.009 org.h2.test.db.TestEncryptedDb 
+2026-10-17T18:42:30.5931081Z 18:42:30 00:00.028 org.h2.test.db.TestExclusive 
+2026-10-17T18:42:30.8683669Z 18:42:30 00:00.275 org.h2.test.db.TestFullText create FT: 1
+2026-10-17T18:42:30.8685310Z 18:42:30 00:00.275 org.h2.test.db.TestFullText search FT: 0 count: 0
+2026-10-17T18:42:33.3102834Z 18:42:33 00:02.717 org.h2.test.db.TestFullText create FTL: 6
+2026-10-17T18:42:33.3105785Z 18:42:33 00:02.717 org.h2.test.db.TestFullText search FTL: 0 count: 0
+2026-10-17T18:42:33.3984491Z 18:42:33 00:02.805 org.h2.test.db.TestFullText 
+2026-10-17T18:42:33.4053543Z 18:42:33 00:00.006 org.h2.test.db.TestFunctionOverload 
+2026-10-17T18:42:33.8260753Z 18:42:33 00:00.420 org.h2.test.db.TestFunctions 
+2026-10-17T18:42:33.8298396Z 18:42:33 00:00.003 org.h2.test.server.TestInit 
+2026-10-17T18:42:42.0499589Z 18:42:42 00:08.219 org.h2.test.db.TestIndex 
+2026-10-17T18:42:42.0561464Z 18:42:42 00:00.005 org.h2.test.db.TestIndexHints 
+2026-10-17T18:42:42.0621909Z 18:42:42 00:00.006 org.h2.test.db.TestCompoundIndexSearch 
+2026-10-17T18:42:42.0714203Z 18:42:42 00:00.008 org.h2.test.db.TestCompoundIndexParamSearch 
+2026-10-17T18:42:42.1059791Z 18:42:42 00:00.034 org.h2.test.db.TestLinkedTable 
+2026-10-17T18:42:58.8149455Z 18:42:58 00:16.708 org.h2.test.db.TestLob 
+2026-10-17T18:42:58.8386073Z 18:42:58 00:00.023 org.h2.test.db.TestMaterializedView 
+2026-10-17T18:42:58.9050212Z 18:42:58 00:00.065 org.h2.test.db.TestMergeUsing 
+2026-10-17T18:42:59.3526904Z 18:42:59 00:00.447 org.h2.test.db.TestMultiConn 
+2026-10-17T18:42:59.5578043Z 18:42:59 00:00.204 org.h2.test.db.TestMultiDimension 
+2026-10-17T18:43:02.5794115Z 18:43:02 00:03.021 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:43:03.6897113Z 18:43:03 00:01.110 org.h2.test.db.TestOpenClose 
+2026-10-17T18:43:03.7575388Z 18:43:03 00:00.067 org.h2.test.db.TestReadOnly 
+2026-10-17T18:43:03.8119035Z 18:43:03 00:00.054 org.h2.test.db.TestRecursiveQueries 
+2026-10-17T18:43:03.8939909Z 18:43:03 00:00.081 org.h2.test.db.TestGeneralCommonTableQueries 
+2026-10-17T18:43:03.9427679Z 18:43:03 00:00.048 org.h2.test.db.TestAlterTableNotFound 
+2026-10-17T18:43:03.9908235Z 18:43:03 00:00.047 org.h2.test.db.TestSelectTableNotFound 
+2026-10-17T18:43:04.0597461Z 18:43:04 00:00.068 org.h2.test.db.TestPersistentCommonTableExpressions 
+2026-10-17T18:43:04.3194124Z 18:43:04 00:00.259 org.h2.test.db.TestRights 
+2026-10-17T18:43:04.8826220Z 18:43:04 00:00.562 org.h2.test.db.TestRunscript 
+2026-10-17T18:43:04.8918618Z 18:43:04 00:00.009 org.h2.test.db.TestSQLInjection 
+2026-10-17T18:43:05.1107315Z 18:43:05 00:00.218 org.h2.test.db.TestSessionsLocks 
+2026-10-17T18:43:08.5247106Z 18:43:08 00:03.413 org.h2.test.db.TestSequence 
+2026-10-17T18:43:08.7246581Z 18:43:08 00:00.199 org.h2.test.db.TestSpaceReuse 
+2026-10-17T18:43:08.7289445Z 18:43:08 00:00.003 org.h2.test.db.TestSpeed 
+2026-10-17T18:43:08.7930702Z 18:43:08 00:00.063 org.h2.test.db.TestTableEngines 
+2026-10-17T18:43:10.2393027Z 18:43:10 00:01.446 org.h2.test.db.TestTempTables 
+2026-10-17T18:43:12.1690064Z 18:43:12 00:01.929 org.h2.test.db.TestTransaction 
+2026-10-17T18:43:12.3008633Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:43:12.3120695Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:43:12.3293583Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:43:12.4050592Z 18:43:12 00:00.235 org.h2.test.db.TestTriggersConstraints 
+2026-10-17T18:43:12.5476131Z 18:43:12 00:00.141 org.h2.test.db.TestView 
+2026-10-17T18:43:12.5764541Z 18:43:12 00:00.028 org.h2.test.db.TestViewAlterTable 
+2026-10-17T18:43:12.5982030Z 18:43:12 00:00.021 org.h2.test.db.TestViewDropView 
+2026-10-17T18:43:12.6886028Z 18:43:12 00:00.090 org.h2.test.db.TestSynonymForTable 
+2026-10-17T18:43:12.8190027Z 18:43:12 00:00.130 org.h2.test.jdbc.TestBatchUpdates 
+2026-10-17T18:43:12.8446378Z 18:43:12 00:00.024 org.h2.test.jdbc.TestCallableStatement 
+2026-10-17T18:43:13.9857282Z 18:43:13 00:01.141 org.h2.test.jdbc.TestCancel 
+2026-10-17T18:43:17.4762894Z 18:43:17 00:03.490 org.h2.test.jdbc.TestConcurrentConnectionUsage 
+2026-10-17T18:43:17.6273257Z 18:43:17 00:00.150 org.h2.test.jdbc.TestConnection 
+2026-10-17T18:43:17.7001289Z 18:43:17 00:00.072 org.h2.test.jdbc.TestDatabaseEventListener 
+2026-10-17T18:43:17.9754390Z 18:43:17 00:00.275 org.h2.test.jdbc.TestLobApi 
+2026-10-17T18:43:18.0530976Z 18:43:18 00:00.077 org.h2.test.jdbc.TestSQLXML 
+2026-10-17T18:43:18.1431893Z 18:43:18 00:00.090 org.h2.test.jdbc.TestManyJdbcObjects 
+2026-10-17T18:43:18.4493529Z 18:43:18 00:00.305 org.h2.test.jdbc.TestMetaData 
+2026-10-17T18:43:18.4831709Z 18:43:18 00:00.033 org.h2.test.jdbc.TestNativeSQL 
+2026-10-17T18:43:19.7053674Z 18:43:19 00:01.221 org.h2.test.jdbc.TestPreparedStatement 
+2026-10-17T18:43:19.7970378Z 18:43:19 00:00.091 org.h2.test.jdbc.TestResultSet 
+2026-10-17T18:43:19.8238722Z 18:43:19 00:00.026 org.h2.test.jdbc.TestStatement 
+2026-10-17T18:43:23.0762531Z 18:43:23 00:03.252 org.h2.test.jdbc.TestGetGeneratedKeys 
+2026-10-17T18:43:24.7687221Z 18:43:24 00:01.692 org.h2.test.jdbc.TestTransactionIsolation 
+2026-10-17T18:43:24.8432061Z 18:43:24 00:00.074 org.h2.test.jdbc.TestUpdatableResultSet 
+2026-10-17T18:43:24.8518405Z 18:43:24 00:00.008 org.h2.test.jdbc.TestZloty 
+2026-10-17T18:43:24.8996502Z 18:43:24 00:00.047 org.h2.test.db.TestSetCollation 
+2026-10-17T18:44:17.6880366Z 18:44:17 00:52.788 org.h2.test.jdbc.TestCachedQueryResults 
+2026-10-17T18:44:20.6185436Z 18:44:20 00:02.930 org.h2.test.jdbcx.TestConnectionPool 
+2026-10-17T18:44:20.6328484Z 18:44:20 00:00.014 org.h2.test.jdbcx.TestDataSource 
+2026-10-17T18:44:20.6812519Z 18:44:20 00:00.048 org.h2.test.jdbcx.TestXA 
+2026-10-17T18:44:20.6884027Z 18:44:20 00:00.006 org.h2.test.jdbcx.TestXASimple 
+2026-10-17T18:44:20.6888472Z 18:44:20 00:00.000 org.h2.test.server.TestAutoServer 
+2026-10-17T18:44:21.2441860Z 18:44:21 00:00.555 org.h2.test.server.TestNestedLoop 
+2026-10-17T18:44:22.0546180Z 18:44:22 00:00.810 org.h2.test.mvcc.TestMvcc1 
+2026-10-17T18:44:22.1305310Z 18:44:22 00:00.075 org.h2.test.mvcc.TestMvcc2 
+2026-10-17T18:44:22.2075640Z 18:44:22 00:00.076 org.h2.test.mvcc.TestMvcc3 
+2026-10-17T18:44:24.7873734Z 18:44:24 00:02.579 org.h2.test.mvcc.TestMvccMultiThreaded 
+2026-10-17T18:44:30.8249318Z 18:44:30 00:06.037 org.h2.test.mvcc.TestMvccMultiThreaded2 
+2026-10-17T18:44:30.9875174Z 18:44:30 00:00.162 org.h2.test.rowlock.TestRowLocks 
+2026-10-17T18:44:31.6635634Z 18:44:31 00:00.675 org.h2.test.synth.TestBtreeIndex 18:44:31 testIndex -939074978
+2026-10-17T18:44:31.7482814Z 18:44:31 00:00.760 org.h2.test.synth.TestBtreeIndex 
+2026-10-17T18:44:33.7669684Z 18:44:33 00:02.018 org.h2.test.synth.TestConcurrentUpdate 
+2026-10-17T18:44:33.7705365Z 18:44:33 00:00.003 org.h2.test.synth.TestDiskFull write op count: 367
+2026-10-17T18:44:35.2924267Z 18:44:35 00:01.525 org.h2.test.synth.TestDiskFull 
+2026-10-17T18:44:35.3326448Z 18:44:35 00:00.039 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4712617501363546209
+2026-10-17T18:44:35.3353847Z 18:44:35 00:00.042 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7875478377931540387
+2026-10-17T18:44:35.3446089Z 18:44:35 00:00.051 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2779015438590881981
+2026-10-17T18:44:35.3466643Z 18:44:35 00:00.053 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4795074310658387871
+2026-10-17T18:44:35.3503443Z 18:44:35 00:00.057 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2552514215686055089
+2026-10-17T18:44:35.3531603Z 18:44:35 00:00.060 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4679026907176311483
+2026-10-17T18:44:35.3555754Z 18:44:35 00:00.062 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8336413483237143867
+2026-10-17T18:44:35.3566884Z 18:44:35 00:00.063 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6588795564726953129
+2026-10-17T18:44:35.3607981Z 18:44:35 00:00.068 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7255145269360023776
+2026-10-17T18:44:35.3636845Z 18:44:35 00:00.070 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2345295124908010041
+2026-10-17T18:44:35.3666745Z 18:44:35 00:00.073 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5129404759489568387
+2026-10-17T18:44:35.3706662Z 18:44:35 00:00.077 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6766930705950809200
+2026-10-17T18:44:35.3712635Z 18:44:35 00:00.078 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6704644724588646127
+2026-10-17T18:44:35.3801253Z 18:44:35 00:00.087 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8284003158223092773
+2026-10-17T18:44:35.3807550Z 18:44:35 00:00.088 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1393600758928726868
+2026-10-17T18:44:35.3815487Z 18:44:35 00:00.088 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6182375006326697999
+2026-10-17T18:44:35.3887563Z 18:44:35 00:00.096 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4263452172107140762
+2026-10-17T18:44:35.3929681Z 18:44:35 00:00.100 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5670568363870602513
+2026-10-17T18:44:35.3953427Z 18:44:35 00:00.102 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 862854091926296139
+2026-10-17T18:44:35.3959640Z 18:44:35 00:00.103 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5305912825020117184
+2026-10-17T18:44:35.3966266Z 18:44:35 00:00.103 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1899882203929548636
+2026-10-17T18:44:35.4057811Z 18:44:35 00:00.113 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 25262076509215721
+2026-10-17T18:44:35.4064541Z 18:44:35 00:00.113 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3728326348717255814
+2026-10-17T18:44:35.4128602Z 18:44:35 00:00.120 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7015628459905571151
+2026-10-17T18:44:35.4251564Z 18:44:35 00:00.132 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2454670151564326055
+2026-10-17T18:44:35.4355760Z 18:44:35 00:00.142 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 516601693280337148
+2026-10-17T18:44:35.4433198Z 18:44:35 00:00.150 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6918470766402389419
+2026-10-17T18:44:35.4458878Z 18:44:35 00:00.153 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6514159422362995822
+2026-10-17T18:44:35.4469279Z 18:44:35 00:00.154 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9068066213687154607
+2026-10-17T18:44:35.4524601Z 18:44:35 00:00.159 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -249227242875923840
+2026-10-17T18:44:35.4535206Z 18:44:35 00:00.160 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7119843383832322942
+2026-10-17T18:44:35.4549603Z 18:44:35 00:00.162 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2346751503886801724
+2026-10-17T18:44:35.4776937Z 18:44:35 00:00.184 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8517424447137354462
+2026-10-17T18:44:35.4812517Z 18:44:35 00:00.188 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4301085035783638283
+2026-10-17T18:44:35.4818393Z 18:44:35 00:00.189 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2288174419613847910
+2026-10-17T18:44:35.4834965Z 18:44:35 00:00.190 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3651955572821455961
+2026-10-17T18:44:35.4894878Z 18:44:35 00:00.196 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5625031182407711394
+2026-10-17T18:44:35.4901572Z 18:44:35 00:00.197 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5202581635569120229
+2026-10-17T18:44:35.4917930Z 18:44:35 00:00.199 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2045591844707803438
+2026-10-17T18:44:35.4931569Z 18:44:35 00:00.200 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1370210432133993486
+2026-10-17T18:44:35.4948935Z 18:44:35 00:00.202 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1452617816784680597
+2026-10-17T18:44:35.4987780Z 18:44:35 00:00.206 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3324534470971381392
+2026-10-17T18:44:35.5020553Z 18:44:35 00:00.209 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2108449110102915245
+2026-10-17T18:44:35.5028958Z 18:44:35 00:00.210 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 861159909114240222
+2026-10-17T18:44:35.5117923Z 18:44:35 00:00.219 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1893075573461474910
+2026-10-17T18:44:35.5148850Z 18:44:35 00:00.222 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5255987264322020141
+2026-10-17T18:44:35.5185644Z 18:44:35 00:00.225 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3342122499758491598
+2026-10-17T18:44:35.5215347Z 18:44:35 00:00.228 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5630565427480562003
+2026-10-17T18:44:35.5241336Z 18:44:35 00:00.231 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3774583855447084829
+2026-10-17T18:44:35.5252803Z 18:44:35 00:00.232 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6278773265465225498
+2026-10-17T18:44:35.5277421Z 18:44:35 00:00.235 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6080422318101993721
+2026-10-17T18:44:35.5290946Z 18:44:35 00:00.236 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2713515642756299045
+2026-10-17T18:44:35.5317730Z 18:44:35 00:00.239 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8538004868680345969
+2026-10-17T18:44:35.5322746Z 18:44:35 00:00.239 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -854600912475705243
+2026-10-17T18:44:35.5335841Z 18:44:35 00:00.240 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 646779090411792651
+2026-10-17T18:44:35.5340086Z 18:44:35 00:00.241 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1547530885127535070
+2026-10-17T18:44:35.5405620Z 18:44:35 00:00.247 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 395870868387576159
+2026-10-17T18:44:35.5463190Z 18:44:35 00:00.253 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6509106755133504124
+2026-10-17T18:44:35.5494227Z 18:44:35 00:00.256 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 9064588273296361540
+2026-10-17T18:44:35.5505066Z 18:44:35 00:00.257 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1892032016112685948
+2026-10-17T18:44:35.5529723Z 18:44:35 00:00.260 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6423947617105724802
+2026-10-17T18:44:35.5533570Z 18:44:35 00:00.260 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2445301671971642036
+2026-10-17T18:44:35.5552657Z 18:44:35 00:00.262 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8756587555195181725
+2026-10-17T18:44:35.5559463Z 18:44:35 00:00.263 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4056358348953983137
+2026-10-17T18:44:35.5625226Z 18:44:35 00:00.269 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 463728405126078365
+2026-10-17T18:44:35.5746383Z 18:44:35 00:00.281 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2494332897318050106
+2026-10-17T18:44:35.5812454Z 18:44:35 00:00.288 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5470716107615197742
+2026-10-17T18:44:35.5854709Z 18:44:35 00:00.292 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4696871799503403292
+2026-10-17T18:44:35.5867630Z 18:44:35 00:00.294 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7587195234277459380
+2026-10-17T18:44:35.5898963Z 18:44:35 00:00.297 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6589408004802471756
+2026-10-17T18:44:35.6043484Z 18:44:35 00:00.311 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7451154849996290066
+2026-10-17T18:44:35.6071320Z 18:44:35 00:00.314 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1035184470570535862
+2026-10-17T18:44:35.6134403Z 18:44:35 00:00.320 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8263257491018139006
+2026-10-17T18:44:35.6170646Z 18:44:35 00:00.324 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6243649352234258505
+2026-10-17T18:44:35.6206535Z 18:44:35 00:00.327 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -471264650204445712
+2026-10-17T18:44:35.6269664Z 18:44:35 00:00.334 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5483537347331084429
+2026-10-17T18:44:35.6273814Z 18:44:35 00:00.334 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7964779032222947334
+2026-10-17T18:44:35.6301037Z 18:44:35 00:00.337 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 56646654726293918
+2026-10-17T18:44:35.6403112Z 18:44:35 00:00.347 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 604322004778210309
+2026-10-17T18:44:35.6409735Z 18:44:35 00:00.348 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3792228070962968986
+2026-10-17T18:44:35.6417173Z 18:44:35 00:00.349 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5657885052617954580
+2026-10-17T18:44:35.6478187Z 18:44:35 00:00.355 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2923381500588443542
+2026-10-17T18:44:35.6491795Z 18:44:35 00:00.356 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3901452840687057666
+2026-10-17T18:44:35.6521659Z 18:44:35 00:00.359 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6234055917825608245
+2026-10-17T18:44:35.6551262Z 18:44:35 00:00.362 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8188074487877053095
+2026-10-17T18:44:35.6635907Z 18:44:35 00:00.370 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5859716113747299493
+2026-10-17T18:44:35.6667340Z 18:44:35 00:00.374 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6004407629376230721
+2026-10-17T18:44:35.6672496Z 18:44:35 00:00.374 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5642900457106987378
+2026-10-17T18:44:35.6702187Z 18:44:35 00:00.377 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4834215674159143951
+2026-10-17T18:44:35.6744725Z 18:44:35 00:00.381 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7005284520087641218
+2026-10-17T18:44:35.6825523Z 18:44:35 00:00.389 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1669522117945899745
+2026-10-17T18:44:35.6830725Z 18:44:35 00:00.390 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6344270320072774452
+2026-10-17T18:44:35.6843419Z 18:44:35 00:00.391 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6211774034177775131
+2026-10-17T18:44:35.6849777Z 18:44:35 00:00.392 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8626162420636998541
+2026-10-17T18:44:35.6913774Z 18:44:35 00:00.398 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3004056591962500988
+2026-10-17T18:44:35.6952452Z 18:44:35 00:00.402 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4841175163705189520
+2026-10-17T18:44:35.6970460Z 18:44:35 00:00.404 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8037795695757688496
+2026-10-17T18:44:35.7035439Z 18:44:35 00:00.410 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6780642809869692654
+2026-10-17T18:44:35.7051556Z 18:44:35 00:00.412 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1626233870933866434
+2026-10-17T18:44:35.7059226Z 18:44:35 00:00.413 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7900647875151666792
+2026-10-17T18:44:35.7100414Z 18:44:35 00:00.417 org.h2.test.synth.TestFuzzOptimizations testGroupSorted() seed: -1264067505032993320
+2026-10-17T18:44:36.1732835Z 18:44:36 00:00.880 org.h2.test.synth.TestFuzzOptimizations testInSelect() seed: 642571102329508874
+2026-10-17T18:44:36.2086808Z 18:44:36 00:00.915 org.h2.test.synth.TestFuzzOptimizations 
+2026-10-17T18:44:41.2878190Z 18:44:41 00:05.078 org.h2.test.synth.TestLimit 
+2026-10-17T18:44:41.4848256Z 18:44:41 00:00.196 org.h2.test.synth.TestRandomCompare 
+2026-10-17T18:44:43.6902168Z 18:44:43 00:02.205 org.h2.test.synth.TestMultiThreaded 
+2026-10-17T18:44:43.7962528Z 18:44:43 00:00.105 org.h2.test.synth.TestOuterJoins 
+2026-10-17T18:44:44.3724089Z 18:44:44 00:00.576 org.h2.test.synth.TestNestedJoins 
+2026-10-17T18:44:45.0874613Z 18:44:45 00:00.714 org.h2.test.db.TestDateStorage 
+2026-10-17T18:44:45.0882612Z 18:44:45 00:00.000 org.h2.test.jdbc.TestDriver 
+2026-10-17T18:44:45.0949433Z 18:44:45 00:00.006 org.h2.test.jdbc.TestJavaObjectSerializer 
+2026-10-17T18:44:45.1029660Z 18:44:45 00:00.007 org.h2.test.unit.TestLocale 
+2026-10-17T18:44:45.9805231Z 18:44:45 00:00.877 org.h2.test.db.TestMemoryUsage 
+2026-10-17T18:44:53.7205903Z 18:44:53 00:07.739 org.h2.test.db.TestMultiThread 
+2026-10-17T18:44:53.7249523Z 18:44:53 00:00.004 org.h2.test.db.TestPowerOff 
+2026-10-17T18:44:53.7250879Z 18:44:53 00:00.000 org.h2.test.poweroff.TestReorderWrites testMVStore(): Disable partial write
+2026-10-17T18:44:53.8325634Z 18:44:53 00:00.107 org.h2.test.poweroff.TestReorderWrites testMVStore(): Enable partial write
+2026-10-17T18:44:53.9269120Z 18:44:53 00:00.201 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Disable partial write
+2026-10-17T18:44:53.9305514Z 18:44:53 00:00.205 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Enable partial write
+2026-10-17T18:44:53.9353216Z 18:44:53 00:00.210 org.h2.test.poweroff.TestReorderWrites 
+2026-10-17T18:44:56.5940666Z 18:44:56 00:02.658 org.h2.test.db.TestQueryCache 
+2026-10-17T18:44:56.5978353Z 18:44:56 00:00.003 org.h2.test.jdbc.TestUrlJavaObjectSerializer 
+2026-10-17T18:45:02.6019862Z 18:45:02 00:06.003 org.h2.test.server.TestWeb 
+2026-10-17T18:45:02.6024596Z 18:45:02 00:00.000 org.h2.test.server.TestJakartaWeb 
+2026-10-17T18:45:03.4746191Z 18:45:03 00:00.871 org.h2.test.db.TestOptimizations 
+2026-10-17T18:45:03.6434179Z 18:45:03 00:00.168 org.h2.test.db.TestOutOfMemory 
+2026-10-17T18:45:03.7107556Z 18:45:03 00:00.067 org.h2.test.db.TestIgnoreCatalogs 
+2026-10-17T18:45:03.7173412Z 
+2026-10-17T18:45:03.7958659Z Test AES SOFT_LRU diskUndo diskResult traceLevelFile throttle:1  (22717 KB used)
+2026-10-17T18:45:16.4191197Z 18:45:16 00:12.622 org.h2.test.scripts.TestScript 
+2026-10-17T18:45:16.4387124Z 18:45:16 00:00.019 org.h2.test.db.TestAlter 
+2026-10-17T18:45:16.5102399Z 18:45:16 00:00.071 org.h2.test.db.TestAlterSchemaRename 
+2026-10-17T18:45:16.5151230Z 18:45:16 00:00.004 org.h2.test.db.TestAutoRecompile 
+2026-10-17T18:45:16.5399877Z 18:45:16 00:00.024 org.h2.test.db.TestBackup 
+2026-10-17T18:45:16.5468941Z 18:45:16 00:00.006 org.h2.test.db.TestBigDb rows: 0
+2026-10-17T18:45:16.5739278Z 18:45:16 00:00.033 org.h2.test.db.TestBigDb 
+2026-10-17T18:45:16.8291657Z 18:45:16 00:00.255 org.h2.test.db.TestBigResult 
+2026-10-17T18:45:17.7981199Z 18:45:17 00:00.968 org.h2.test.db.TestCases 
+2026-10-17T18:45:17.8043282Z 18:45:17 00:00.006 org.h2.test.db.TestCheckpoint 
+2026-10-17T18:45:20.5115192Z 18:45:20 00:02.706 org.h2.test.db.TestCompatibility 
+2026-10-17T18:45:20.5482423Z 18:45:20 00:00.036 org.h2.test.db.TestCompatibilityOracle 
+2026-10-17T18:45:20.5528873Z 18:45:20 00:00.004 org.h2.test.db.TestCompatibilitySQLServer 
+2026-10-17T18:45:20.6484074Z 18:45:20 00:00.095 org.h2.test.db.TestCsv 
+2026-10-17T18:45:23.1728096Z 18:45:23 00:02.524 org.h2.test.db.TestDeadlock 
+2026-10-17T18:45:23.1826871Z 18:45:23 00:00.009 org.h2.test.db.TestDuplicateKeyUpdate 
+2026-10-17T18:45:23.1925853Z 18:45:23 00:00.008 org.h2.test.db.TestExclusive 
+2026-10-17T18:45:23.6132786Z 18:45:23 00:00.421 org.h2.test.db.TestFullText create FT: 2
+2026-10-17T18:45:23.6133740Z 18:45:23 00:00.421 org.h2.test.db.TestFullText search FT: 0 count: 0
+2026-10-17T18:45:26.0142258Z 18:45:26 00:02.822 org.h2.test.db.TestFullText create FTL: 6
+2026-10-17T18:45:26.0143999Z 18:45:26 00:02.822 org.h2.test.db.TestFullText search FTL: 0 count: 0
+2026-10-17T18:45:26.0939862Z 18:45:26 00:02.902 org.h2.test.db.TestFullText 
+2026-10-17T18:45:26.0996153Z 18:45:26 00:00.005 org.h2.test.db.TestFunctionOverload 
+2026-10-17T18:45:26.4230044Z 18:45:26 00:00.323 org.h2.test.db.TestFunctions 
+2026-10-17T18:45:26.4268286Z 18:45:26 00:00.003 org.h2.test.server.TestInit 
+2026-10-17T18:45:36.5332571Z 18:45:36 00:10.106 org.h2.test.db.TestIndex 
+2026-10-17T18:45:36.5387767Z 18:45:36 00:00.005 org.h2.test.db.TestIndexHints 
+2026-10-17T18:45:36.5438397Z 18:45:36 00:00.004 org.h2.test.db.TestCompoundIndexSearch 
+2026-10-17T18:45:36.5529757Z 18:45:36 00:00.008 org.h2.test.db.TestCompoundIndexParamSearch 
+2026-10-17T18:45:36.7147737Z 18:45:36 00:00.161 org.h2.test.db.TestLinkedTable 
+2026-10-17T18:45:49.7857466Z 18:45:49 00:13.070 org.h2.test.db.TestLob 
+2026-10-17T18:45:49.7896344Z 18:45:49 00:00.003 org.h2.test.db.TestMaterializedView 
+2026-10-17T18:45:49.8565747Z 18:45:49 00:00.066 org.h2.test.db.TestMergeUsing 
+2026-10-17T18:45:50.2833891Z 18:45:50 00:00.426 org.h2.test.db.TestMultiConn 
+2026-10-17T18:45:50.4272640Z 18:45:50 00:00.143 org.h2.test.db.TestMultiDimension 
+2026-10-17T18:45:53.4468532Z 18:45:53 00:03.019 org.h2.test.db.TestMultiThreadedKernel 
+2026-10-17T18:45:54.6028583Z 18:45:54 00:01.155 org.h2.test.db.TestOpenClose 
+2026-10-17T18:45:54.6365814Z 18:45:54 00:00.033 org.h2.test.db.TestReadOnly 
+2026-10-17T18:45:54.7107604Z 18:45:54 00:00.071 org.h2.test.db.TestRecursiveQueries 
+2026-10-17T18:45:54.7971538Z 18:45:54 00:00.088 org.h2.test.db.TestGeneralCommonTableQueries 
+2026-10-17T18:45:54.8264614Z 18:45:54 00:00.029 org.h2.test.db.TestAlterTableNotFound 
+2026-10-17T18:45:54.8732982Z 18:45:54 00:00.046 org.h2.test.db.TestSelectTableNotFound 
+2026-10-17T18:45:54.9766821Z 18:45:54 00:00.103 org.h2.test.db.TestPersistentCommonTableExpressions 
+2026-10-17T18:45:55.1929297Z 18:45:55 00:00.216 org.h2.test.db.TestRights 
+2026-10-17T18:45:56.2154065Z 18:45:56 00:01.022 org.h2.test.db.TestRunscript 
+2026-10-17T18:45:56.2512037Z 18:45:56 00:00.035 org.h2.test.db.TestSQLInjection 
+2026-10-17T18:45:56.4658449Z 18:45:56 00:00.214 org.h2.test.db.TestSessionsLocks 
+2026-10-17T18:45:58.8140901Z 18:45:58 00:02.348 org.h2.test.db.TestSequence 
+2026-10-17T18:45:59.1778680Z 18:45:59 00:00.363 org.h2.test.db.TestSpaceReuse 
+2026-10-17T18:45:59.1997011Z 18:45:59 00:00.021 org.h2.test.db.TestSpeed 
+2026-10-17T18:45:59.2489247Z 18:45:59 00:00.049 org.h2.test.db.TestTableEngines 
+2026-10-17T18:45:59.9910056Z 18:45:59 00:00.741 org.h2.test.db.TestTempTables 
+2026-10-17T18:46:01.3673096Z 18:46:01 00:01.374 org.h2.test.db.TestTransaction 
+2026-10-17T18:46:01.4953457Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:46:01.5024119Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:46:01.5119515Z Warning: Nashorn engine is planned to be removed from a future JDK release
+2026-10-17T18:46:01.6259719Z 18:46:01 00:00.258 org.h2.test.db.TestTriggersConstraints 
+2026-10-17T18:46:01.6896286Z 18:46:01 00:00.063 org.h2.test.db.TestTwoPhaseCommit 
+2026-10-17T18:46:01.8333255Z 18:46:01 00:00.143 org.h2.test.db.TestView 
+2026-10-17T18:46:01.8611956Z 18:46:01 00:00.027 org.h2.test.db.TestViewAlterTable 
+2026-10-17T18:46:01.8896758Z 18:46:01 00:00.028 org.h2.test.db.TestViewDropView 
+2026-10-17T18:46:01.9946059Z 18:46:01 00:00.103 org.h2.test.db.TestSynonymForTable 
+2026-10-17T18:46:02.0676820Z 18:46:02 00:00.072 org.h2.test.jdbc.TestBatchUpdates 
+2026-10-17T18:46:02.1183483Z 18:46:02 00:00.050 org.h2.test.jdbc.TestCallableStatement 
+2026-10-17T18:46:03.2976716Z 18:46:03 00:01.179 org.h2.test.jdbc.TestCancel 
+2026-10-17T18:46:03.4342287Z 18:46:03 00:00.136 org.h2.test.jdbc.TestConcurrentConnectionUsage 
+2026-10-17T18:46:03.5765589Z 18:46:03 00:00.142 org.h2.test.jdbc.TestConnection 
+2026-10-17T18:46:03.6660167Z 18:46:03 00:00.089 org.h2.test.jdbc.TestDatabaseEventListener 
+2026-10-17T18:46:03.8465988Z 18:46:03 00:00.178 org.h2.test.jdbc.TestLobApi 
+2026-10-17T18:46:03.8728246Z 18:46:03 00:00.028 org.h2.test.jdbc.TestSQLXML 
+2026-10-17T18:46:03.8799898Z 18:46:03 00:00.006 org.h2.test.jdbc.TestManyJdbcObjects 
+2026-10-17T18:46:04.1589626Z 18:46:04 00:00.278 org.h2.test.jdbc.TestMetaData 
+2026-10-17T18:46:04.1755392Z 18:46:04 00:00.016 org.h2.test.jdbc.TestNativeSQL 
+2026-10-17T18:46:04.7093772Z 18:46:04 00:00.533 org.h2.test.jdbc.TestPreparedStatement 
+2026-10-17T18:46:04.8772353Z 18:46:04 00:00.167 org.h2.test.jdbc.TestResultSet 
+2026-10-17T18:46:04.8934290Z 18:46:04 00:00.016 org.h2.test.jdbc.TestStatement 
+2026-10-17T18:46:07.6263102Z 18:46:07 00:02.732 org.h2.test.jdbc.TestGetGeneratedKeys 
+2026-10-17T18:46:09.2677306Z 18:46:09 00:01.641 org.h2.test.jdbc.TestTransactionIsolation 
+2026-10-17T18:46:09.3454681Z 18:46:09 00:00.077 org.h2.test.jdbc.TestUpdatableResultSet 
+2026-10-17T18:46:09.3526769Z 18:46:09 00:00.007 org.h2.test.jdbc.TestZloty 
+2026-10-17T18:46:09.4012077Z 18:46:09 00:00.048 org.h2.test.db.TestSetCollation 
+2026-10-17T18:46:58.5547777Z 18:46:58 00:49.153 org.h2.test.jdbc.TestCachedQueryResults 
+2026-10-17T18:47:00.7221136Z 18:47:00 00:02.167 org.h2.test.jdbcx.TestConnectionPool 
+2026-10-17T18:47:00.7351682Z 18:47:00 00:00.012 org.h2.test.jdbcx.TestDataSource 
+2026-10-17T18:47:00.7606711Z 18:47:00 00:00.025 org.h2.test.jdbcx.TestXA 
+2026-10-17T18:47:00.7916182Z 18:47:00 00:00.030 org.h2.test.jdbcx.TestXASimple 
+2026-10-17T18:47:01.7853853Z 18:47:01 00:00.993 org.h2.test.server.TestAutoServer 
+2026-10-17T18:47:01.9604656Z 18:47:01 00:00.174 org.h2.test.server.TestNestedLoop 
+2026-10-17T18:47:02.0895572Z 18:47:02 00:00.128 org.h2.test.mvcc.TestMvcc1 
+2026-10-17T18:47:02.1583194Z 18:47:02 00:00.068 org.h2.test.mvcc.TestMvcc2 
+2026-10-17T18:47:02.2337613Z 18:47:02 00:00.075 org.h2.test.mvcc.TestMvcc3 
+2026-10-17T18:47:02.2383755Z 18:47:02 00:00.004 org.h2.test.mvcc.TestMvcc4 
+2026-10-17T18:47:04.4593445Z 18:47:04 00:02.220 org.h2.test.mvcc.TestMvccMultiThreaded 
+2026-10-17T18:47:10.4875289Z 18:47:10 00:06.027 org.h2.test.mvcc.TestMvccMultiThreaded2 
+2026-10-17T18:47:10.6429577Z 18:47:10 00:00.155 org.h2.test.rowlock.TestRowLocks 
+2026-10-17T18:47:12.3196707Z 18:47:12 00:01.676 org.h2.test.db.TestAnalyzeTableTx 
+2026-10-17T18:47:15.3226273Z 18:47:15 00:03.002 org.h2.test.synth.TestBtreeIndex 18:47:15 testIndex -1297217270
+2026-10-17T18:47:15.4634455Z 18:47:15 00:03.143 org.h2.test.synth.TestBtreeIndex 
+2026-10-17T18:47:17.6840020Z 18:47:17 00:02.220 org.h2.test.synth.TestConcurrentUpdate 
+2026-10-17T18:47:17.6905235Z 18:47:17 00:00.006 org.h2.test.synth.TestDiskFull write op count: 367
+2026-10-17T18:47:19.3476334Z 18:47:19 00:01.663 org.h2.test.synth.TestDiskFull 
+2026-10-17T18:47:30.8260346Z 18:47:30 00:11.478 org.h2.test.synth.TestCrashAPI 18:47:30 seed: 1711256417
+2026-10-17T18:48:22.9314280Z 18:48:22 01:03.583 org.h2.test.synth.TestCrashAPI stopping...
+2026-10-17T18:48:23.9316935Z 18:48:23 01:04.583 org.h2.test.synth.TestCrashAPI 
+2026-10-17T18:48:23.9336974Z 18:48:23 00:00.001 org.h2.test.synth.TestFuzzOptimizations testGroupSorted() seed: -7778506291522105075
+2026-10-17T18:48:24.4953902Z 18:48:24 00:00.563 org.h2.test.synth.TestFuzzOptimizations testInSelect() seed: -4502676198133005377
+2026-10-17T18:48:24.5331122Z 18:48:24 00:00.601 org.h2.test.synth.TestFuzzOptimizations 
+2026-10-17T18:48:26.9900894Z 18:48:26 00:02.456 org.h2.test.synth.TestLimit 
+2026-10-17T18:48:27.2180479Z 18:48:27 00:00.227 org.h2.test.synth.TestRandomCompare 
+2026-10-17T18:48:28.1066703Z 18:48:28 00:00.886 org.h2.test.synth.TestKillRestart 18:48:28 killing: 0
+2026-10-17T18:48:29.2498340Z 18:48:29 00:02.031 org.h2.test.synth.TestKillRestart 18:48:29 killing: 1
+2026-10-17T18:48:29.4844624Z 18:48:29 00:02.266 org.h2.test.synth.TestKillRestart 
+2026-10-17T18:48:30.9046173Z 18:48:30 00:01.418 org.h2.test.synth.TestKillRestartMulti 18:48:30 killing: 0
+2026-10-17T18:48:30.9066565Z 18:48:30 00:01.418 org.h2.test.synth.TestKillRestartMulti 18:48:30 killing, waiting for: 0
+2026-10-17T18:48:30.9645665Z 18:48:30 00:01.479 org.h2.test.synth.TestKillRestartMulti 18:48:30 killing, dead: 0
+2026-10-17T18:48:32.4456437Z 18:48:32 00:02.959 org.h2.test.synth.TestKillRestartMulti 18:48:32 killing: 1
+2026-10-17T18:48:32.4485582Z 18:48:32 00:02.959 org.h2.test.synth.TestKillRestartMulti 18:48:32 killing, waiting for: 1
+2026-10-17T18:48:32.6861375Z 18:48:32 00:03.201 org.h2.test.synth.TestKillRestartMulti 18:48:32 killing, dead: 1
+2026-10-17T18:48:34.0516217Z 18:48:34 00:04.565 org.h2.test.synth.TestKillRestartMulti 18:48:34 killing: 2
+2026-10-17T18:48:34.0540333Z 18:48:34 00:04.565 org.h2.test.synth.TestKillRestartMulti 18:48:34 killing, waiting for: 2
+2026-10-17T18:48:34.2801326Z 18:48:34 00:04.795 org.h2.test.synth.TestKillRestartMulti 18:48:34 killing, dead: 2
+2026-10-17T18:48:34.3427785Z 18:48:34 00:04.858 org.h2.test.synth.TestKillRestartMulti 
+2026-10-17T18:48:36.5496040Z 18:48:36 00:02.206 org.h2.test.synth.TestMultiThreaded 
+2026-10-17T18:48:36.6852897Z 18:48:36 00:00.135 org.h2.test.synth.TestOuterJoins 
+2026-10-17T18:48:37.6048479Z 18:48:37 00:00.919 org.h2.test.synth.TestNestedJoins 
+2026-10-17T18:48:37.8369711Z 18:48:37 00:00.231 org.h2.test.db.TestDateStorage 
+2026-10-17T18:48:37.8378947Z 18:48:37 00:00.000 org.h2.test.jdbc.TestDriver 
+2026-10-17T18:48:37.8443426Z 18:48:37 00:00.006 org.h2.test.jdbc.TestJavaObjectSerializer 
+2026-10-17T18:48:37.8850677Z 18:48:37 00:00.040 org.h2.test.unit.TestLocale 
+2026-10-17T18:48:38.5499380Z 18:48:38 00:00.664 org.h2.test.db.TestMemoryUsage 
+2026-10-17T18:48:48.6204777Z 18:48:48 00:10.070 org.h2.test.db.TestMultiThread 
+2026-10-17T18:48:48.6963083Z 18:48:48 00:00.075 org.h2.test.db.TestPowerOff 
+2026-10-17T18:48:48.6970004Z 18:48:48 00:00.000 org.h2.test.poweroff.TestReorderWrites testMVStore(): Disable partial write
+2026-10-17T18:48:48.8176710Z 18:48:48 00:00.120 org.h2.test.poweroff.TestReorderWrites testMVStore(): Enable partial write
+2026-10-17T18:48:48.9606440Z 18:48:48 00:00.262 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Disable partial write
+2026-10-17T18:48:48.9638448Z 18:48:48 00:00.267 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Enable partial write
+2026-10-17T18:48:48.9721672Z 18:48:48 00:00.275 org.h2.test.poweroff.TestReorderWrites 
+2026-10-17T18:48:48.9723589Z 18:48:48 00:00.000 org.h2.test.synth.TestRandomSQL 18:48:48 seed: 1740883911
+2026-10-17T18:48:49.0035757Z 18:48:49 00:00.030 org.h2.test.synth.TestRandomSQL 18:48:49 seed: 1341468079
+2026-10-17T18:48:49.0433735Z 18:48:49 00:00.070 org.h2.test.synth.TestRandomSQL 18:48:49 total: 100 success: 8%
+2026-10-17T18:48:49.0528656Z 18:48:49 00:00.080 org.h2.test.synth.TestRandomSQL 
+2026-10-17T18:48:51.1658382Z 18:48:51 00:02.112 org.h2.test.db.TestQueryCache 
+2026-10-17T18:48:51.1698149Z 18:48:51 00:00.003 org.h2.test.jdbc.TestUrlJavaObjectSerializer 
+2026-10-17T18:48:56.9039582Z 18:48:56 00:05.733 org.h2.test.server.TestWeb 
+2026-10-17T18:48:56.9044000Z 18:48:56 00:00.000 org.h2.test.server.TestJakartaWeb 
+2026-10-17T18:49:00.1816172Z 18:49:00 00:03.276 org.h2.test.db.TestOptimizations 
+2026-10-17T18:49:02.6903044Z 18:49:02 00:02.508 org.h2.test.db.TestOutOfMemory 
+2026-10-17T18:49:02.7490412Z 18:49:02 00:00.058 org.h2.test.db.TestIgnoreCatalogs 
+2026-10-17T18:49:02.8316457Z Warning: test org.h2.test.store.TestMVStoreBenchmark was not executed.
+2026-10-17T18:49:02.8317517Z Warning: test org.h2.test.db.TestLargeBlob was not executed.
+2026-10-17T18:49:02.8318957Z Warning: test org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode was not executed.
+2026-10-17T18:49:02.8320365Z Warning: test org.h2.test.db.TestSpatial was not executed.
+2026-10-17T18:49:02.8321474Z Warning: test org.h2.test.store.TestDefrag was not executed.
+2026-10-17T18:49:02.8328209Z 21:36.566 total
+2026-10-17T18:49:02.8923690Z Done in 1316534 ms
+2026-10-17T18:49:02.9162042Z Post job cleanup.
+2026-10-17T18:49:03.0618211Z Post job cleanup.
+2026-10-17T18:49:03.1505824Z [command]/usr/bin/git version
+2026-10-17T18:49:03.1549873Z git version 2.55.0
+2026-10-17T18:49:03.1592277Z Temporarily overriding HOME='/home/runner/work/_temp/a24874dc-b6d9-4a5c-bb1f-f4efd487cc60' before making global git config changes
+2026-10-17T18:49:03.1594121Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-17T18:49:03.1598033Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/h2database/h2database
+2026-10-17T18:49:03.1632327Z Removing SSH command configuration
+2026-10-17T18:49:03.1640122Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-17T18:49:03.1677320Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-17T18:49:03.1924326Z Removing HTTP extra header
+2026-10-17T18:49:03.1925925Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-17T18:49:03.1962095Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-17T18:49:03.2211878Z Removing includeIf entries pointing to credentials config files
+2026-10-17T18:49:03.2220434Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-17T18:49:03.2253700Z includeif.gitdir:/home/runner/work/h2database/h2database/.git.path
+2026-10-17T18:49:03.2255193Z includeif.gitdir:/home/runner/work/h2database/h2database/.git/worktrees/*.path
+2026-10-17T18:49:03.2256140Z includeif.gitdir:/github/workspace/.git.path
+2026-10-17T18:49:03.2256840Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-17T18:49:03.2264837Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/h2database/h2database/.git.path
+2026-10-17T18:49:03.2290570Z /home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2311082Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/h2database/h2database/.git.path /home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2343101Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/h2database/h2database/.git/worktrees/*.path
+2026-10-17T18:49:03.2366663Z /home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2376574Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/h2database/h2database/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2414760Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-10-17T18:49:03.2436769Z /github/runner_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2446437Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2479330Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-10-17T18:49:03.2503291Z /github/runner_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2510471Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config
+2026-10-17T18:49:03.2547583Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-17T18:49:03.2801334Z Removing credentials config '/home/runner/work/_temp/git-credentials-6fc67db1-3a38-471f-96f3-4d72da38002a.config'
+2026-10-17T18:49:03.3003321Z Cleaning up orphan processes
