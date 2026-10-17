@@ -126,6 +126,7 @@ public class TestPreparedStatement extends TestDb {
         testPreparedStatementWithLiteralsNone();
         testPreparedStatementWithIndexedParameterAndLiteralsNone();
         testPreparedStatementWithAnyParameter();
+        testPreparedStatementWithAnyParameterTypes();
         deleteDb("preparedStatement");
     }
 
@@ -1651,6 +1652,63 @@ public class TestPreparedStatement extends TestDb {
             assertEquals("CASE V WHEN = ANY(?1) THEN 1 ELSE 2 END", rs.getMetaData().getColumnLabel(2));
         }
         conn.close();
+        deleteDb("preparedStatement");
+    }
+
+    private void testPreparedStatementWithAnyParameterTypes() throws SQLException {
+        deleteDb("preparedStatement");
+        try (Connection conn = getConnection("preparedStatement"); Statement stat = conn.createStatement()) {
+            stat.execute("CREATE TABLE TEST(ID INT, V VARCHAR)");
+            stat.execute("INSERT INTO TEST VALUES (1, '01'), (2, '1'), (3, '2'), (4, '02')");
+            for (String order : new String[] { "", "ASC", "DESC" }) {
+                if (!order.isEmpty()) {
+                    stat.execute("CREATE INDEX TEST_V ON TEST(V " + order + ", ID)");
+                }
+                for (String condition : new String[] { "V = ANY(?)", "V = ANY(?) AND V >= '00' AND V < '9'" }) {
+                    try (PreparedStatement ps = conn.prepareStatement("SELECT ID FROM TEST WHERE " + condition
+                            + " ORDER BY ID")) {
+                        anyParameterCheck(ps, "01", new int[] { 1 });
+                        anyParameterCheck(ps, 1, new int[] { 1, 2 });
+                        anyParameterCheck(ps, new Integer[] { 1, 2 }, new int[] { 1, 2, 3, 4 });
+                        anyParameterCheck(ps, new String[] { "1", "02" }, new int[] { 2, 4 });
+                        anyParameterCheck(ps, new Integer[0], new int[0]);
+                        anyParameterCheck(ps, null, new int[0]);
+                        anyParameterCheck(ps, new Integer[] { null, 2 }, new int[] { 3, 4 });
+                        anyParameterCheck(ps, new String[] { "01" }, new int[] { 1 });
+                    }
+                }
+                for (boolean reverse : new boolean[] { false, true }) {
+                    try (PreparedStatement ps = conn.prepareStatement("SELECT ID FROM TEST WHERE V = ANY(?) ORDER BY "
+                            + (reverse ? "V DESC, ID DESC" : "V, ID") + " LIMIT 2")) {
+                        anyParameterCheck(ps, "01", new int[] { 1 });
+                        anyParameterCheck(ps, 1, reverse ? new int[] { 2, 1 } : new int[] { 1, 2 });
+                        anyParameterCheck(ps, new Integer[] { 1, 2 },
+                                reverse ? new int[] { 3, 2 } : new int[] { 1, 4 });
+                        anyParameterCheck(ps, new String[] { "1", "02" },
+                                reverse ? new int[] { 2, 4 } : new int[] { 4, 2 });
+                        anyParameterCheck(ps, new Integer[0], new int[0]);
+                        anyParameterCheck(ps, null, new int[0]);
+                        anyParameterCheck(ps, new Integer[] { null, 2 },
+                                reverse ? new int[] { 3, 4 } : new int[] { 4, 3 });
+                        anyParameterCheck(ps, new String[] { "01" }, new int[] { 1 });
+                    }
+                }
+                if (!order.isEmpty()) {
+                    try (PreparedStatement ps = conn.prepareStatement(
+                            "EXPLAIN ANALYZE SELECT ID FROM TEST WHERE V = ANY(?)")) {
+                        for (Object value : new Object[] { "01", new String[] { "01" } }) {
+                            ps.setObject(1, value);
+                            try (ResultSet rs = ps.executeQuery()) {
+                                assertTrue(rs.next());
+                                assertContains(rs.getString(1), "/* scanCount: 2 */");
+                                assertFalse(rs.next());
+                            }
+                        }
+                    }
+                    stat.execute("DROP INDEX TEST_V");
+                }
+            }
+        }
         deleteDb("preparedStatement");
     }
 

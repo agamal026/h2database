@@ -26,6 +26,7 @@ import org.h2.result.SortOrder;
 import org.h2.table.Column;
 import org.h2.table.IndexColumn;
 import org.h2.table.TableType;
+import org.h2.value.TypeInfo;
 import org.h2.value.Value;
 import org.h2.value.ValueArray;
 import org.h2.value.ValueRow;
@@ -183,7 +184,8 @@ public class IndexCondition {
      *
      * @param session the session
      * @param sortTypes sort types
-     * @return the value list
+     * @return the value list, or {@code null} if the values cannot safely be
+     *         converted for an index lookup
      */
     public Value[] getCurrentValueList(SessionLocal session, int[] sortTypes) {
         Comparator<Value> comparator;
@@ -207,8 +209,14 @@ public class IndexCondition {
                 }
             } else {
                 Column column = getColumn();
+                TypeInfo columnType = column.getType();
                 for (Expression e : expressionList) {
                     Value v = e.getValue(session);
+                    // A parameter may have a different type on each call.
+                    if (!Comparison.isSafeIndexCondition(columnType,
+                            TypeInfo.getHigherType(columnType, v.getType()))) {
+                        return null;
+                    }
                     v = column.convert(session, v);
                     valueSet.add(v);
                 }
