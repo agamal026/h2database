@@ -1,0 +1,9 @@
+START org.h2.test.db.TestOutOfMemory memory=true
+17:27:55 6:57:17.380 org.h2.test.db.TestOutOfMemory Failure
+Exception in thread "main" java.lang.AssertionError: Failure
+	at org.h2.test.TestBase.fail(TestBase.java:334)
+	at org.h2.test.TestBase.fail(TestBase.java:308)
+	at org.h2.test.db.TestOutOfMemory.testDatabaseUsingInMemoryFileSystem(TestOutOfMemory.java:133)
+	at org.h2.test.db.TestOutOfMemory.test(TestOutOfMemory.java:60)
+	at org.h2.test.TestBase.testFromMain(TestBase.java:479)
+	at RunSelectedH2Tests.main(RunSelectedH2Tests.java:16)

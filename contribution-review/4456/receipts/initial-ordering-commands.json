@@ -1,0 +1,26 @@
+[
+  {
+    "name": "baseline-ordering",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/baseline-classes:/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "OrderProbe4456"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence",
+    "exit_code": 0
+  },
+  {
+    "name": "patched-ordering",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "OrderProbe4456"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence",
+    "exit_code": 0
+  }
+]

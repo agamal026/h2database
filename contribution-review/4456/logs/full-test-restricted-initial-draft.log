@@ -1,0 +1,431 @@
+Target: test
+/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java -ea -Xmx128m -Duser.timezone=America/New_York -cp src/java10/precompiled:src/java9/precompiled:temp:bin:ext/postgresql-42.7.2.jar:ext/javax.servlet-api-4.0.1.jar:ext/jakarta.servlet-api-5.0.0.jar:ext/lucene-core-9.7.0.jar:ext/lucene-analysis-common-9.7.0.jar:ext/lucene-queryparser-9.7.0.jar:ext/org.osgi.core-5.0.0.jar:ext/org.osgi.service.jdbc-1.1.0.jar:ext/jts-core-1.19.0.jar:ext/slf4j-api-2.0.7.jar:ext/slf4j-nop-2.0.7.jar:ext/asm-9.5.jar:/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/../lib/tools.jar:ext/nashorn-core-15.4.jar:ext/asm-commons-9.5.jar:ext/asm-tree-9.5.jar:ext/asm-util-9.5.jar org.h2.test.TestAll
+H2 2.5.259-SNAPSHOT (2026-09-23) @ 2026-10-17 17:14:50.886
+Java 17.0.20.1+1, OpenJDK 64-Bit Server VM, Eclipse Adoptium, 64
+Linux, amd64, 6.18.55, null, / : \n null en America/New_York null UTF-8
+
+Test memory  (1712 KB used)
+17:15:01 00:10.744 org.h2.test.scripts.TestScript 
+17:15:01 00:00.019 org.h2.test.db.TestAlter 
+17:15:01 00:00.055 org.h2.test.db.TestAlterSchemaRename 
+17:15:01 00:00.012 org.h2.test.db.TestAutoRecompile 
+17:15:02 00:00.449 org.h2.test.db.TestCases 
+17:15:02 00:00.000 org.h2.test.db.TestCheckpoint 
+17:15:02 00:00.420 org.h2.test.db.TestCompatibility 
+17:15:02 00:00.011 org.h2.test.db.TestCompatibilityOracle 
+17:15:02 00:00.001 org.h2.test.db.TestCompatibilitySQLServer 
+17:15:02 00:00.046 org.h2.test.db.TestCsv 
+17:15:05 00:02.516 org.h2.test.db.TestDeadlock 
+17:15:05 00:00.011 org.h2.test.db.TestDuplicateKeyUpdate 
+17:15:05 00:00.004 org.h2.test.db.TestExclusive 
+17:15:05 00:00.137 org.h2.test.db.TestFullText create FT: 1
+17:15:05 00:00.140 org.h2.test.db.TestFullText search FT: 0 count: 0
+17:15:07 00:02.540 org.h2.test.db.TestFullText create FTL: 3
+17:15:07 00:02.540 org.h2.test.db.TestFullText search FTL: 0 count: 0
+17:15:07 00:02.541 org.h2.test.db.TestFullText 
+17:15:07 00:00.004 org.h2.test.db.TestFunctionOverload 
+17:15:08 00:00.268 org.h2.test.db.TestFunctions 
+17:15:08 00:00.002 org.h2.test.server.TestInit 
+17:15:08 00:00.875 org.h2.test.db.TestIndex 
+17:15:08 00:00.001 org.h2.test.db.TestIndexHints 
+17:15:08 00:00.002 org.h2.test.db.TestCompoundIndexSearch 
+17:15:08 00:00.005 org.h2.test.db.TestCompoundIndexParamSearch 
+17:15:09 00:00.013 org.h2.test.db.TestLinkedTable 
+17:15:09 00:00.003 org.h2.test.db.TestListener 
+17:15:20 00:11.403 org.h2.test.db.TestLob 
+17:15:20 00:00.001 org.h2.test.db.TestMaterializedView 
+17:15:20 00:00.014 org.h2.test.db.TestMergeUsing 
+17:15:20 00:00.394 org.h2.test.db.TestMultiConn 
+17:15:20 00:00.025 org.h2.test.db.TestMultiDimension 
+17:15:23 00:03.006 org.h2.test.db.TestMultiThreadedKernel 
+17:15:24 00:01.053 org.h2.test.db.TestOpenClose 
+17:15:24 00:00.033 org.h2.test.db.TestRecursiveQueries 
+17:15:24 00:00.015 org.h2.test.db.TestGeneralCommonTableQueries 
+17:15:24 00:00.006 org.h2.test.db.TestAlterTableNotFound 
+17:15:24 00:00.004 org.h2.test.db.TestSelectTableNotFound 
+17:15:24 00:00.018 org.h2.test.db.TestRights 
+17:15:27 00:02.461 org.h2.test.db.TestRunscript 
+17:15:27 00:00.002 org.h2.test.db.TestSQLInjection 
+17:15:27 00:00.209 org.h2.test.db.TestSessionsLocks 
+17:15:29 00:02.029 org.h2.test.db.TestSequence 
+17:15:29 00:00.002 org.h2.test.db.TestSpeed 
+17:15:29 00:00.019 org.h2.test.db.TestTableEngines 
+17:15:30 00:01.104 org.h2.test.db.TestTempTables 
+17:15:38 00:07.474 org.h2.test.db.TestTransaction 
+17:15:38 00:00.379 org.h2.test.db.TestTriggersConstraints 
+17:15:38 00:00.051 org.h2.test.db.TestView 
+17:15:38 00:00.013 org.h2.test.db.TestViewAlterTable 
+17:15:38 00:00.004 org.h2.test.db.TestViewDropView 
+17:15:38 00:00.008 org.h2.test.db.TestSynonymForTable 
+17:15:38 00:00.017 org.h2.test.jdbc.TestBatchUpdates 
+17:15:38 00:00.016 org.h2.test.jdbc.TestCallableStatement 
+17:15:39 00:01.141 org.h2.test.jdbc.TestCancel 
+17:15:39 00:00.051 org.h2.test.jdbc.TestConcurrentConnectionUsage 
+17:15:40 00:00.060 org.h2.test.jdbc.TestConnection 
+17:15:40 00:00.003 org.h2.test.jdbc.TestDatabaseEventListener 
+17:15:40 00:00.088 org.h2.test.jdbc.TestLobApi 
+17:15:40 00:00.090 org.h2.test.jdbc.TestSQLXML 
+17:15:40 00:00.000 org.h2.test.jdbc.TestManyJdbcObjects 
+17:15:40 00:00.048 org.h2.test.jdbc.TestMetaData 
+17:15:40 00:00.006 org.h2.test.jdbc.TestNativeSQL 
+17:15:40 00:00.266 org.h2.test.jdbc.TestPreparedStatement 
+17:15:40 00:00.036 org.h2.test.jdbc.TestResultSet 
+17:15:40 00:00.005 org.h2.test.jdbc.TestStatement 
+17:15:40 00:00.349 org.h2.test.jdbc.TestGetGeneratedKeys 
+17:15:42 00:01.626 org.h2.test.jdbc.TestTransactionIsolation 
+17:15:42 00:00.011 org.h2.test.jdbc.TestUpdatableResultSet 
+17:15:42 00:00.002 org.h2.test.jdbc.TestZloty 
+17:15:42 00:00.008 org.h2.test.db.TestSetCollation 
+17:15:45 00:02.970 org.h2.test.jdbc.TestCachedQueryResults 
+17:15:47 00:02.050 org.h2.test.jdbcx.TestConnectionPool 
+17:15:47 00:00.004 org.h2.test.jdbcx.TestDataSource 
+17:15:47 00:00.003 org.h2.test.jdbcx.TestXA 
+17:15:47 00:00.000 org.h2.test.jdbcx.TestXASimple 
+17:15:47 00:00.001 org.h2.test.server.TestAutoServer 
+17:15:47 00:00.065 org.h2.test.server.TestNestedLoop 
+17:15:47 00:00.048 org.h2.test.mvcc.TestMvcc1 
+17:15:47 00:00.053 org.h2.test.mvcc.TestMvcc2 
+17:15:47 00:00.053 org.h2.test.mvcc.TestMvcc3 
+17:15:47 00:00.001 org.h2.test.mvcc.TestMvcc4 
+17:15:49 00:02.032 org.h2.test.mvcc.TestMvccMultiThreaded 
+17:15:55 00:06.012 org.h2.test.mvcc.TestMvccMultiThreaded2 
+17:15:56 00:00.152 org.h2.test.rowlock.TestRowLocks 
+17:15:56 00:00.208 org.h2.test.db.TestAnalyzeTableTx 
+17:15:56 00:00.099 org.h2.test.synth.TestBtreeIndex 17:15:56 testIndex -415512952
+17:15:56 00:00.109 org.h2.test.synth.TestBtreeIndex 
+17:15:58 00:02.005 org.h2.test.synth.TestConcurrentUpdate 
+17:15:58 00:00.042 org.h2.test.synth.TestDiskFull write op count: 367
+17:16:00 00:01.702 org.h2.test.synth.TestDiskFull 
+17:16:07 00:07.722 org.h2.test.synth.TestCrashAPI 17:16:07 seed: 604731152
+17:16:45 00:45.205 org.h2.test.synth.TestCrashAPI 17:16:45 seed: 73598891
+17:16:58 00:58.533 org.h2.test.synth.TestCrashAPI stopping...
+17:16:59 00:59.533 org.h2.test.synth.TestCrashAPI 
+17:16:59 00:00.007 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6190738334945706812
+17:16:59 00:00.027 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5143616496128972202
+17:16:59 00:00.029 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1569225306995599324
+17:16:59 00:00.030 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6342588477321900315
+17:16:59 00:00.034 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 848221985506600498
+17:16:59 00:00.034 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3002873606624810926
+17:16:59 00:00.036 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3232422050019362888
+17:16:59 00:00.038 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8707374142677508743
+17:16:59 00:00.045 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4894884677153355831
+17:16:59 00:00.049 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4205233277983895133
+17:16:59 00:00.051 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1947751435161156938
+17:16:59 00:00.053 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4197942300431490026
+17:16:59 00:00.056 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1858981965619447945
+17:16:59 00:00.066 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1290979079331790823
+17:16:59 00:00.070 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -433993017853570147
+17:16:59 00:00.070 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2422918592330802421
+17:16:59 00:00.077 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4109542062220481903
+17:16:59 00:00.079 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6506625838027834619
+17:16:59 00:00.082 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7515980065139882136
+17:16:59 00:00.086 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1979493469624825216
+17:16:59 00:00.096 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2379734115829760619
+17:16:59 00:00.096 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8897293282923738320
+17:16:59 00:00.097 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -658704048193865979
+17:16:59 00:00.099 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -208703367350980386
+17:16:59 00:00.132 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4081319707109673757
+17:16:59 00:00.135 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6598723044969016338
+17:16:59 00:00.136 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8095766677013558660
+17:16:59 00:00.138 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2005169386092744601
+17:16:59 00:00.139 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2688543319787183662
+17:16:59 00:00.142 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8761165974506367508
+17:16:59 00:00.143 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7154037994528887514
+17:16:59 00:00.143 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1062268923734860717
+17:16:59 00:00.145 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5541343818969515546
+17:16:59 00:00.145 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3460615884186954745
+17:16:59 00:00.146 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8062097899318406686
+17:16:59 00:00.146 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6998221986758032663
+17:16:59 00:00.152 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2353876232660376217
+17:16:59 00:00.153 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7407625709040786602
+17:16:59 00:00.153 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -894649995879652381
+17:16:59 00:00.155 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2292346021487884387
+17:16:59 00:00.155 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 773495568797110346
+17:16:59 00:00.164 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1977019024398199846
+17:16:59 00:00.166 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5670664973180273159
+17:16:59 00:00.168 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6970433917934596382
+17:16:59 00:00.169 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4714297941739942123
+17:16:59 00:00.170 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2265325030756196755
+17:16:59 00:00.170 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7272226447577123938
+17:16:59 00:00.171 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6607403010070935250
+17:16:59 00:00.171 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3540861027606958567
+17:16:59 00:00.172 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6998243895470177165
+17:16:59 00:00.174 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2142333708842936647
+17:16:59 00:00.174 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5093241723450908855
+17:16:59 00:00.175 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2083732954916780238
+17:16:59 00:00.176 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6854704497853752884
+17:16:59 00:00.176 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -5547251930891998456
+17:16:59 00:00.176 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3983357803643710085
+17:16:59 00:00.180 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6875669609502453594
+17:16:59 00:00.181 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -633742992368235441
+17:16:59 00:00.181 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5377156048521452540
+17:16:59 00:00.182 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2930628075932215204
+17:16:59 00:00.184 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1226244429892445286
+17:16:59 00:00.184 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2981400624236820143
+17:16:59 00:00.195 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3594184029634648198
+17:16:59 00:00.195 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6955208691523228152
+17:16:59 00:00.199 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2356723465383504252
+17:16:59 00:00.199 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3833371490397993118
+17:16:59 00:00.200 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -8173728489834518250
+17:16:59 00:00.201 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7377982178334390403
+17:16:59 00:00.201 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3183298352742652488
+17:16:59 00:00.214 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3969701389542756888
+17:16:59 00:00.216 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -9196260832617227107
+17:16:59 00:00.217 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7856735949817890672
+17:16:59 00:00.220 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7612306010538532705
+17:16:59 00:00.220 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3562502534090837046
+17:16:59 00:00.222 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 7249237662638354572
+17:16:59 00:00.222 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1179253773945973088
+17:16:59 00:00.223 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -1657603248554241976
+17:16:59 00:00.223 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -2155025610659259776
+17:16:59 00:00.223 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2989860021963106454
+17:16:59 00:00.225 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6390452367945951118
+17:16:59 00:00.225 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 115695684056920450
+17:16:59 00:00.225 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 500875130757889044
+17:16:59 00:00.225 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6926885145404698591
+17:16:59 00:00.231 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -4692658619640466149
+17:16:59 00:00.232 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8044022702847089533
+17:16:59 00:00.232 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 6191978455730280996
+17:16:59 00:00.233 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 230252653070597321
+17:16:59 00:00.233 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -7965109731700890103
+17:16:59 00:00.235 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5533206177890442972
+17:16:59 00:00.236 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3805227694957573750
+17:16:59 00:00.239 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -407587355089772324
+17:16:59 00:00.239 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 142248002421497787
+17:16:59 00:00.239 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 4952809194366664761
+17:16:59 00:00.240 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 8534664886341970402
+17:16:59 00:00.242 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -6381481098301280803
+17:16:59 00:00.242 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 2300883045701733124
+17:16:59 00:00.242 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 3860759097512624801
+17:16:59 00:00.243 org.h2.test.synth.TestFuzzOptimizations testIn() seed: -3376158274270956840
+17:16:59 00:00.243 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 1535584389317641986
+17:16:59 00:00.244 org.h2.test.synth.TestFuzzOptimizations testIn() seed: 5221108271006284684
+17:16:59 00:00.253 org.h2.test.synth.TestFuzzOptimizations testGroupSorted() seed: -2008582767444797691
+17:17:00 00:00.417 org.h2.test.synth.TestFuzzOptimizations testInSelect() seed: -8641697388975614617
+17:17:00 00:00.427 org.h2.test.synth.TestFuzzOptimizations 
+17:17:00 00:00.371 org.h2.test.synth.TestLimit 
+17:17:00 00:00.065 org.h2.test.synth.TestRandomCompare 
+17:17:00 00:00.405 org.h2.test.synth.TestKillRestart 17:17:00 killing: 0
+17:17:01 00:00.842 org.h2.test.synth.TestKillRestart 17:17:01 killing: 1
+17:17:01 00:00.863 org.h2.test.synth.TestKillRestart 
+17:17:01 00:00.530 org.h2.test.synth.TestKillRestartMulti 17:17:01 killing: 0
+17:17:01 00:00.530 org.h2.test.synth.TestKillRestartMulti 17:17:01 killing, waiting for: 0
+17:17:01 00:00.552 org.h2.test.synth.TestKillRestartMulti 17:17:01 killing, dead: 0
+17:17:02 00:01.042 org.h2.test.synth.TestKillRestartMulti 17:17:02 killing: 1
+17:17:02 00:01.042 org.h2.test.synth.TestKillRestartMulti 17:17:02 killing, waiting for: 1
+17:17:02 00:01.060 org.h2.test.synth.TestKillRestartMulti 17:17:02 killing, dead: 1
+17:17:02 00:01.608 org.h2.test.synth.TestKillRestartMulti 17:17:02 killing: 2
+17:17:02 00:01.608 org.h2.test.synth.TestKillRestartMulti 17:17:02 killing, waiting for: 2
+17:17:02 00:01.619 org.h2.test.synth.TestKillRestartMulti 17:17:02 killing, dead: 2
+17:17:02 00:01.620 org.h2.test.synth.TestKillRestartMulti 
+17:17:05 00:02.202 org.h2.test.synth.TestMultiThreaded 
+17:17:05 00:00.019 org.h2.test.synth.TestOuterJoins 
+17:17:05 00:00.303 org.h2.test.synth.TestNestedJoins 
+17:17:05 00:00.156 org.h2.test.db.TestDateStorage 
+17:17:05 00:00.002 org.h2.test.jdbc.TestDriver 
+17:17:05 00:00.001 org.h2.test.jdbc.TestJavaObjectSerializer 
+17:17:05 00:00.000 org.h2.test.unit.TestLocale 
+17:17:05 00:00.000 org.h2.test.db.TestMemoryUsage 
+17:17:09 00:03.590 org.h2.test.db.TestMultiThread 
+17:17:09 00:00.000 org.h2.test.poweroff.TestReorderWrites testMVStore(): Disable partial write
+17:17:09 00:00.279 org.h2.test.poweroff.TestReorderWrites testMVStore(): Enable partial write
+17:17:09 00:00.420 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Disable partial write
+17:17:09 00:00.436 org.h2.test.poweroff.TestReorderWrites testFileSystem(): Enable partial write
+17:17:09 00:00.446 org.h2.test.poweroff.TestReorderWrites 
+17:17:09 00:00.000 org.h2.test.synth.TestRandomSQL 17:17:09 seed: 1301820193
+17:17:09 00:00.019 org.h2.test.synth.TestRandomSQL 17:17:09 seed: 2090676908
+17:17:09 00:00.035 org.h2.test.synth.TestRandomSQL 17:17:09 total: 100 success: 14%
+17:17:09 00:00.038 org.h2.test.synth.TestRandomSQL 
+17:17:09 00:00.018 org.h2.test.db.TestQueryCache 
+17:17:09 00:00.001 org.h2.test.jdbc.TestUrlJavaObjectSerializer 
+17:17:09 00:00.013 org.h2.test.server.TestWeb FAIL org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 8182 ssl: false" [90031-259]
+ERROR: FAIL (memory ) org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 8182 ssl: false" [90031-259] org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 8182 ssl: false" [90031-259] ------------------------------
+org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 8182 ssl: false" [90031-259]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convertIOException(DbException.java:454)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:209)
+	at org.h2.util.NetUtils.createServerSocket(NetUtils.java:172)
+	at org.h2.server.web.WebServer.start(WebServer.java:412)
+	at org.h2.tools.Server.start(Server.java:551)
+	at org.h2.test.server.TestWeb.testAlreadyRunning(TestWeb.java:136)
+	at org.h2.test.server.TestWeb.test(TestWeb.java:77)
+	at org.h2.test.TestBase.runTest(TestBase.java:147)
+	at org.h2.test.TestAll.addTest(TestAll.java:1065)
+	at org.h2.test.TestAll.test(TestAll.java:916)
+	at org.h2.test.TestAll.runTests(TestAll.java:677)
+	at org.h2.test.TestAll.testAll(TestAll.java:621)
+	at org.h2.test.TestAll.run(TestAll.java:605)
+	at org.h2.test.TestAll.main(TestAll.java:437)
+Caused by: java.net.SocketException: Operation not permitted
+	at java.base/java.net.ServerSocket.createImpl(ServerSocket.java:320)
+	at java.base/java.net.ServerSocket.getImpl(ServerSocket.java:294)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:167)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:202)
+	... 12 more
+17:17:09 00:00.003 org.h2.test.server.TestJakartaWeb 
+17:17:11 00:01.714 org.h2.test.db.TestOptimizations 
+17:17:12 00:01.358 org.h2.test.db.TestOutOfMemory Failure
+17:17:12 00:01.390 org.h2.test.db.TestOutOfMemory FAIL java.lang.AssertionError: Failure
+ERROR: FAIL (memory ) java.lang.AssertionError: Failure java.lang.AssertionError: Failure ------------------------------
+java.lang.AssertionError: Failure
+	at org.h2.test.TestBase.fail(TestBase.java:334)
+	at org.h2.test.TestBase.fail(TestBase.java:308)
+	at org.h2.test.db.TestOutOfMemory.testDatabaseUsingInMemoryFileSystem(TestOutOfMemory.java:133)
+	at org.h2.test.db.TestOutOfMemory.test(TestOutOfMemory.java:60)
+	at org.h2.test.TestBase.runTest(TestBase.java:147)
+	at org.h2.test.TestAll.addTest(TestAll.java:1065)
+	at org.h2.test.TestAll.test(TestAll.java:921)
+	at org.h2.test.TestAll.runTests(TestAll.java:677)
+	at org.h2.test.TestAll.testAll(TestAll.java:621)
+	at org.h2.test.TestAll.run(TestAll.java:605)
+	at org.h2.test.TestAll.main(TestAll.java:437)
+17:17:12 00:00.011 org.h2.test.db.TestIgnoreCatalogs 
+17:17:12 00:00.008 org.h2.test.store.TestMVTableEngine 
+17:17:12 00:00.031 org.h2.test.unit.TestAutoReconnect FAIL java.lang.AssertionError: Expected an SQLException or DbException with error code 50000, but got a org.h2.jdbc.JdbcSQLNonTransientException exception  with error code 90031
+ERROR: FAIL (memory ) java.lang.AssertionError: Expected an SQLException or DbException with error code 50000, but got a org.h2.jdbc.JdbcSQLNonTransientException exception  with error code 90031 java.lang.AssertionError: Expected an SQLException or DbException with error code 50000, but got a org.h2.jdbc.JdbcSQLNonTransientException exception  with error code 90031 ------------------------------
+java.lang.AssertionError: Expected an SQLException or DbException with error code 50000, but got a org.h2.jdbc.JdbcSQLNonTransientException exception  with error code 90031
+	at org.h2.test.TestBase.checkErrorCode(TestBase.java:1689)
+	at org.h2.test.TestBase.assertThrows(TestBase.java:1640)
+	at org.h2.test.unit.TestAutoReconnect.testFailedInitServerLeak(TestAutoReconnect.java:198)
+	at org.h2.test.unit.TestAutoReconnect.test(TestAutoReconnect.java:56)
+	at org.h2.test.TestBase.runTest(TestBase.java:147)
+	at org.h2.test.TestAll.addTest(TestAll.java:1065)
+	at org.h2.test.TestAll.testAdditional(TestAll.java:940)
+	at org.h2.test.TestAll.runTests(TestAll.java:681)
+	at org.h2.test.TestAll.testAll(TestAll.java:621)
+	at org.h2.test.TestAll.run(TestAll.java:605)
+	at org.h2.test.TestAll.main(TestAll.java:437)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 0 ssl: false" [90031-259]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convertIOException(DbException.java:454)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:209)
+	at org.h2.util.NetUtils.createServerSocket(NetUtils.java:172)
+	at org.h2.server.TcpServer.start(TcpServer.java:241)
+	at org.h2.tools.Server.start(Server.java:551)
+	at org.h2.engine.Database.startServer(Database.java:692)
+	at org.h2.engine.Database.<init>(Database.java:322)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:350)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:124)
+	at org.h2.Driver.connect(Driver.java:59)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at org.h2.test.TestDb.getConnectionInternal(TestDb.java:146)
+	at org.h2.test.TestDb.getConnection(TestDb.java:31)
+	at org.h2.test.unit.TestAutoReconnect.lambda$testFailedInitServerLeak$3(TestAutoReconnect.java:199)
+	at org.h2.test.TestBase.assertThrows(TestBase.java:1636)
+	... 9 more
+Caused by: java.net.SocketException: Operation not permitted
+	at java.base/java.net.ServerSocket.createImpl(ServerSocket.java:320)
+	at java.base/java.net.ServerSocket.getImpl(ServerSocket.java:294)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:167)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:202)
+	... 26 more
+17:17:13 00:00.122 org.h2.test.unit.TestBnf 
+17:17:13 00:00.000 org.h2.test.unit.TestCache 
+17:17:13 00:00.005 org.h2.test.unit.TestCollation 
+17:17:16 00:03.805 org.h2.test.unit.TestCompress 
+17:17:16 00:00.007 org.h2.test.unit.TestConnectionInfo 
+17:17:17 00:00.661 org.h2.test.unit.TestExit 
+17:17:21 00:04.006 org.h2.test.unit.TestFileLock FAIL org.h2.message.DbException: Database may be already in use: "Locked by another process: ./data/test/test.lock". Possible solutions: close all other connection(s); use the server mode [90020-259]
+ERROR: FAIL (memory ) org.h2.message.DbException: Database may be already in use: "Locked by another process: ./data/test/test.lock". Possible solutions: close all other connection(s); use the server mode [90020-259] org.h2.message.DbException: Database may be already in use: "Locked by another process: ./data/test/test.lock". Possible solutions: close all other connection(s); use the server mode [90020-259] ------------------------------
+org.h2.message.DbException: Database may be already in use: "Locked by another process: ./data/test/test.lock". Possible solutions: close all other connection(s); use the server mode [90020-259]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.store.FileLock.getExceptionAlreadyInUse(FileLock.java:434)
+	at org.h2.store.FileLock.lockFile(FileLock.java:326)
+	at org.h2.store.FileLock.lock(FileLock.java:110)
+	at org.h2.test.unit.TestFileLock.testFutureModificationDate(TestFileLock.java:85)
+	at org.h2.test.unit.TestFileLock.test(TestFileLock.java:63)
+	at org.h2.test.TestBase.runTest(TestBase.java:147)
+	at org.h2.test.TestAll.addTest(TestAll.java:1065)
+	at org.h2.test.TestAll.testAdditional(TestAll.java:947)
+	at org.h2.test.TestAll.runTests(TestAll.java:681)
+	at org.h2.test.TestAll.testAll(TestAll.java:621)
+	at org.h2.test.TestAll.run(TestAll.java:605)
+	at org.h2.test.TestAll.main(TestAll.java:437)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database may be already in use: "Locked by another process: ./data/test/test.lock". Possible solutions: close all other connection(s); use the server mode [90020-259]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 14 more
+17:17:21 00:00.036 org.h2.test.unit.TestJmx 
+17:17:24 00:03.009 org.h2.test.db.TestMultiThreadedKernel 
+17:17:24 00:00.000 org.h2.test.unit.TestPgServer FAIL org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 5535 ssl: false" [90031-259]
+ERROR: FAIL (memory ) org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 5535 ssl: false" [90031-259] org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 5535 ssl: false" [90031-259] ------------------------------
+org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 5535 ssl: false" [90031-259]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convertIOException(DbException.java:454)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:209)
+	at org.h2.util.NetUtils.createServerSocket(NetUtils.java:172)
+	at org.h2.server.pg.PgServer.start(PgServer.java:179)
+	at org.h2.tools.Server.start(Server.java:551)
+	at org.h2.test.unit.TestPgServer.testPgAdapter(TestPgServer.java:114)
+	at org.h2.test.unit.TestPgServer.test(TestPgServer.java:65)
+	at org.h2.test.TestBase.runTest(TestBase.java:147)
+	at org.h2.test.TestAll.addTest(TestAll.java:1065)
+	at org.h2.test.TestAll.testAdditional(TestAll.java:951)
+	at org.h2.test.TestAll.runTests(TestAll.java:681)
+	at org.h2.test.TestAll.testAll(TestAll.java:621)
+	at org.h2.test.TestAll.run(TestAll.java:605)
+	at org.h2.test.TestAll.main(TestAll.java:437)
+Caused by: java.net.SocketException: Operation not permitted
+	at java.base/java.net.ServerSocket.createImpl(ServerSocket.java:320)
+	at java.base/java.net.ServerSocket.getImpl(ServerSocket.java:294)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:167)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:202)
+	... 12 more
+17:17:24 00:00.021 org.h2.test.unit.TestTimeStampWithTimeZone 
+17:17:24 00:00.006 org.h2.test.unit.TestValue 
+17:17:24 00:00.000 org.h2.test.unit.TestFileLockProcess socket
+17:17:28 00:04.150 org.h2.test.unit.TestFileLockProcess 0/4
+17:17:37 00:13.193 org.h2.test.unit.TestFileLockProcess fs
+17:17:37 00:13.295 org.h2.test.unit.TestFileLockProcess 0/4
+17:17:38 00:13.879 org.h2.test.unit.TestFileLockProcess default
+17:17:38 00:13.980 org.h2.test.unit.TestFileLockProcess 0/50
+17:17:39 00:15.003 org.h2.test.unit.TestFileLockProcess 10/50
+17:17:40 00:16.019 org.h2.test.unit.TestFileLockProcess 20/50
+17:17:41 00:17.035 org.h2.test.unit.TestFileLockProcess 30/50
+17:17:42 00:18.056 org.h2.test.unit.TestFileLockProcess 40/50
+17:17:43 00:19.245 org.h2.test.unit.TestFileLockProcess 
+17:17:43 00:00.009 org.h2.test.unit.TestTools FAIL org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 0 ssl: false" [90031-259]
+ERROR: FAIL (memory ) org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 0 ssl: false" [90031-259] org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 0 ssl: false" [90031-259] ------------------------------
+org.h2.jdbc.JdbcSQLNonTransientException: IO Exception: "java.net.SocketException: Operation not permitted"; "port: 0 ssl: false" [90031-259]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:566)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.message.DbException.convertIOException(DbException.java:454)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:209)
+	at org.h2.util.NetUtils.createServerSocket(NetUtils.java:172)
+	at org.h2.server.TcpServer.start(TcpServer.java:244)
+	at org.h2.tools.Server.start(Server.java:551)
+	at org.h2.test.unit.TestTools.testTcpServerWithoutPort(TestTools.java:129)
+	at org.h2.test.unit.TestTools.test(TestTools.java:102)
+	at org.h2.test.TestBase.runTest(TestBase.java:147)
+	at org.h2.test.TestAll.addTest(TestAll.java:1065)
+	at org.h2.test.TestAll.testAdditional(TestAll.java:964)
+	at org.h2.test.TestAll.runTests(TestAll.java:681)
+	at org.h2.test.TestAll.testAll(TestAll.java:621)
+	at org.h2.test.TestAll.run(TestAll.java:605)
+	at org.h2.test.TestAll.main(TestAll.java:437)
+Caused by: java.net.SocketException: Operation not permitted
+	at java.base/java.net.ServerSocket.createImpl(ServerSocket.java:320)
+	at java.base/java.net.ServerSocket.getImpl(ServerSocket.java:294)
+	at java.base/java.net.ServerSocket.bind(ServerSocket.java:388)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:274)
+	at java.base/java.net.ServerSocket.<init>(ServerSocket.java:167)
+	at org.h2.util.NetUtils.createServerSocketTry(NetUtils.java:202)
+	... 12 more

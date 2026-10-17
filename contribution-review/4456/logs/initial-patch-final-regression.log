@@ -1,0 +1,11 @@
+17:30:07 6:59:29.822 org.h2.test.jdbc.TestPreparedStatement Expected: 4 actual: 2
+Exception in thread "main" java.lang.AssertionError: Expected: 4 actual: 2
+	at org.h2.test.TestBase.fail(TestBase.java:334)
+	at org.h2.test.TestBase.assertEquals(TestBase.java:506)
+	at org.h2.test.jdbc.TestPreparedStatement.anyParameterCheck(TestPreparedStatement.java:1720)
+	at org.h2.test.jdbc.TestPreparedStatement.testPreparedStatementWithAnyParameterTypes(TestPreparedStatement.java:1687)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at RunRegression4456.main(RunRegression4456.java:13)

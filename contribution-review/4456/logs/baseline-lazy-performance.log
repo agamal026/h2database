@@ -1,0 +1,10 @@
+START org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode memory=true
+17:27:49 6:57:11.384 org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode Lazy execution too slow. Avg lazy time: 900, avg not lazy time: 15
+Exception in thread "main" java.lang.AssertionError: Lazy execution too slow. Avg lazy time: 900, avg not lazy time: 15
+	at org.h2.test.TestBase.fail(TestBase.java:334)
+	at org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode.checkExecutionTime(TestSubqueryPerformanceOnLazyExecutionMode.java:143)
+	at org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode.checkExecutionTime(TestSubqueryPerformanceOnLazyExecutionMode.java:111)
+	at org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode.testSubqueryInJoin(TestSubqueryPerformanceOnLazyExecutionMode.java:78)
+	at org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode.test(TestSubqueryPerformanceOnLazyExecutionMode.java:56)
+	at org.h2.test.TestBase.testFromMain(TestBase.java:479)
+	at RunSelectedH2Tests.main(RunSelectedH2Tests.java:16)

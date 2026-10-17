@@ -1,0 +1,44 @@
+[
+  {
+    "variant": "baseline",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/baseline-classes:/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunRegression4456"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/baseline-final-regression-work",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "log": "baseline-final-regression.log"
+  },
+  {
+    "variant": "initial-patch",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/initial-patch-classes:/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunRegression4456"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/initial-patch-final-regression-work",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "log": "initial-patch-final-regression.log"
+  },
+  {
+    "variant": "final",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunRegression4456"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/final-final-regression-work",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "log": "final-final-regression.log"
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "name": "org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode",
+    "variant": "baseline",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-Xmx128m",
+      "-Duser.timezone=America/New_York",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/baseline-classes:/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunSelectedH2Tests",
+      "org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/baseline-TestSubqueryPerformanceOnLazyExecutionMode-work",
+    "exit_code": 1,
+    "elapsed_seconds": 5.193,
+    "log": "baseline-TestSubqueryPerformanceOnLazyExecutionMode.log"
+  },
+  {
+    "name": "org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode",
+    "variant": "patched",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-Xmx128m",
+      "-Duser.timezone=America/New_York",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunSelectedH2Tests",
+      "org.h2.test.db.TestSubqueryPerformanceOnLazyExecutionMode"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/patched-TestSubqueryPerformanceOnLazyExecutionMode-work",
+    "exit_code": 1,
+    "elapsed_seconds": 4.996,
+    "log": "patched-TestSubqueryPerformanceOnLazyExecutionMode.log"
+  },
+  {
+    "name": "org.h2.test.db.TestOutOfMemory",
+    "variant": "baseline",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-Xmx128m",
+      "-Duser.timezone=America/New_York",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/baseline-classes:/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunSelectedH2Tests",
+      "org.h2.test.db.TestOutOfMemory"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/baseline-TestOutOfMemory-work",
+    "exit_code": 1,
+    "elapsed_seconds": 0.99,
+    "log": "baseline-TestOutOfMemory.log"
+  }
+]

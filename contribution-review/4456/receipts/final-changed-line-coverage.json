@@ -1,0 +1,73 @@
+{
+  "patch_sha256": "12214cbedb78209380b7b4d6c7402752de14b96bb464abe9a10ab224abcf3e98",
+  "changed_executable_lines": [
+    {
+      "source": "IndexCondition.java",
+      "nr": 212,
+      "mi": 0,
+      "ci": 3,
+      "mb": 0,
+      "cb": 0
+    },
+    {
+      "source": "IndexCondition.java",
+      "nr": 216,
+      "mi": 0,
+      "ci": 5,
+      "mb": 0,
+      "cb": 2
+    },
+    {
+      "source": "IndexCondition.java",
+      "nr": 217,
+      "mi": 0,
+      "ci": 2,
+      "mb": 0,
+      "cb": 0
+    },
+    {
+      "source": "IndexCondition.java",
+      "nr": 218,
+      "mi": 0,
+      "ci": 2,
+      "mb": 0,
+      "cb": 0
+    },
+    {
+      "source": "IndexCursor.java",
+      "nr": 81,
+      "mi": 0,
+      "ci": 3,
+      "mb": 0,
+      "cb": 0
+    },
+    {
+      "source": "IndexCursor.java",
+      "nr": 120,
+      "mi": 0,
+      "ci": 3,
+      "mb": 0,
+      "cb": 2
+    },
+    {
+      "source": "IndexCursor.java",
+      "nr": 121,
+      "mi": 0,
+      "ci": 3,
+      "mb": 0,
+      "cb": 0
+    },
+    {
+      "source": "IndexCursor.java",
+      "nr": 122,
+      "mi": 0,
+      "ci": 4,
+      "mb": 0,
+      "cb": 0
+    }
+  ],
+  "covered_executable_lines": 8,
+  "total_executable_lines": 8,
+  "covered_branch_outcomes": 4,
+  "missed_branch_outcomes": 0
+}

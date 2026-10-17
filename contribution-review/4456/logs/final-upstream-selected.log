@@ -1,0 +1,10 @@
+START org.h2.test.jdbc.TestPreparedStatement memory=true
+PASS org.h2.test.jdbc.TestPreparedStatement memory=true
+START org.h2.test.db.TestIndex memory=true
+PASS org.h2.test.db.TestIndex memory=true
+START org.h2.test.db.TestCompoundIndexSearch memory=true
+PASS org.h2.test.db.TestCompoundIndexSearch memory=true
+START org.h2.test.db.TestCompoundIndexParamSearch memory=true
+PASS org.h2.test.db.TestCompoundIndexParamSearch memory=true
+START org.h2.test.db.TestOptimizations memory=true
+PASS org.h2.test.db.TestOptimizations memory=true

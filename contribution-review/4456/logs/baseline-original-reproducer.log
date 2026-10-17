@@ -1,0 +1,5 @@
+without index: 1; with index: 0
+Exception in thread "main" java.lang.AssertionError: Adding an index changed numeric ANY comparison results
+	at Reproduce4456.main(Reproduce4456.java:16)
+
+exit_code=1

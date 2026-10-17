@@ -1,0 +1,49 @@
+{
+  "status": "published_to_owned_fork_review_branch_not_upstream_submitted",
+  "issue": "https://github.com/h2database/h2database/issues/4456",
+  "upstream_repository": "https://github.com/h2database/h2database",
+  "upstream_commit": "f2922a7766ec2472bc65d5e5ab4086390a76a42c",
+  "source_commit_url": "https://github.com/agamal026/h2database/commit/9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+  "source_branch": "fix/4456-any-parameter-types",
+  "source_commit": "9d7a0ad26f8a53654e0ce106a80f702ae5840a28",
+  "source_tree": "07172cddd8b11fa8a5325ccb40072de775f3eaa7",
+  "patch_sha256": "12214cbedb78209380b7b4d6c7402752de14b96bb464abe9a10ab224abcf3e98",
+  "changed_files": 4,
+  "insertions": 73,
+  "deletions": 3,
+  "review": "Automated root code review of exact final four-file diff; no independent human approval or authorship attestation.",
+  "integrated_regression_binding_cases": 96,
+  "safe_index_scan_controls": 4,
+  "ordering_differential_cases_per_variant": 432,
+  "baseline_ordering_mismatches": 160,
+  "initial_draft_new_ordering_mismatches": 10,
+  "final_ordering_mismatches": 0,
+  "changed_executable_lines_covered": 8,
+  "changed_executable_lines_total": 8,
+  "new_branch_outcomes_covered": 4,
+  "new_branch_outcomes_total": 4,
+  "final_jar_build_exit": 0,
+  "final_selected_upstream_test_classes_passed": 5,
+  "negative_control_original_production_exit": 1,
+  "negative_control_first_draft_production_exit": 1,
+  "final_regression_exit": 0,
+  "full_suite_final_patch": "not run; broad attempts on initial draft failed and were stopped with exit130",
+  "baseline_reproduced_failure_assertions": [
+    "TestOutOfMemory.java:133",
+    "TestSubqueryPerformanceOnLazyExecutionMode.java:143"
+  ],
+  "full_suite_unclassified_failures": [
+    "TestFileLock lock conflict",
+    "TestTools SSL trust handshake",
+    "TestMVStore write-format assertion",
+    "TestMVStoreBenchmark timing assertion"
+  ],
+  "source_checks": "Text-format and spelling each exit1 on baseline and final; diagnostic output identical after normalizing copied working-directory path.",
+  "pending_gates": [
+    "Truthful contributor licensing/authorship requirement from official H2 guide",
+    "Final upstream submission review",
+    "Complete upstream full-suite/CI acceptance; final focused verification is not a full-suite pass",
+    "Any maintainer-requested documentation/style validation beyond the existing baseline failures"
+  ],
+  "prepared_at": "2026-10-17T21:47:24.082442+00:00"
+}

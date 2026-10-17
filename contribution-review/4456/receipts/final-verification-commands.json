@@ -1,0 +1,136 @@
+[
+  {
+    "name": "final-build",
+    "command": [
+      "./build.sh",
+      "jar"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-investigation/h2",
+    "environment_overrides": {
+      "JAVA_HOME": "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1"
+    },
+    "started_at": "2026-10-17T21:31:47.601882+00:00",
+    "finished_at": "2026-10-17T21:32:00.864886+00:00",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "log": "final-build.log"
+  },
+  {
+    "name": "final-upstream-selected",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-Xmx128m",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunSelectedH2Tests",
+      "org.h2.test.jdbc.TestPreparedStatement",
+      "org.h2.test.db.TestIndex",
+      "org.h2.test.db.TestCompoundIndexSearch",
+      "org.h2.test.db.TestCompoundIndexParamSearch",
+      "org.h2.test.db.TestOptimizations"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/final-selected-work",
+    "environment_overrides": {},
+    "started_at": "2026-10-17T21:32:00.865144+00:00",
+    "finished_at": "2026-10-17T21:32:05.269148+00:00",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "log": "final-upstream-selected.log"
+  },
+  {
+    "name": "final-original-reproducer",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/bin/h2-2.5.259-SNAPSHOT.jar",
+      "Reproduce4456"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence",
+    "environment_overrides": {},
+    "started_at": "2026-10-17T21:32:05.269468+00:00",
+    "finished_at": "2026-10-17T21:32:05.520285+00:00",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "log": "final-original-reproducer.log"
+  },
+  {
+    "name": "final-coverage-regression",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-ea",
+      "-javaagent:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/jacocoagent.jar=destfile=/workspace/scratch/908a08b14060/h2-4456-evidence/final-coverage.exec,includes=org.h2.index.IndexCondition:org.h2.index.IndexCursor",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "RunRegression4456"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/final-coverage-work",
+    "environment_overrides": {},
+    "started_at": "2026-10-17T21:32:05.520581+00:00",
+    "finished_at": "2026-10-17T21:32:05.943762+00:00",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "log": "final-coverage-regression.log"
+  },
+  {
+    "name": "final-coverage-report",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "org.jacoco.cli.internal.Main",
+      "report",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/final-coverage.exec",
+      "--classfiles",
+      "/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp/org/h2/index/IndexCondition.class",
+      "--classfiles",
+      "/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp/org/h2/index/IndexCursor.class",
+      "--sourcefiles",
+      "/workspace/scratch/908a08b14060/h2-4456-investigation/h2/src/main",
+      "--html",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/final-coverage-report",
+      "--xml",
+      "/workspace/scratch/908a08b14060/h2-4456-evidence/final-coverage.xml"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence",
+    "environment_overrides": {},
+    "started_at": "2026-10-17T21:32:05.943978+00:00",
+    "finished_at": "2026-10-17T21:32:06.191892+00:00",
+    "exit_code": 0,
+    "expected_exit": 0,
+    "log": "final-coverage-report.log"
+  },
+  {
+    "name": "final-text-format",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "org.h2.build.code.CheckTextFiles"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/final-source-checks",
+    "environment_overrides": {},
+    "started_at": "2026-10-17T21:32:06.338285+00:00",
+    "finished_at": "2026-10-17T21:32:06.890777+00:00",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "log": "final-text-format.log"
+  },
+  {
+    "name": "final-spellcheck",
+    "command": [
+      "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+      "-cp",
+      "/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+      "org.h2.build.doc.SpellChecker"
+    ],
+    "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence/final-source-checks",
+    "environment_overrides": {},
+    "started_at": "2026-10-17T21:32:06.891137+00:00",
+    "finished_at": "2026-10-17T21:32:07.667493+00:00",
+    "exit_code": 1,
+    "expected_exit": 1,
+    "log": "final-spellcheck.log"
+  }
+]

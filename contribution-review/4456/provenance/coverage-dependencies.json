@@ -1,0 +1,37 @@
+[
+  {
+    "path": "ext/org.jacoco.agent-0.8.10.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.agent/0.8.10/org.jacoco.agent-0.8.10.jar",
+    "sha1": "ffdd953dfe502cd7678743c75905bc3304ae2eb7",
+    "verified": true,
+    "bytes": 272074
+  },
+  {
+    "path": "ext/org.jacoco.cli-0.8.10.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.cli/0.8.10/org.jacoco.cli-0.8.10.jar",
+    "sha1": "b2e14234f8ab0c72d9ed599d2f01d21f453fecc0",
+    "verified": true,
+    "bytes": 34227
+  },
+  {
+    "path": "ext/org.jacoco.core-0.8.10.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.core/0.8.10/org.jacoco.core-0.8.10.jar",
+    "sha1": "669a338279c3f40b154a64c624bab625664a00e6",
+    "verified": true,
+    "bytes": 204345
+  },
+  {
+    "path": "ext/org.jacoco.report-0.8.10.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/jacoco/org.jacoco.report/0.8.10/org.jacoco.report-0.8.10.jar",
+    "sha1": "c361019431d1c88e7004ba5a722e7c3f7c22194b",
+    "verified": true,
+    "bytes": 131145
+  },
+  {
+    "path": "ext/args4j-2.33.jar",
+    "url": "https://repo.maven.apache.org/maven2/args4j/args4j/2.33/args4j-2.33.jar",
+    "sha1": "bd87a75374a6d6523de82fef51fc3cfe9baf9fc9",
+    "verified": true,
+    "bytes": 155379
+  }
+]

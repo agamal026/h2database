@@ -1,0 +1,135 @@
+[
+  {
+    "path": "ext/javax.servlet-api-4.0.1.jar",
+    "url": "https://repo.maven.apache.org/maven2/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar",
+    "sha1": "a27082684a2ff0bf397666c3943496c44541d1ca",
+    "verified": true,
+    "bytes": 95505
+  },
+  {
+    "path": "ext/jakarta.servlet-api-5.0.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/jakarta/servlet/jakarta.servlet-api/5.0.0/jakarta.servlet-api-5.0.0.jar",
+    "sha1": "2e6b8ccde55522c879434ddec3714683ccae6867",
+    "verified": true,
+    "bytes": 307850
+  },
+  {
+    "path": "ext/lucene-core-9.7.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-core/9.7.0/lucene-core-9.7.0.jar",
+    "sha1": "ad391210ffd806931334be9670a35af00c56f959",
+    "verified": true,
+    "bytes": 3770658
+  },
+  {
+    "path": "ext/lucene-analysis-common-9.7.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-analysis-common/9.7.0/lucene-analysis-common-9.7.0.jar",
+    "sha1": "27ba6caaa4587a982cd451f7217b5a982bcfc44a",
+    "verified": true,
+    "bytes": 1911507
+  },
+  {
+    "path": "ext/lucene-queryparser-9.7.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/apache/lucene/lucene-queryparser/9.7.0/lucene-queryparser-9.7.0.jar",
+    "sha1": "6e77bde908ff698354e4a2149e6dd4658b56d7b0",
+    "verified": true,
+    "bytes": 422910
+  },
+  {
+    "path": "ext/slf4j-api-2.0.7.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar",
+    "sha1": "41eb7184ea9d556f23e18b5cb99cad1f8581fc00",
+    "verified": true,
+    "bytes": 63635
+  },
+  {
+    "path": "ext/org.osgi.core-5.0.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/osgi/org.osgi.core/5.0.0/org.osgi.core-5.0.0.jar",
+    "sha1": "6e5e8cd3c9059c08e1085540442a490b59a7783c",
+    "verified": true,
+    "bytes": 430350
+  },
+  {
+    "path": "ext/org.osgi.service.jdbc-1.1.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/osgi/org.osgi.service.jdbc/1.1.0/org.osgi.service.jdbc-1.1.0.jar",
+    "sha1": "07673601d60c98d876b82530ff4363ed9e428c1e",
+    "verified": true,
+    "bytes": 13199
+  },
+  {
+    "path": "ext/jts-core-1.19.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/locationtech/jts/jts-core/1.19.0/jts-core-1.19.0.jar",
+    "sha1": "3ff3baa0074445384f9e0068df81fbd0a168395a",
+    "verified": true,
+    "bytes": 1103721
+  },
+  {
+    "path": "ext/junit-jupiter-api-5.10.0.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar",
+    "sha1": "2fe4ba3d31d5067878e468c96aa039005a9134d3",
+    "verified": true,
+    "bytes": 210954
+  },
+  {
+    "path": "ext/asm-9.5.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm/9.5/asm-9.5.jar",
+    "sha1": "dc6ea1875f4d64fbc85e1691c95b96a3d8569c90",
+    "verified": true,
+    "bytes": 121863
+  },
+  {
+    "path": "ext/apiguardian-api-1.1.2.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar",
+    "sha1": "a231e0d844d2721b0fa1b238006d15c6ded6842a",
+    "verified": true,
+    "bytes": 6806
+  },
+  {
+    "path": "ext/h2-1.2.127.jar",
+    "url": "https://repo.maven.apache.org/maven2/com/h2database/h2/1.2.127/h2-1.2.127.jar",
+    "sha1": "056e784c7cf009483366ab9cd8d21d02fe47031a",
+    "verified": true,
+    "bytes": 1240488
+  },
+  {
+    "path": "ext/postgresql-42.7.2.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/postgresql/postgresql/42.7.2/postgresql-42.7.2.jar",
+    "sha1": "86ed42574cd68662b05d3b00432a34e9a34cb12c",
+    "verified": true,
+    "bytes": 1089136
+  },
+  {
+    "path": "ext/slf4j-nop-2.0.7.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/slf4j/slf4j-nop/2.0.7/slf4j-nop-2.0.7.jar",
+    "sha1": "a5b48a1a935615f0cc70148267bc0f6c4e437239",
+    "verified": true,
+    "bytes": 4848
+  },
+  {
+    "path": "ext/nashorn-core-15.4.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/openjdk/nashorn/nashorn-core/15.4/nashorn-core-15.4.jar",
+    "sha1": "f67f5ffaa5f5130cf6fb9b133da00c7df3b532a5",
+    "verified": true,
+    "bytes": 2167292
+  },
+  {
+    "path": "ext/asm-util-9.5.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm-util/9.5/asm-util-9.5.jar",
+    "sha1": "64b5a1fc8c1b15ed2efd6a063e976bc8d3dc5ffe",
+    "verified": true,
+    "bytes": 91076
+  },
+  {
+    "path": "ext/asm-commons-9.5.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm-commons/9.5/asm-commons-9.5.jar",
+    "sha1": "19ab5b5800a3910d30d3a3e64fdb00fd0cb42de0",
+    "verified": true,
+    "bytes": 72209
+  },
+  {
+    "path": "ext/asm-tree-9.5.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/ow2/asm/asm-tree/9.5/asm-tree-9.5.jar",
+    "sha1": "fd33c8b6373abaa675be407082fdfda35021254a",
+    "verified": true,
+    "bytes": 51944
+  }
+]

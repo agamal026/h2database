@@ -1,0 +1,127 @@
+diff --git a/h2/src/docsrc/html/changelog.html b/h2/src/docsrc/html/changelog.html
+index 2d4f44e..35c7feb 100644
+--- a/h2/src/docsrc/html/changelog.html
++++ b/h2/src/docsrc/html/changelog.html
+@@ -21,6 +21,7 @@ Change Log
+ 
+ <h2>Next Version (unreleased)</h2>
+ <ul>
++    <li>Issue #4456: Indexed ANY parameter comparisons could omit matching rows after type conversion</li>
+     <li>Issue #4457: Invalid chunk after abrupt shutdown preclude subsequent file space reuse</li>
+     <li>Issue #4446: Committed data lost after reopening a crashed database once RETENTION_TIME elapsed (stale store header)</li>
+     <li>Issue #3958: org.h2.tools.Recover not dealing with Arrays correctly</li>
+diff --git a/h2/src/main/org/h2/index/IndexCondition.java b/h2/src/main/org/h2/index/IndexCondition.java
+index a3bb793..fd89a08 100644
+--- a/h2/src/main/org/h2/index/IndexCondition.java
++++ b/h2/src/main/org/h2/index/IndexCondition.java
+@@ -26,6 +26,7 @@
+ import org.h2.table.Column;
+ import org.h2.table.IndexColumn;
+ import org.h2.table.TableType;
++import org.h2.value.TypeInfo;
+ import org.h2.value.Value;
+ import org.h2.value.ValueArray;
+ import org.h2.value.ValueRow;
+@@ -183,7 +184,8 @@ public Value getCurrentValue(SessionLocal session) {
+      *
+      * @param session the session
+      * @param sortTypes sort types
+-     * @return the value list
++     * @return the value list, or {@code null} if the values cannot safely be
++     *         converted for an index lookup
+      */
+     public Value[] getCurrentValueList(SessionLocal session, int[] sortTypes) {
+         Comparator<Value> comparator;
+@@ -207,8 +209,14 @@ public Value[] getCurrentValueList(SessionLocal session, int[] sortTypes) {
+                 }
+             } else {
+                 Column column = getColumn();
++                TypeInfo columnType = column.getType();
+                 for (Expression e : expressionList) {
+                     Value v = e.getValue(session);
++                    // A parameter may have a different type on each call.
++                    if (!Comparison.isSafeIndexCondition(columnType,
++                            TypeInfo.getHigherType(columnType, v.getType()))) {
++                        return null;
++                    }
+                     v = column.convert(session, v);
+                     valueSet.add(v);
+                 }
+diff --git a/h2/src/main/org/h2/index/IndexCursor.java b/h2/src/main/org/h2/index/IndexCursor.java
+index a908fab..d6b1b5c 100644
+--- a/h2/src/main/org/h2/index/IndexCursor.java
++++ b/h2/src/main/org/h2/index/IndexCursor.java
+@@ -115,9 +115,11 @@ public void prepare(SessionLocal s, ArrayList<IndexCondition> indexConditions) {
+             case Comparison.IN_ARRAY:
+                 if (start == null && end == null) {
+                     if (canUseIndexForIn(column)) {
+-                        this.inColumn = column;
+                         inList = condition.getCurrentValueList(s, buildSortTypes(new Column[] { column }));
+-                        inListIndex = 0;
++                        if (inList != null) {
++                            this.inColumn = column;
++                            inListIndex = 0;
++                        }
+                     }
+                 }
+                 break;
+diff --git a/h2/src/test/org/h2/test/jdbc/TestPreparedStatement.java b/h2/src/test/org/h2/test/jdbc/TestPreparedStatement.java
+index e0f434b..5bffaa6 100644
+--- a/h2/src/test/org/h2/test/jdbc/TestPreparedStatement.java
++++ b/h2/src/test/org/h2/test/jdbc/TestPreparedStatement.java
+@@ -126,6 +126,7 @@ public void test() throws Exception {
+         testPreparedStatementWithLiteralsNone();
+         testPreparedStatementWithIndexedParameterAndLiteralsNone();
+         testPreparedStatementWithAnyParameter();
++        testPreparedStatementWithAnyParameterTypes();
+         deleteDb("preparedStatement");
+     }
+ 
+@@ -1654,6 +1655,47 @@ private void testPreparedStatementWithAnyParameter() throws SQLException {
+         deleteDb("preparedStatement");
+     }
+ 
++    private void testPreparedStatementWithAnyParameterTypes() throws SQLException {
++        deleteDb("preparedStatement");
++        try (Connection conn = getConnection("preparedStatement"); Statement stat = conn.createStatement()) {
++            stat.execute("CREATE TABLE TEST(ID INT, V VARCHAR)");
++            stat.execute("INSERT INTO TEST VALUES (1, '01'), (2, '1'), (3, '2'), (4, '02')");
++            for (String order : new String[] { "", "ASC", "DESC" }) {
++                if (!order.isEmpty()) {
++                    stat.execute("CREATE INDEX TEST_V ON TEST(V " + order + ")");
++                }
++                for (String condition : new String[] { "V = ANY(?)", "V = ANY(?) AND V >= '00' AND V < '9'" }) {
++                    try (PreparedStatement ps = conn.prepareStatement("SELECT ID FROM TEST WHERE " + condition
++                            + " ORDER BY ID")) {
++                        anyParameterCheck(ps, "01", new int[] { 1 });
++                        anyParameterCheck(ps, 1, new int[] { 1, 2 });
++                        anyParameterCheck(ps, new Integer[] { 1, 2 }, new int[] { 1, 2, 3, 4 });
++                        anyParameterCheck(ps, new String[] { "1", "02" }, new int[] { 2, 4 });
++                        anyParameterCheck(ps, new Integer[0], new int[0]);
++                        anyParameterCheck(ps, null, new int[0]);
++                        anyParameterCheck(ps, new Integer[] { null, 2 }, new int[] { 3, 4 });
++                        anyParameterCheck(ps, new String[] { "01" }, new int[] { 1 });
++                    }
++                }
++                if (!order.isEmpty()) {
++                    try (PreparedStatement ps = conn.prepareStatement(
++                            "EXPLAIN ANALYZE SELECT ID FROM TEST WHERE V = ANY(?)")) {
++                        for (Object value : new Object[] { "01", new String[] { "01" } }) {
++                            ps.setObject(1, value);
++                            try (ResultSet rs = ps.executeQuery()) {
++                                assertTrue(rs.next());
++                                assertContains(rs.getString(1), "/* scanCount: 2 */");
++                                assertFalse(rs.next());
++                            }
++                        }
++                    }
++                    stat.execute("DROP INDEX TEST_V");
++                }
++            }
++        }
++        deleteDb("preparedStatement");
++    }
++
+     private void anyParameterCheck(PreparedStatement ps, Object values, int[] expected) throws SQLException {
+         ps.setObject(1, values);
+         try (ResultSet rs = ps.executeQuery()) {

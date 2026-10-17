@@ -1,0 +1,40 @@
+{
+  "cases_per_variant": 432,
+  "baseline_mismatch_count": 160,
+  "final_mismatch_count": 0,
+  "new_mismatches": [],
+  "changed_scan_results": [],
+  "peer_case_key": "0:0:2:3",
+  "peer_case": {
+    "baseline": {
+      "scan": [
+        4,
+        2
+      ],
+      "indexed": [
+        4,
+        2
+      ]
+    },
+    "final": {
+      "scan": [
+        4,
+        2
+      ],
+      "indexed": [
+        4,
+        2
+      ]
+    }
+  },
+  "case_key": "index:order:limit:binding; values/order/index defined in OrderProbe4456.java",
+  "command": [
+    "/workspace/scratch/908a08b14060/h2-jdk17/jdk-17.0.20.1+1/bin/java",
+    "-ea",
+    "-cp",
+    "/workspace/scratch/908a08b14060/h2-4456-evidence:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/temp:/workspace/scratch/908a08b14060/h2-4456-investigation/h2/ext/*",
+    "OrderProbe4456"
+  ],
+  "working_directory": "/workspace/scratch/908a08b14060/h2-4456-evidence",
+  "exit_code": 0
+}

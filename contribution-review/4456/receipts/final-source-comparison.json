@@ -1,0 +1,12 @@
+{
+  "text-format": {
+    "baseline_exit": 1,
+    "final_exit": 1,
+    "identical_after_normalizing_copy_directory": true
+  },
+  "spellcheck": {
+    "baseline_exit": 1,
+    "final_exit": 1,
+    "identical_after_normalizing_copy_directory": true
+  }
+}
