@@ -536,20 +536,25 @@ public class IndexCondition {
         }
 
         int[] newOrder = new int[length];
-        int found = 0;
+        boolean[] used = new boolean[length];
         for (int i = 0; i < length; i++) {
             if (indexColumns[i] == null || indexColumns[i].column == null) {
                 return null;
             }
-            for (int j = 0; j < this.columns.length; j++) {
+            int position = -1;
+            for (int j = 0; j < length; j++) {
                 if (columns[j] == indexColumns[i].column) {
-                    newOrder[j] = i;
-                    found++;
+                    if (position >= 0) {
+                        return null;
+                    }
+                    position = j;
                 }
             }
-        }
-        if (found != length) {
-            return null;
+            if (position < 0 || used[position]) {
+                return null;
+            }
+            used[position] = true;
+            newOrder[i] = position;
         }
 
         Column[] newColumns = new Column[length];

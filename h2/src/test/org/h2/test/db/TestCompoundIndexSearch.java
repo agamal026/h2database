@@ -38,6 +38,8 @@ public class TestCompoundIndexSearch extends TestDb {
         compoundInNoIndexAndNull(conn);
         compoundInAgainstCompoundIndex(conn);
         compoundInAgainstCompoundIndexUnordered(conn);
+        compoundInWithDuplicateColumns(conn);
+        compoundInWithThreeColumnPermutation(conn);
         compoundInAgainstSimpleIndex(conn);
         compoundEqAgainstCompoundIndex(conn);
         multipleEqAgainstCompoundIndex(conn);
@@ -137,6 +139,47 @@ public class TestCompoundIndexSearch extends TestDb {
                 "SELECT \"B\", \"C\" FROM \"PUBLIC\".\"TEST\" " +
                         "/* PUBLIC.IDX_B_C: IN(ROW (2, '1'), ROW (3, '2')) */ " +
                         "/* scanCount: 4 */ WHERE ROW (\"C\", \"B\") IN(ROW ('1', 2), ROW ('2', 3))");
+        stat.close();
+    }
+
+    /**
+     * Duplicate row-value columns must not be mapped to two different index columns.
+     */
+    private void compoundInWithDuplicateColumns(Connection conn) throws Exception {
+        Statement stat = conn.createStatement();
+        stat.execute("CREATE TABLE DUPLICATE_INDEX_COLUMNS(A INT, B INT)");
+        stat.execute("CREATE INDEX IDX_DUPLICATE_INDEX_COLUMNS ON DUPLICATE_INDEX_COLUMNS(A, B)");
+        stat.execute("INSERT INTO DUPLICATE_INDEX_COLUMNS VALUES (5, 1), (6, 2)");
+        ResultSet rs = stat.executeQuery("SELECT A, B FROM DUPLICATE_INDEX_COLUMNS " +
+                "WHERE (B, B) = (1, 1) OR (B, B) = (2, 3)");
+        assertTrue(rs.next());
+        assertEquals(5, rs.getInt(1));
+        assertEquals(1, rs.getInt(2));
+        assertFalse(rs.next());
+        stat.execute("DROP TABLE DUPLICATE_INDEX_COLUMNS");
+        stat.close();
+    }
+
+    /**
+     * Compound index values must be permuted from row order to index order.
+     */
+    private void compoundInWithThreeColumnPermutation(Connection conn) throws Exception {
+        Statement stat = conn.createStatement();
+        stat.execute("CREATE TABLE PERMUTED_INDEX_COLUMNS(A INT, B INT, C INT)");
+        stat.execute("CREATE INDEX IDX_PERMUTED_INDEX_COLUMNS ON PERMUTED_INDEX_COLUMNS(A, B, C)");
+        stat.execute("INSERT INTO PERMUTED_INDEX_COLUMNS VALUES (1, 2, 3), (4, 5, 6), (7, 8, 9)");
+        ResultSet rs = stat.executeQuery("SELECT A, B, C FROM PERMUTED_INDEX_COLUMNS " +
+                "WHERE (B, C, A) IN ((2, 3, 1), (5, 6, 4)) ORDER BY A");
+        assertTrue(rs.next());
+        assertEquals(1, rs.getInt(1));
+        assertEquals(2, rs.getInt(2));
+        assertEquals(3, rs.getInt(3));
+        assertTrue(rs.next());
+        assertEquals(4, rs.getInt(1));
+        assertEquals(5, rs.getInt(2));
+        assertEquals(6, rs.getInt(3));
+        assertFalse(rs.next());
+        stat.execute("DROP TABLE PERMUTED_INDEX_COLUMNS");
         stat.close();
     }
 
