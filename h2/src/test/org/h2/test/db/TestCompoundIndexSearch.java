@@ -168,8 +168,9 @@ public class TestCompoundIndexSearch extends TestDb {
         stat.execute("CREATE TABLE PERMUTED_INDEX_COLUMNS(A INT, B INT, C INT)");
         stat.execute("CREATE INDEX IDX_PERMUTED_INDEX_COLUMNS ON PERMUTED_INDEX_COLUMNS(A, B, C)");
         stat.execute("INSERT INTO PERMUTED_INDEX_COLUMNS VALUES (1, 2, 3), (4, 5, 6), (7, 8, 9)");
-        ResultSet rs = stat.executeQuery("SELECT A, B, C FROM PERMUTED_INDEX_COLUMNS " +
-                "WHERE (B, C, A) IN ((2, 3, 1), (5, 6, 4)) ORDER BY A");
+        String sql = "SELECT A, B, C FROM PERMUTED_INDEX_COLUMNS " +
+                "WHERE (B, C, A) IN ((2, 3, 1), (5, 6, 4)) ORDER BY A";
+        ResultSet rs = stat.executeQuery(sql);
         assertTrue(rs.next());
         assertEquals(1, rs.getInt(1));
         assertEquals(2, rs.getInt(2));
@@ -179,6 +180,11 @@ public class TestCompoundIndexSearch extends TestDb {
         assertEquals(5, rs.getInt(2));
         assertEquals(6, rs.getInt(3));
         assertFalse(rs.next());
+        rs = stat.executeQuery("EXPLAIN ANALYZE " + sql);
+        assertTrue(rs.next());
+        String plan = rs.getString(1).replaceAll("[\\r\\n\\s]+", " ");
+        assertContains(plan, "PUBLIC.IDX_PERMUTED_INDEX_COLUMNS: IN(ROW (1, 2, 3), ROW (4, 5, 6))");
+        assertContains(plan, "/* scanCount: 3 */");
         stat.execute("DROP TABLE PERMUTED_INDEX_COLUMNS");
         stat.close();
     }
@@ -225,7 +231,7 @@ public class TestCompoundIndexSearch extends TestDb {
         rs.next();
         assertEquals(rs.getString(1).replaceAll("[\\r\\n\\s]+", " "),
                 "SELECT \"B\", \"C\" FROM \"PUBLIC\".\"TEST\" /* PUBLIC.IDX_B_C: B = 1 AND C = '1' */ " +
-                        "/* scanCount: 3 */ WHERE ROW (\"B\", \"C\") = ROW (1, '1')");
+                        "/* scanCount: 3 */ WHERE ROW (\"B\" = 1, \"C\" = '1')");
         stat.close();
     }
 
