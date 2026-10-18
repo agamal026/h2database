@@ -231,7 +231,7 @@ public class TestCompoundIndexSearch extends TestDb {
         rs.next();
         assertEquals(rs.getString(1).replaceAll("[\\r\\n\\s]+", " "),
                 "SELECT \"B\", \"C\" FROM \"PUBLIC\".\"TEST\" /* PUBLIC.IDX_B_C: B = 1 AND C = '1' */ " +
-                        "/* scanCount: 3 */ WHERE ROW (\"B\" = 1, \"C\" = '1')");
+                        "/* scanCount: 3 */ WHERE ROW (\"B\", \"C\") = ROW (1, '1')");
         stat.close();
     }
 
